@@ -344,7 +344,8 @@ li{
 }
 .container{
     width: 100%;
-    max-width: 1170px;
+    /* max-width: 1170px; */
+    max-width: 90%;
     margin: 0px auto;
 }
 
@@ -352,7 +353,7 @@ li{
 
 :root {
 
-    --black-color: #111013;
+    --black-color: #0E1422;
     --white-color: #e7e7e8;
     --other-color: #57aeff;
     --backgroung-color: #ffffff;

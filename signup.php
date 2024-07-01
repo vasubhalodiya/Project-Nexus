@@ -12,7 +12,7 @@
         $password2 = md5($_POST['confirmpassword']);
         $user_type =$_POST['user_type'];
 
-        $sql = "select * from allmember where email='$email'";
+        $sql = "select * from login where email='$email'";
         echo $sql;
         $run = mysqli_query($db, $sql);
         $get_rows = mysqli_affected_rows($db);
@@ -31,7 +31,7 @@
         }
         else
         {
-            $sql1 = "insert into allmember (uname, email, password, user_type) values('$uname', '$email', '$password', 'user')";
+            $sql1 = "insert into login (uname, email, password, user_type) values('$uname', '$email', '$password', 'user')";
             // if($sql1)
             // {
             //     echo "<script>alert('Registered successfully');</script>";
