@@ -262,6 +262,33 @@
     src: url(../css/fonts/Inter/Inter-Thin.ttf);
 }
 
+/* Satoshi */
+
+@font-face {
+    font-family: 'St-Black';
+    src: url(../css/fonts/satoshi/Satoshi-Black.otf);
+}
+
+@font-face {
+    font-family: 'St-Bold';
+    src: url(../css/fonts/satoshi/Satoshi-Bold.otf);
+}
+
+@font-face {
+    font-family: 'St-Regular';
+    src: url(../css/fonts/satoshi/Satoshi-Light.otf);
+}
+
+@font-face {
+    font-family: 'St-Medium';
+    src: url(../css/fonts/satoshi/Satoshi-Medium.otf);
+}
+
+@font-face {
+    font-family: 'St-Regular';
+    src: url(../css/fonts/satoshi/Satoshi-Regular.otf);
+}
+
 /* ********************* */
 
 img{max-width:100%;}
