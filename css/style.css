@@ -341,6 +341,9 @@ ul{
 li{
     list-style: none;
 }
+.row{
+    margin: 0;
+}
 .main{
     width: 100%;
 }
@@ -366,6 +369,7 @@ li{
         /* Background Color */
         --main-bg-color: #101112;
         --secondary-bg-color: #2C2C2D;
+        --third-bg-color: #1C1C1D;
         --other-bg-color: #2c2c2d;
         --border-big: #1C1D1E;
         --border-mini: #e2e2e2;
@@ -598,9 +602,10 @@ form
 .nav-logo h4
 {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 25px;
     font-family: var(--logo-ff);
     padding: 15px;
+    padding-left: 30px;
 }
 
 .nav-menu
@@ -617,7 +622,7 @@ form
     flex-direction: column;
     justify-content: center;
     border-left: 1px solid var(--border-big);
-    padding: 30px;
+    padding: 0px 30px;
 }
 
 .end-line
@@ -654,7 +659,12 @@ form
     flex-direction: column;
     justify-content: center;
     border-left: 1px solid var(--border-big);
-    padding: 30px;
+    padding: 0px 30px;
+}
+
+.nav-profile ul a:hover
+{
+    background-color: var(--other-bg-color);
 }
 
 .nav-menu ul a
@@ -750,9 +760,7 @@ form
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: var(--other-bg-color); */
-    /* background-color: rgb(11, 12, 13, 0.7); */
-    background-color: #1C1C1D;
+    background-color: var(--third-bg-color);
     padding: 80px;
     padding-top: 40px;
     padding-bottom: 0;
@@ -868,7 +876,9 @@ form
     border-radius: 15px;
 }
 
-.facility-content .row .col-lg-4, .col-md-6, .col-sm-12
+.facility-content .row .col-lg-4, 
+.facility-content .row .col-md-6, 
+.facility-content .row .col-sm-12
 {
     display: flex;
     flex-wrap: wrap;
@@ -925,18 +935,153 @@ form
     text-align: center;
 }
 
+/* ************************************************************************************************** */
 
+.best-sell
+{
+    margin-bottom: 80px;
+}
 
+.best-sell-content
+{
+    width: 90%;
+    margin: auto;
+}
 
+.best-head
+{
+    margin-bottom: 60px;
+}
 
+.best-card
+{
+    cursor: pointer;
+    transition:all 0.5s ease;
+}
 
+.best-card-img
+{
+    position: relative;
+}
 
+.best-card-btn
+{
+    display: none;
+    transition:all 0.5s ease;
+}
 
+.best-card:hover .best-card-btn
+{
+    display: block;
+}
 
+.best-card-btn .view-dtl
+{
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    font-size: 13px;
+    font-family: var(--heading-ff);
+    padding: 10px 20px;
+    border-radius: 10px;
 
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+}
 
+.best-card-btn .view-dtl:hover
+{
+    color: var(--primary-color);
+    background-color: rgb(230, 230, 230, 0.1);
+    border: 1px solid var(--primary-color);
+}
 
+.best-card-btn .add-cart
+{
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: 13px;
+    font-family: var(--heading-ff);
+    padding: 10px 20px;
+    border-radius: 10px;
 
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+
+.best-card-btn .add-cart:hover
+{
+    color: var(--main-bg-color);
+    background-color: #c7c7c7;
+    border: 1px solid var(--primary-color);
+}
+
+.best-card-img img
+{
+    width: 100%;
+    height: 100%;
+    background-color: var(--third-bg-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.best-card-cnt
+{
+    border: 1px solid var(--border-big);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+}
+
+.best-card-name h4
+{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-family: var(--heading-ff);
+    margin-bottom: 20px;
+}
+
+.best-card-price-stock
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.best-card-price
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.best-card-price h6
+{
+    color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--content-ff);
+}
+
+.best-card-price p
+{
+    color: var(--content-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+}
+
+.best-card-stock p
+{
+    color: var(--content-color);
+    background-color: rgb(44, 44, 45, 0.3);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+    border: 1px solid var(--border-big);
+    padding: 7px 20px;
+    border-radius: 50px;
+}
 
 
 
