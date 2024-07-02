@@ -358,23 +358,10 @@ li{
 
     /* All Colors */
         /* Font Color */
-        /*  --primary-color: #101112;
-        --content-color: #707070;
-        --other-color: #878A92;
-        --placeholder-color: #999999; */
-        
-        /* Background Color */
-        /* --main-bg-color: #ffffff;
-        --secondary-bg-color: #f9f9f9;
-        --third-bg-color: #F4F4F4;
-        --other-bg-color: #E9E9EB;
-        --border-big: rgb(14, 20, 34, 0.3);
-        --border-mini: #e2e2e2; */
-
-        /* --primary-color: #16171a; */
         --primary-color: #e6e6e6;
         --content-color: #8f8f8f;
         --placeholder-color: #999999;
+        --blue-color: #45A5FF;
         
         /* Background Color */
         --main-bg-color: #101112;
@@ -404,9 +391,9 @@ li{
 
 }
 
-::-webkit-scrollbar{width: 10px;}
-::-webkit-scrollbar-track{background: #888;}
-::-webkit-scrollbar-thumb{background: #111013;}
+::-webkit-scrollbar{width: 3px;}
+::-webkit-scrollbar-track{background: #101112;}
+::-webkit-scrollbar-thumb{background: #8f8f8f;}
 
 /* *************************************************************************************************** */
 
@@ -656,8 +643,18 @@ form
 {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 15px;
+    /* gap: 20px; */
+    /* padding: 15px; */
+}
+
+.nav-profile ul a
+{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid var(--border-big);
+    padding: 30px;
 }
 
 .nav-menu ul a
@@ -741,6 +738,8 @@ form
 
 .header
 {
+    width: 90%;
+    margin: auto;
     /* padding: 100px 0px; */
     padding-top: 30px;
     padding-bottom: 80px;
@@ -751,7 +750,9 @@ form
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--main-bg-color);
+    /* background-color: var(--other-bg-color); */
+    /* background-color: rgb(11, 12, 13, 0.7); */
+    background-color: #1C1C1D;
     padding: 80px;
     padding-top: 40px;
     padding-bottom: 0;
@@ -765,7 +766,7 @@ form
 
 .header-txt h2
 {
-    color: var(--main-bg-color);
+    color: var(--primary-color);
     font-size: 40px;
     font-family: 'Int-Bold';
     margin-bottom: 10px;
@@ -773,7 +774,7 @@ form
 
 .header-txt h6
 {
-    color: var(--main-bg-color);
+    color: var(--primary-color);
     font-size: var(--content-mini-fs);
     font-family: var(--content-ff);
     margin-bottom: 70px;
@@ -853,10 +854,51 @@ form
 
 /* ******************************************************************************** */
 
+.facility
+{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.facility-content .row
+{
+    margin: 0;
+    border: 1px solid var(--border-big);
+    border-radius: 15px;
+}
+
+.facility-content .row .col-lg-4, .col-md-6, .col-sm-12
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--border-big);
+    padding: 40px;
+}
+
+.facility-content .row .border-none
+{
+    border: none;
+}
+
 .facility-card
 {
-    max-width: 270px;
-    padding-bottom: 80px;
+    max-width: 280px;
+    /* padding-bottom: 80px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.facility-img, .facility-title, .facility-cnt
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .facility-img img
@@ -880,6 +922,7 @@ form
     color: var(--content-color);
     font-size: var(--content-mini-fs);
     font-family: var(--content-ff);
+    text-align: center;
 }
 
 
