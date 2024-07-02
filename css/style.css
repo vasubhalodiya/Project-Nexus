@@ -365,7 +365,7 @@ li{
         /* Background Color */
         --main-bg-color: #ffffff;
         --secondary-bg-color: #f9f9f9;
-        --third-bg-color: #F6F6F6;
+        --third-bg-color: #F4F4F4;
         --other-bg-color: #E9E9EB;
         /* --border: rgb(17, 16, 19, 0.3); */
         --border: #e2e2e2;
@@ -380,7 +380,7 @@ li{
 
     /* Font Size */
     --heading-fs: 30px;
-    --content-head-fs: 16px;
+    --content-head-fs: 17px;
     --content-mini-fs: 14px;
 
     --letter-space: 0.5px;
@@ -445,7 +445,7 @@ li{
 {
     width: 50%;
     margin: auto;
-    background-color: var(--backgroung-color);
+    background-color: var(--main-bg-color);
     border-radius: 10px;
     padding: 70px 50px;
 }
@@ -454,7 +454,7 @@ li{
 {
     width: 35%;
     margin: auto;
-    background-color: var(--backgroung-color);
+    background-color: var(--main-bg-color);
     border-radius: 10px;
     padding: 70px 50px;
 }
@@ -472,18 +472,18 @@ li{
 .login-form-head h2
 {
     width: 100%;
-    color: var(--black-color);
+    color: var(--primary-color);
     font-size: 30px;
-    font-family: 'Int-Medium';
+    font-family: var(--logo-ff);
     letter-spacing: 1px;
 }
 
 .login-form-dtl h6
 {
     width: 100%;
-    color: var(--black-color);
+    color: var(--primary-color);
     font-size: 16px;
-    font-family: 'St-Regular';
+    font-family: var(--content-ff);
     letter-spacing: 1px;
     margin-bottom: 40px;
 }
@@ -543,10 +543,10 @@ li{
 .login-btn input
 {
     width: 70%;
-    color: var(--backgroung-color);
+    color: var(--main-bg-color);
     font-size: 18px;
-    font-family: 'St-Medium';
-    background-color: var(--black-color);
+    font-family: var(--heading-ff);
+    background-color: var(--primary-color);
     padding: 13px 20px;
     border-radius: 10px;
 }
@@ -712,14 +712,10 @@ form
     background-color: var(--third-bg-color);
 } */
 
-spline-viewer #container a #logo
-{
-    display: none;
-}
-
 .header
 {
-    padding-top: 100px;
+    padding: 100px 0px;
+    padding-bottom: 80px;
 }
 
 .header-content
@@ -728,9 +724,15 @@ spline-viewer #container a #logo
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 50px;
+    padding: 80px;
+    padding-top: 40px;
     padding-bottom: 0;
     border-radius: 10px;
+}
+
+.header-txt
+{
+    padding-bottom: 40px;
 }
 
 .header-txt h2
@@ -751,8 +753,8 @@ spline-viewer #container a #logo
 
 .header-btn a
 {
-    color: var(--main-bg-color);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--main-bg-color);
     font-size: var(--content-head-fs);
     padding: 15px 25px;
     border-radius: 8px;
@@ -770,11 +772,87 @@ spline-viewer #container a #logo
     width: 300px;
 }
 
+/* ******************************************************************************** */
+
+.category
+{
+    padding-bottom: 80px;
+}
+
+.section-head h3
+{
+    color: var(--primary-color);
+    font-size: var(--heading-fs);
+    font-family: var(--logo-ff);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-card
+{
+    width: 100%;
+    height: 300px;
+    background-color: var(--other-bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.category-card h1
+{
+    color: rgb(14, 20, 34, 0.8);
+    font-size: 60px;
+    font-family: 'St-Black';
+    letter-spacing: -3px;
+    text-align: center;
+    rotate: -10deg;
+    padding-top: 70px;
+    transition: all 0.5s ease;
+}
+
+.category-card:hover
+{
+    background-color: var(--primary-color);
+    padding-top: 40px;
+}
+
+.category-card:hover h1
+{
+    color: var(--main-bg-color);
+    padding-top: 30px;
+}
 
 
+/* ******************************************************************************** */
 
+.facility-card
+{
+    max-width: 270px;
+    padding-bottom: 80px;
+}
 
+.facility-img img
+{
+    background-color: var(--third-bg-color);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
 
+.facility-title h5
+{
+    color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--heading-ff);
+    margin-bottom: 10px;
+}
+
+.facility-cnt p
+{
+    color: var(--content-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+}
 
 
 
