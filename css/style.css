@@ -748,7 +748,7 @@ form
 
 .header
 {
-    width: 90%;
+    max-width: 90%;
     margin: auto;
     /* padding: 100px 0px; */
     padding-top: 30px;
@@ -864,7 +864,7 @@ form
 
 .facility
 {
-    width: 90%;
+    max-width: 90%;
     margin: auto;
     margin-bottom: 80px;
 }
@@ -944,7 +944,7 @@ form
 
 .best-sell-content
 {
-    width: 90%;
+    max-width: 90%;
     margin: auto;
 }
 
@@ -1092,12 +1092,35 @@ form
     border-radius: 50px;
 }
 
+.best-btn
+{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.best-btn a
+{
+    color: var(--primary-color);
+    background-color: var(--other-bg-color);
+    padding: 10px 30px;
+    border-radius: 7px;
+}
 
+/* ******************************************************************************************* */
 
+.footer
+{
+    border-top: 1px solid var(--border-big);
+    padding: 50px;
+}
 
-
-
+.footer-content
+{
+    max-width: 90%;
+    margin: auto;
+}
 
 
 
