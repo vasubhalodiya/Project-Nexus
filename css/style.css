@@ -1296,24 +1296,33 @@ form
 /* ****************************************************************************************************************
 ****************************************************************************************************************
 **************************************************************************************************************** */
-
-/* .brand-cnt
+.brand-content
 {
-    width: 100%;
-    
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.brand-content .row .col-lg-3,
+.brand-content .row .col-md-4,
+.brand-content .row .col-sm-6
+{
+    padding: 10px;
+}
+
+.brand-head h3
+{
+    color: var(--primary-color);
+    font-size: var(--heading-fs);
+    font-family: var(--heading-ff);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .brand-cnt img
 {
-    width: 200px;
-    height: 70px;
-    margin-bottom: 20px;
-    background-color: var(--other-bg-color);
-} */
-
-
-
-
+    width: 100%;
+    border-radius: 10px;
+}
 
 
 
