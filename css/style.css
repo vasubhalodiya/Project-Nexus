@@ -1160,6 +1160,7 @@ form
     color: var(--content-color);
     font-size: var(--content-mini-fs);
     font-family: var(--content-ff);
+    margin-bottom: 20px;
 }
 
 
@@ -1258,8 +1259,34 @@ form
     width: 50px;
 }
 
+.footer-social-media ul
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;    
+}
 
+.footer-social-media li
+{
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
 
+.footer-social-media li:hover
+{
+    background-color: var(--other-bg-color);
+}
+
+.footer-social-media a
+{
+    color: var(--primary-color);
+    font-size: 19px;
+}
 
 
 
