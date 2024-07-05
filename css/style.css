@@ -1025,7 +1025,7 @@ form
     border: 1px solid var(--primary-color);
 }
 
-.best-card-img img
+.best-card-main-img img
 {
     width: 100%;
     /* height: 100%; */
@@ -1324,12 +1324,180 @@ form
     border-radius: 10px;
 }
 
+.brand-slider
+{
+    margin-bottom: 80px;
+}
 
+.brand-slider-card
+{
+    margin: 0px 10px;
+}
 
+.brand-card-img .brand-logo img
+{
+    width: 120px;
+    height: 30px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
 
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
+.brand-card
+{
+    cursor: pointer;
+    transition:all 0.5s ease;
+}
 
+.brand-card-img
+{
+    position: relative;
+}
 
+.brand-card-btn
+{
+    display: none;
+    transition:all 0.5s ease;
+}
+
+.brand-card:hover .brand-card-btn
+{
+    display: block;
+}
+
+.brand-card-btn .view-dtl
+{
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    font-size: 13px;
+    font-family: var(--heading-ff);
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+}
+
+.brand-card-btn .view-dtl:hover
+{
+    color: var(--primary-color);
+    background-color: rgb(230, 230, 230, 0.1);
+    border: 1px solid var(--primary-color);
+}
+
+.brand-card-btn .add-cart
+{
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: 13px;
+    font-family: var(--heading-ff);
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+
+.brand-card-btn .add-cart:hover
+{
+    color: var(--main-bg-color);
+    background-color: #c7c7c7;
+    border: 1px solid var(--primary-color);
+}
+
+.brand-card-img img
+{
+    width: 100%;
+    /* height: 100%; */
+    height: 320px;
+    object-fit: cover;
+    background-color: var(--third-bg-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.brand-card-cnt
+{
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+}
+
+.brand-card-name h4
+{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-family: var(--heading-ff);
+    margin-bottom: 20px;
+}
+
+.brand-card-price-stock
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-card-price
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-card-price h6
+{
+    color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--content-ff);
+}
+
+.brand-card-price p
+{
+    color: var(--content-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+}
+
+.brand-card-stock p
+{
+    color: var(--content-color);
+    background-color: rgb(44, 44, 45, 0.3);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+    border: 1px solid var(--border);
+    padding: 7px 20px;
+    border-radius: 50px;
+}
+
+.brand-btn
+{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-btn a
+{
+    color: var(--primary-color);
+    background-color: var(--other-bg-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
 
 
 
