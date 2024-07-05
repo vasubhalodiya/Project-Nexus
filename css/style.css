@@ -1025,7 +1025,7 @@ form
     border: 1px solid var(--primary-color);
 }
 
-.best-card-main-img img
+.best-card-img img
 {
     width: 100%;
     /* height: 100%; */
@@ -1336,7 +1336,7 @@ form
 
 .brand-card-img .brand-logo img
 {
-    width: 120px;
+    width: 100px;
     height: 30px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 0px;
@@ -1356,6 +1356,17 @@ form
 .brand-card-img
 {
     position: relative;
+}
+
+.brand-slider-head h3
+{
+    color: var(--primary-color);
+    font-size: 22px;
+    font-family: var(--content-ff);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 15px;
+    margin-bottom: 30px;
 }
 
 .brand-card-btn
@@ -1417,7 +1428,7 @@ form
 {
     width: 100%;
     /* height: 100%; */
-    height: 320px;
+    height: 260px;
     object-fit: cover;
     background-color: var(--third-bg-color);
     border-top-left-radius: 15px;
@@ -1429,13 +1440,13 @@ form
     border: 1px solid var(--border);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding: 20px;
+    padding: 17px;
 }
 
 .brand-card-name h4
 {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--heading-ff);
     margin-bottom: 20px;
 }
@@ -1451,20 +1462,20 @@ form
 {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .brand-card-price h6
 {
     color: var(--primary-color);
-    font-size: var(--content-head-fs);
+    font-size: 16px;
     font-family: var(--content-ff);
 }
 
 .brand-card-price p
 {
     color: var(--content-color);
-    font-size: var(--content-mini-fs);
+    font-size: 13px;
     font-family: var(--content-ff);
 }
 
@@ -1472,10 +1483,10 @@ form
 {
     color: var(--content-color);
     background-color: rgb(44, 44, 45, 0.3);
-    font-size: var(--content-mini-fs);
+    font-size: 13px;
     font-family: var(--content-ff);
     border: 1px solid var(--border);
-    padding: 7px 20px;
+    padding: 7px 15px;
     border-radius: 50px;
 }
 
@@ -1499,12 +1510,65 @@ form
     letter-spacing: 3px;
 }
 
+.card-view-more
+{
+    width: 100%;
+    height: 375px;
+    background-color: var(--third-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
 
+.card-view-more h3
+{
+    color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--content-ff);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
 
+.brand-slider-with-arrow
+{
+    position: relative;
+}
 
+.slider-arrow .prev-btn
+{
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
 
+    position: absolute;
+    left: -8px;
+    top: 40%;
+    z-index: 9999;
+}
 
+.slider-arrow .next-btn
+{
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
 
+    position: absolute;
+    right: -8px;
+    top: 40%;
+    z-index: 9999;
+}
 
 
 
