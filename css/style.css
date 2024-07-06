@@ -383,6 +383,7 @@ li{
 
     /* Font Size */
     --heading-fs: 30px;
+    --title-fs: 20px;
     --content-head-fs: 17px;
     --content-mini-fs: 14px;
 
@@ -1599,7 +1600,10 @@ form
 
 .cart
 {
-    padding: 100px 0px;
+    max-width: 85%;
+    margin: auto;
+    padding: 80px 0px;
+    padding-bottom: 200px;
 }
 
 .cart-plus-minus 
@@ -1631,10 +1635,10 @@ form
 {
     width: 38px;
     height: 100%;
-    color: var(--primary-color);
+    color: var(--content-color);
     background-color: var(--third-bg-color);
     border: none;
-    font-size: 20px;
+    font-size: 22px;
     padding: 0;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -1650,10 +1654,10 @@ form
 {
     width: 38px;
     height: 100%;
-    color: var(--primary-color);
+    color: var(--content-color);
     background-color: var(--third-bg-color);
     border: none;
-    font-size: 23px;
+    font-size: 24px;
     padding: 0;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
@@ -1665,30 +1669,179 @@ form
     left: 0;
 }
 
+.cart-product-head h3
+{
+    color: var(--primary-color);
+    font-size: 25px;
+    font-family: var(--heading-ff);
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 50px;
+}
 
+.cart-card
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 
+.cart-card-img
+{
+    width: 100px;
+    height: 100px;
+    background-color: var(--third-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
 
+.cart-card-img img
+{
+    width: 90px;
+}
 
+.cart-card-part
+{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
+.cart-card-child-part
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
+.cart-card-title h4
+{
+    color: var(--primary-color);
+    font-size: 18px;
+    font-family: var(--heading-ff);
+    margin-bottom: 10px;
+}
 
+.cart-card-title h5
+{
+    color: var(--content-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--heading-ff);
+    margin-bottom: 10px;
+}
 
+.cart-card-price h6
+{
+    color: var(--primary-color);
+    font-size: 18px;
+    font-family: var(--heading-ff);
+}
 
+.cart-card-close
+{
+    width: 38px;
+    height: 38px;
+    background-color: var(--third-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
 
+.cart-card-close img
+{
+    width: 20px;
+}
 
+.no-border
+{
+    border: none;
+}
 
+.summary-card
+{
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 10px;
+}
 
+.summary-head h4
+{
+    color: var(--primary-color);
+    font-size: var(--title-fs);
+    font-family: var(--heading-ff);
+    margin-bottom: 40px;
+}
 
+.summary-field
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
+.new-border
+{
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
 
+.summary-field h5
+{
+    color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--content-ff);
+}
 
+.summary-field h6
+{
+    color: var(--content-color);
+    font-size: 15px;
+    font-family: var(--heading-ff);
+}
 
+.summary-btn
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
 
+.summary-btn a
+{
+    width: 100%;
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--heading-ff);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
+.summary-continue-shopping
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
-
+.summary-continue-shopping a
+{
+    color: var(--content-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+    border-bottom: 1px solid var(--content-color);
+    padding-bottom: 0px;
+}
 
 
 
