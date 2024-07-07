@@ -1962,6 +1962,14 @@ form
     margin-left: 270px;
 }
 
+.cnt-sec-head
+{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .cnt-navbar
 {
     height: 70px;
@@ -2010,6 +2018,44 @@ form
     outline: 2px solid var(--blue-color);
 }
 
+.cnt-main-content
+{
+    padding: 30px;
+}
+
+.cnt-head
+{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.cnt-head h4
+{
+    color: var(--primary-color);
+    font-size: 21px;
+    font-family: var(--heading-ff);
+}
+
+.cnt-head button
+{
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    font-size: 15px;
+    font-family: var(--heading-ff);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+#creat-cnt {
+    display: none;
+}
+
+#save-cnt
+{
+    display: none;
+}
 
 
 
@@ -2020,35 +2066,63 @@ form
 
 
 
+table th,
+table td 
+{
+    text-align: center;
+}
 
+table tr:nth-child(even) 
+{
+    background-color: #e4e3e3
+}
 
+th 
+{
+    background: #333;
+    color: #fff;
+}
 
+.pagination 
+{
+    margin: 0;
+}
 
+.pagination li:hover 
+{
+    cursor: pointer;
+}
 
+.header_wrap
+{
+    padding: 30px 0;
+}
 
+.num_rows 
+{
+    width: 20%;
+    float: left;
+}
 
+.tb_search 
+{
+    width: 20%;
+    float: right;
+}
 
+.pagination-container 
+{
+    width: 70%;
+    float: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.rows_count 
+{
+    width: 20%;
+    float: right;
+    text-align: right;
+    color: #999;
+}
 
 
 
