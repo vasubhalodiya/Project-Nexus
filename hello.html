@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            --primary-color: 13, 45, 123;
+            --icon-size: 3rem;
+        }
+
+        input[type="radio"] {
+            display: inline-block;
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1;
+            width: 1;
+            margin: -1;
+            padding: 0;
+            border: 0;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            color: rgb(var(--primary-color));
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            overflow: hidden;
+        }
+
+        .icon:hover {
+            cursor: pointer;
+            background-color: rgba(var(--primary-color), 0.1);
+        }
+
+        .peer:checked~.icon {
+            background-color: rgba(var(--primary-color), 0.2);
+        }
+
+        .wrapper {
+            display: flex;
+            flex-shrink: 0;
+            gap: 0.5rem;
+        }
+
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="wrapper">
+
+            <label for="left">
+                <input type="radio" id="left" name="alignment" value="left" class="peer radio" checked />s
+                <div class="icon">
+                    s
+                </div>
+            </label>
+
+            <label for="center">
+                <input type="radio" id="center" name="alignment" value="center" class="peer radio" />
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+            </label>
+
+            <label for="right">
+                <input type="radio" id="right" name="alignment" value="right" class="peer radio" />
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                    </svg>
+
+                </div>
+            </label>
+
+        </div><!-- end .wrapper -->
+    </div><!-- end .page -->
+
+    <!-- icons from https://heroicons.com -->
+</body>
+
+</html>
