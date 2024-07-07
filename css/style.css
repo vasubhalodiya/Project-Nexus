@@ -2275,17 +2275,25 @@ form
     padding: 50px 30px;
 }
 
-.cnt-adding-part
+.cnt-adding-main-part
 {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 80px;
+}
+
+.cnt-adding-part
+{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin-bottom: 30px;
 }
 
 .cnt-adding-field
 {
-    width: 30%;
+    width: 100%;
 }
 
 .cnt-adding-field h5
@@ -2519,7 +2527,58 @@ form
 
 
 
+#picture-input 
+{
+    display: none;
+}
 
+.picture 
+{
+    height: 42px;
+    color: var(--content-color);
+    background: var(--third-bg-color);
+    font-size: 14px;
+    border: 1px solid var(--content-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-family: sans-serif;
+    outline: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.picture:hover, .picture:active, .picture:focus
+{
+    color: var(--primary-color);
+    background: var(--other-bg-color);
+}
+
+.picture-image
+{
+    color: var(--content-color);
+}
+
+/* .picture:active 
+{
+    color: var(--primary-color);
+    background: var(--other-bg-color);
+}
+
+.picture:focus 
+{
+    color: var(--primary-color);
+    background: var(--other-bg-color);
+} */
+
+.picture-img 
+{
+    max-width: 100px;
+}
 
 
 
