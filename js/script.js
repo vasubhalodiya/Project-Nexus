@@ -18,23 +18,17 @@ tabs.forEach((tab, index) => {
 
 // **********************************************************************************************************
 
-// add product active
+const navlinks = document.querySelectorAll('.nav-links');
 
-const tabsbtn = document.querySelectorAll(".add-item");
-const allctnbtn = document.querySelectorAll(".add-cnt");
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tab => { tab.classList.remove('active') })
+                tab.classList.add('active')
+                allctn.forEach(content => { content.classList.remove('active') })
+                allctn[index].classList.add('active');
+            });
+        });
 
-tabsbtn.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-        tabsbtn.forEach((tab) => {
-            tab.classList.remove("active");
-        });
-        tab.classList.add("active");
-        allctnbtn.forEach((content) => {
-            content.classList.remove("active");
-        });
-        allctnbtn[index].classList.add("active");
-    });
-});
 
 // **********************************************************************************************************
 

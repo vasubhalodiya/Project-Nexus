@@ -672,7 +672,7 @@ form
     /* position: relative; */
     display: flex;
     align-content: center;
-    gap: 15px;
+    gap: 7px;
 }
 
 .cart-count p
@@ -717,9 +717,15 @@ form
 .nav-menu ul a:hover
 {
     color: var(--primary-color);
-    background-color: var(--other-bg-color);
+    background-color: rgb(28, 28, 29, 0.5);
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+.nav-links.active
+{
+    color: var(--primary-color);
+    background-color: var(--other-bg-color);
 }
 
 /* .nav-dropmenu
@@ -2210,8 +2216,35 @@ form
     background-color: var(--other-bg-color);
 }
 
+/* ************************************************************************************************ */
 
+.stock-not-found-content
+{
+    text-align: center;
+    padding: 80px 0px;
+}
 
+.stock-img img
+{
+    width: 25%;
+    opacity: 0.5;
+    margin-bottom: 25px;
+}
+
+.stock-txt h3
+{
+    color: var(--primary-color);
+    font-size: 35px;
+    font-family: var(--heading-ff);
+    margin-bottom: 10px;
+}
+
+.stock-txt h5
+{
+    color: var(--content-color);
+    font-size: 18px;
+    font-family: var(--content);
+}
 
 
 
