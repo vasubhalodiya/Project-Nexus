@@ -2055,18 +2055,51 @@ form
 
 #creat-cnt 
 {
-    /* display: none; */
-    display: block;
+    display: none;
+    /* display: block; */
 }
 
-#add-cnt
+/* #add-cnt
 {
     display: none;
-}
+} */
 
 #save-cnt
 {
     display: none;
+}
+
+.edit 
+{
+    width: 0;
+    font-size: 16px;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+}
+
+.table tbody tr td a .fa-pen
+{
+    color: var(--blue-color);
+    font-size: 14px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table tbody tr td a .fa-trash-can
+{
+    color: #ef4e4e;
+    font-size: 16px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit a
+{
+    margin: 0px 10px;
 }
 
 .cnt-table
@@ -2393,7 +2426,7 @@ form
 
 .cnt-adding-btn
 {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .cnt-adding-btn button
