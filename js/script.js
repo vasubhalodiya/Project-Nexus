@@ -1,3 +1,21 @@
+// sidebar active
+
+const tabs = document.querySelectorAll('.sidebar-link-menu');
+const allctn = document.querySelectorAll('.content-main-section');
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(tab => { tab.classList.remove('active') })
+        tab.classList.add('active')
+        allctn.forEach(content => { content.classList.remove('active') })
+        allctn[index].classList.add('active');
+    })
+})
+
+
+
+
+
 // -----------------for-Shopping-cart-------------
 $(document).ready(function(){
     update_amounts();
@@ -16,9 +34,6 @@ function update_amounts(){
       });
   $('.total').text(sum);
 }
-
-
-
 //----------------for quantity-increment-or-decrement-------
 var incrementQty;
 var decrementQty;
