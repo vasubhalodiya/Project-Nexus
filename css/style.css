@@ -2172,46 +2172,43 @@ form
     align-items: center;
 }
 
-.rows-count p
+.rows-count
 {
     color: var(--content-color);
     font-size: var(--content-mini-fs);
     font-family: var(--content-ff);
 }
 
+.pagination li 
+{
+    width: 35px;
+    height: 35px;
+    color: var(--primary-color);
+    background-color: var(--third-bg-color);
+    margin: 0px 5px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.pagination li.active 
+{
+    cursor: pointer;
+    background-color: var(--blue-color);
+}
 
+.pagination li.active:hover
+{
+    background-color: var(--blue-color);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.pagination li:hover 
+{
+    cursor: pointer;
+    background-color: var(--other-bg-color);
+}
 
 
 
