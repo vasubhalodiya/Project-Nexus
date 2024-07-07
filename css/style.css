@@ -382,7 +382,7 @@ li{
     --content-ff: 'St-Regular'; */
 
     /* Font Size */
-    --heading-fs: 30px;
+    --heading-fs: 27px;
     --title-fs: 20px;
     --content-head-fs: 17px;
     --content-mini-fs: 14px;
@@ -1910,7 +1910,7 @@ form
 .sidebar-links ul a
 {
     color: var(--content-color);
-    font-size: var(--content-head-fs);
+    font-size: 15px;
     font-family: var(--content-ff);
 }
 
@@ -1932,8 +1932,8 @@ form
 
 .sidebar-links ul a li img
 {
-    width: 25px;
-    margin-right: 15px;
+    width: 23px;
+    margin-right: 13px;
 }
 
 .up-border
@@ -1943,6 +1943,7 @@ form
 
 .sidebar-link-menu.active
 {
+    color: var(--primary-color);
     background-color: var(--third-bg-color);
 }
 
@@ -1961,12 +1962,53 @@ form
     margin-left: 270px;
 }
 
+.cnt-navbar
+{
+    height: 70px;
+    color: var(--primary-color);
+    font-size: var(--heading-fs);
+    font-family: var(--logo-ff);
+    padding: 0px 30px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.cnt-path h6
+{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
 
+.cnt-path h6 a
+{
+    color: var(--content-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--heading-ff);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
+.cnt-path h6 a:hover
+{
+    text-decoration: underline;
+}
 
+.cnt-path h6 .path-active
+{
+    color: var(--primary-color);
+}
 
-
+.cnt-profile img
+{
+    width: 40px;
+    margin-top: -3px;
+    border-radius: 50px;
+    border: 4px solid var(--main-bg-color);
+    outline: 2px solid var(--blue-color);
+}
 
 
 
