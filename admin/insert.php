@@ -63,10 +63,10 @@ if(isset($_POST["insert"]))
                 <div class="content-child-section">
                     <div class="cnt-navbar">
                         <div class="cnt-path">
-                            <h6><a href="admin-dashboard.html">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
+                            <h6><a href="admin-dashboard.php">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
                         </div>
                         <div class="cnt-profile">
-                            <a href="admin-profile.html"><img src="../images/my-icon.jpg" alt=""></a>
+                            <a href="admin-profile.php"><img src="../images/my-icon.jpg" alt=""></a>
                         </div>
                     </div>
 <!-- ========================================================================= -->
@@ -264,7 +264,7 @@ if(isset($_POST["insert"]))
             $("#maxRows").trigger("change");
             function getPagination(table) {
                 $("#maxRows").on("change", function () {
-                    $(".pagination").html("");
+                    $(".pagination").php("");
                     var trnum = 0;
                     var maxRows = parseInt($(this).val());
 
@@ -331,7 +331,7 @@ if(isset($_POST["insert"]))
                     " of " +
                     totalRows +
                     " entries";
-                $(".rows-count").html(string);
+                $(".rows-count").php(string);
             }
 
             function default_index() {

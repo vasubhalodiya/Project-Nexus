@@ -67,17 +67,17 @@ if(isset($_POST["insert"]))
                         </div>
                         <div class="sidebar-links">
                             <ul>
-                                <a href="admin-dashboard.html">
+                                <a href="admin-dashboard.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
-                                <a href="admin-users.html">
+                                <a href="admin-users.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Users.svg">Users
                                     </li>
                                 </a>
-                                <a href="admin-category.html">
+                                <a href="admin-category.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Copy.svg">Category
                                     </li>
@@ -87,7 +87,7 @@ if(isset($_POST["insert"]))
                                         <img src="../images/Product.svg">Products
                                     </li>
                                 </a>
-                                <a href="admin-sales.html">
+                                <a href="admin-sales.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Cart.svg">Sales
                                     </li>
@@ -98,12 +98,12 @@ if(isset($_POST["insert"]))
                     <div class="sidebar-part">
                         <div class="sidebar-links">
                             <ul>
-                                <a href="admin-setting.html">
+                                <a href="admin-setting.php">
                                     <li class="up-border sidebar-link-menu">
                                         <img src="../images/Settings.svg">Setting
                                     </li>
                                 </a>
-                                <a href="admin-logout.html">
+                                <a href="admin-logout.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Logout.svg">Logout
                                     </li>
@@ -118,10 +118,10 @@ if(isset($_POST["insert"]))
                 <div class="content-child-section">
                     <div class="cnt-navbar">
                         <div class="cnt-path">
-                            <h6><a href="admin-dashboard.html">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
+                            <h6><a href="admin-dashboard.php">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
                         </div>
                         <div class="cnt-profile">
-                            <a href="admin-profile.html"><img src="../images/my-icon.jpg" alt=""></a>
+                            <a href="admin-profile.php"><img src="../images/my-icon.jpg" alt=""></a>
                         </div>
                     </div>
 <!-- ========================================================================= -->
@@ -319,7 +319,7 @@ if(isset($_POST["insert"]))
             $("#maxRows").trigger("change");
             function getPagination(table) {
                 $("#maxRows").on("change", function () {
-                    $(".pagination").html("");
+                    $(".pagination").php("");
                     var trnum = 0;
                     var maxRows = parseInt($(this).val());
 
@@ -386,7 +386,7 @@ if(isset($_POST["insert"]))
                     " of " +
                     totalRows +
                     " entries";
-                $(".rows-count").html(string);
+                $(".rows-count").php(string);
             }
 
             function default_index() {

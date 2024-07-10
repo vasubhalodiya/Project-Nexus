@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="login-form-acc">
                                     <h6>Already have an account? <a href="login.php">Login</a></h6>
-                                    <!-- <h6>Don't have an account? <a href="signup.html">Register here</a></h6> -->
+                                    <!-- <h6>Don't have an account? <a href="signup.php">Register here</a></h6> -->
                                 </div>
                                 <form method="post" name="signup" onsubmit="return checkpass();">
                                     <div class="login-field">

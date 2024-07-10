@@ -32,19 +32,19 @@
                 <!-- <div class="container"> -->
                     <div class="navbar-content">
                         <div class="nav-logo">
-                            <a href="index.html"><h4>Nexus</h4></a>
+                            <a href="index.php"><h4>Nexus</h4></a>
                         </div>
                         <div class="nav-menu">
                             <ul>
-                                <a href="index.html" class="nav-links"><li>Home</li></a>
-                                <a href="shop.html" class="nav-links"><li>Shop</li></a>
-                                <a href="brands.html" class="nav-links active"><li>Brands</li></a>
+                                <a href="index.php" class="nav-links"><li>Home</li></a>
+                                <a href="shop.php" class="nav-links"><li>Shop</li></a>
+                                <a href="brands.php" class="nav-links active"><li>Brands</li></a>
                                 <a href="#" class="nav-links"><li class="end-line">Support</li></a>
                             </ul>
                         </div>
                         <div class="nav-profile">
                             <ul>
-                                <a href="cart.html" class="nav-links">
+                                <a href="cart.php" class="nav-links">
                                     <li class="cart-count-relative">
                                         <img src="images/Cart.svg" alt="">
                                         <!-- <div class="cart-count">
@@ -818,7 +818,7 @@
                                                     <ul>
                                                         <a href="#"><li>My Account</li></a>
                                                         <a href="#"><li>Checkout</li></a>
-                                                        <a href="cart.html"><li>Cart</li></a>
+                                                        <a href="cart.php"><li>Cart</li></a>
                                                     </ul>
                                                 </div>
                                             </div>

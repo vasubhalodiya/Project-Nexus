@@ -28,12 +28,12 @@
             if($row['user_type'] == 'admin'){
       
             //    $_SESSION['admin_name'] = $row['name'];
-               header('location:admin.html');
+               header('location:admin.php');
       
             }elseif($row['user_type'] == 'user'){
       
             //    $_SESSION['user_name'] = $row['name'];
-               header('location:user.html');
+               header('location:user.php');
       
             }
            
@@ -87,7 +87,7 @@
                                     <a href="index.php"><img src="images/back-to-home.svg" alt="">Home</a>
                                 </div>
                                 <div class="login-form-acc">
-                                    <!-- <h6>Already have an account? <a href="login.html">Login</a></h6> -->
+                                    <!-- <h6>Already have an account? <a href="login.php">Login</a></h6> -->
                                     <h6>Don't have an account? <a href="signup.php">Register here</a></h6>
                                 </div>
                                 <form method="post" action="">
