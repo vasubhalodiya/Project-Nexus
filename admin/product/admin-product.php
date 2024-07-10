@@ -197,7 +197,7 @@
                                                     {
                                                         echo "<tbody>";
                                                         echo "<tr>";
-                                                        echo "<td><img src=".$row['proimage']."height = 50px width = 50px></td>";
+                                                        echo "<td>".$row['proimage']."</td>";
                                                         echo "<td>".$row[2]."</td>";
                                                         echo "<td>".$row[3]."</td>";
                                                         echo "<td>".$row[4]."</td>";

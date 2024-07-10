@@ -63,8 +63,3 @@ if(isset($_POST["insert"]))
 
 
 
-
-
-
-
-
