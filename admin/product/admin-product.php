@@ -1,5 +1,5 @@
 <?php
-include('../includes/config.php');
+include('../../includes/config.php');
 if(isset($_POST["insert"]))
 {
     $proid = $_POST['proid'];
@@ -36,14 +36,14 @@ if(isset($_POST["insert"]))
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Admin Product- Nexus</title>
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/fontawesome-all.css" >
-        <link rel="stylesheet" href="../css/searchboxstyle.css">
-        <link rel="stylesheet" href="../css/slick.css">
-        <link rel="stylesheet" href="../css/slick-theme.css">
-        <link rel="stylesheet" href="../css/animate.css">
-        <link rel="stylesheet" href="../css/style.css" >
-        <link rel="stylesheet" href="../css/responsive.css" >
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/fontawesome-all.css" >
+        <link rel="stylesheet" href="../../css/searchboxstyle.css">
+        <link rel="stylesheet" href="../../css/slick.css">
+        <link rel="stylesheet" href="../../css/slick-theme.css">
+        <link rel="stylesheet" href="../../css/animate.css">
+        <link rel="stylesheet" href="../../css/style.css" >
+        <link rel="stylesheet" href="../../css/responsive.css" >
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6880c7d510.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
@@ -69,27 +69,27 @@ if(isset($_POST["insert"]))
                             <ul>
                                 <a href="admin-dashboard.php">
                                     <li class="sidebar-link-menu">
-                                        <img src="../images/Dashboard.svg">Dashboard
+                                        <img src="../../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
                                 <a href="admin-users.php">
                                     <li class="sidebar-link-menu">
-                                        <img src="../images/Users.svg">Users
+                                        <img src="../../images/Users.svg">Users
                                     </li>
                                 </a>
                                 <a href="admin-category.php">
                                     <li class="sidebar-link-menu">
-                                        <img src="../images/Copy.svg">Category
+                                        <img src="../../images/Copy.svg">Category
                                     </li>
                                 </a>
                                 <a href="admin-product.php">
                                     <li class="sidebar-link-menu active">
-                                        <img src="../images/Product.svg">Products
+                                        <img src="../../images/Product.svg">Products
                                     </li>
                                 </a>
                                 <a href="admin-sales.php">
                                     <li class="sidebar-link-menu">
-                                        <img src="../images/Cart.svg">Sales
+                                        <img src="../../images/Cart.svg">Sales
                                     </li>
                                 </a>
                             </ul>
@@ -100,12 +100,12 @@ if(isset($_POST["insert"]))
                             <ul>
                                 <a href="admin-setting.php">
                                     <li class="up-border sidebar-link-menu">
-                                        <img src="../images/Settings.svg">Setting
+                                        <img src="../../images/Settings.svg">Setting
                                     </li>
                                 </a>
                                 <a href="admin-logout.php">
                                     <li class="sidebar-link-menu">
-                                        <img src="../images/Logout.svg">Logout
+                                        <img src="../../images/Logout.svg">Logout
                                     </li>
                                 </a>
                             </ul>
@@ -118,10 +118,10 @@ if(isset($_POST["insert"]))
                 <div class="content-child-section">
                     <div class="cnt-navbar">
                         <div class="cnt-path">
-                            <h6><a href="admin-dashboard.php">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
+                            <h6><a href="admin-dashboard.php">Admin</a><img src="../../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
                         </div>
                         <div class="cnt-profile">
-                            <a href="admin-profile.php"><img src="../images/my-icon.jpg" alt=""></a>
+                            <a href="admin-profile.php"><img src="../../images/my-icon.jpg" alt=""></a>
                         </div>
                     </div>
 <!-- ========================================================================= -->
@@ -169,7 +169,7 @@ if(isset($_POST["insert"]))
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Image</h5>
                                                         <label class="picture" for="proimage" tabIndex="0">
-                                                            <img src="../images/Upload.svg" alt=""><h6>Choose product images</h6>
+                                                            <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
                                                         </label>
                                                         <span class="picture-image"></span>
                                                         <input type="file" name="proimage" id="proimage">
@@ -207,7 +207,7 @@ if(isset($_POST["insert"]))
                                                 </div>
                                             </div>
                                             <?php
-                                                include('../includes/config.php');
+                                                include('../../includes/config.php');
                                                 $sql = "select * from product";
                                                 $result = mysqli_query($db, $sql);
 
@@ -255,7 +255,7 @@ if(isset($_POST["insert"]))
                                                 <!-- <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
                                                         <div class="stock-img">
-                                                            <img src="../images/empty cart.png" alt="">
+                                                            <img src="../../images/empty cart.png" alt="">
                                                         </div>
                                                         <div class="stock-txt">
                                                             <h3>No item found</h3>
@@ -286,11 +286,11 @@ if(isset($_POST["insert"]))
 
         </div>
 <!-- ******************************************************************************************** -->
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/slick.min.js"></script>
-        <script src="../js/wow.min.js"></script>
-        <script src="../js/script.js"></script>
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/slick.min.js"></script>
+        <script src="../../js/wow.min.js"></script>
+        <script src="../../js/script.js"></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
