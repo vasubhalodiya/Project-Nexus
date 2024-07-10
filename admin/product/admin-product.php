@@ -1,31 +1,3 @@
-<?php
-include('../../includes/config.php');
-if(isset($_POST["insert"]))
-{
-    $proid = $_POST['proid'];
-    $proname = $_POST['proname'];
-    $prostock = $_POST['prostock'];
-    $proprice = $_POST['proprice'];
-    $prowrongprice = $_POST['prowrongprice'];
-    $proquantity = $_POST['proquantity'];
-    $prodescription = $_POST['prodescription'];
-    $proimage = $_POST['proimage'];
-    // $procolor = $_POST['procolor'];
-    // $prosize = $_POST['prosize'];
-
-    // $db = mysqli_connect("localhost","root","","nexus");
-    // $query = "insert into product(proid, proname, prostock, proprice, prowrongprice, proquantity, proimage, prodescription, procolor, prosize) values('$proid','$proname','$prostock',' $proprice','$prowrongprice','$proquantity','$proimage','$prodescription','$procolor','$prosize')";
-    $query = "insert into product(proid, proname, prostock, proprice, prowrongprice, proquantity, prodescription, proimage) values('$proid','$proname','$prostock',' $proprice','$prowrongprice','$proquantity','$prodescription', '$proimage')";
-
-    $run = mysqli_query($db, $query) or die ("can not insert data into database. ".mysqli_error($db));
-
-    if($run)
-    {
-        // echo "data submited to database <a href='form.php'>Click here to submit data</a>";
-        // echo "<br>Your aplication number is- ".mysqli_insert_id($db);
-    }
-}      
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -124,11 +96,64 @@ if(isset($_POST["insert"]))
 <!-- ========================================================================= -->
                     <div class="cnt-main-content">
                         <div class="cnt-child-content">
+                            <div class="cnt-main-add" id="creat-cnt">
+                                <div class="cnt-adding">
+                                    <div class="cnt-adding-head">
+                                        <h4>Add Product</h4>
+                                    </div>
+                                    <div class="cnt-adding-form">
+                                        <form action="action-product.php" method="post">
+                                            <div class="cnt-adding-main-part">
+                                                <div class="cnt-adding-part">
+                                                    <!-- <div class="cnt-adding-field">
+                                                        <h5>Product Id</h5>
+                                                        <input type="text" placeholder="Enter id" name="proid">
+                                                    </div> -->
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Name</h5>
+                                                        <input type="text" placeholder="Enter name" name="proname">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Stock</h5>
+                                                        <input type="text" placeholder="Enter stock" name="prostock">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Quantity</h5>
+                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Description</h5>
+                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodescription"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="cnt-adding-part">
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Price</h5>
+                                                        <input type="text" placeholder="Enter price" name="proprice">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Image</h5>
+                                                        <label class="picture" for="proimage" tabIndex="0">
+                                                            <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
+                                                        </label>
+                                                        <span class="picture-image"></span>
+                                                        <input type="file" name="proimage" id="proimage">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cnt-adding-btn">
+                                                <!-- <button id="save-cnt" onclick="mynew()">Save Product</button> -->
+                                                 <input type="submit" name="insert" value="Add Product">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="cnt-main-cnt" id="add-cnt">
                                 <div class="cnt-head">
                                     <h4>Dashboard</h4>
-                                    <!-- <button onclick="myFunction()">Add Product</button> -->
-                                     <a href="add-product.php">Add Product</a>
+                                    <button onclick="myFunction()">Add Product</button>
+                                     <!-- <a href="add-product.php">Add Product</a> -->
                                 </div>
                                 <div class="cnt-main-table">
                                     <div class="cnt-table">
@@ -162,14 +187,13 @@ if(isset($_POST["insert"]))
                                                         <th>Image</th>
                                                         <th>Name</th>
                                                         <th>Price</th>
-                                                        <th>Wrong Price</th>
                                                         <!-- <th>color</th>
                                                         <th>size</th> -->
                                                         <th>Quantity</th>
                                                         <th>Stock</th>
                                                         <th>Description</th>
-                                                        <th>Edit</th>
-                                                        <th>Delete</th>
+                                                        <th>Edit - Delete - View</th>
+                                                        <!-- <th>Delete</th> -->
                                                     </tr>
                                                 </thead>
                                                 <!-- <tbody> -->
@@ -184,9 +208,8 @@ if(isset($_POST["insert"]))
                                                         echo "<td>".$row[4]."</td>";
                                                         echo "<td>".$row[5]."</td>";
                                                         echo "<td>".$row[6]."</td>";
-                                                        echo "<td>".$row[7]."</td>";
-                                                        echo "<td class='edit'><a href='product-edit.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a></td>";
-                                                        echo "<td class='edit'><a href='product-delete.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-telescope'></i></a></td>";
+                                                        // echo "<td class='edit'></td>";
                                                         echo "</tr>";
                                                         echo "<tbody>";
                                                     }
@@ -242,6 +265,19 @@ if(isset($_POST["insert"]))
                     disclaimer.remove();
                 }
             });
+        </script>
+
+        <script>
+            function myFunction() {
+                document.getElementById("creat-cnt").style.display = "block";
+                document.getElementById("add-cnt").style.display = "none";
+                document.getElementById("save-cnt").style.display = "block";
+            }
+            function mynew() {
+                document.getElementById("creat-cnt").style.display = "none";
+                document.getElementById("add-cnt").style.display = "block";
+                document.getElementById("save-cnt").style.display = "none";
+            }
         </script>
 
         <script>
