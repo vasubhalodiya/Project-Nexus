@@ -41,7 +41,7 @@ $rs1 = mysqli_query($db, $qry2);
                         <h4>Add Product</h4>
                     </div>
                     <div class="cnt-adding-form all-center">
-                        <form action="admin-product.php" method="post">
+                        <form action="update-product.php" method="post">
                         <?php
                         while($row = mysqli_fetch_array($rs1))
                         {
@@ -58,10 +58,6 @@ $rs1 = mysqli_query($db, $qry2);
                                         <div class='cnt-adding-field'>
                                             <h5>Product Quantity</h5>
                                             <input type='text' placeholder='Enter quantity' name='proquantity' value='$row[4]'>
-                                        </div>
-                                        <div class='cnt-adding-field'>
-                                            <h5>Product Description</h5>
-                                            <textarea cols='30' rows='5' placeholder='Product description' name='prodescription' value='$row[6]'></textarea>
                                         </div>
                                     </div>
                                     <div class='cnt-adding-part'>
@@ -82,10 +78,10 @@ $rs1 = mysqli_query($db, $qry2);
                                 <input type='hidden' name='id' value='$row[0]'>
                                 <div class='update-form-btn'>
                                     <div class='update-form-btn-off'>
-                                        <a href='admin-product.php'>cancle</a>
+                                        <a href='admin-product.php'>Cancle</a>
                                     </div>
                                     <div class='update-form-btn-on'>
-                                        <input type='submit' name='update' value='update'>
+                                        <input type='submit' name='update' value='Update'>
                                     </div>
                                 </div>";
                                 }

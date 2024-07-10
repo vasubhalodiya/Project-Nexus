@@ -121,10 +121,6 @@
                                                         <h5>Product Quantity</h5>
                                                         <input type="text" placeholder="Enter quantity" name="proquantity">
                                                     </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Description</h5>
-                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodescription"></textarea>
-                                                    </div>
                                                 </div>
                                                 <div class="cnt-adding-part">
                                                     <div class="cnt-adding-field">
@@ -191,8 +187,7 @@
                                                         <th>size</th> -->
                                                         <th>Quantity</th>
                                                         <th>Stock</th>
-                                                        <th>Description</th>
-                                                        <th>Edit - Delete - View</th>
+                                                        <th>Edit - Delete</th>
                                                         <!-- <th>Delete</th> -->
                                                     </tr>
                                                 </thead>
@@ -202,13 +197,12 @@
                                                     {
                                                         echo "<tbody>";
                                                         echo "<tr>";
-                                                        echo "<td>".$row[1]."</td>";
+                                                        echo "<td><img src=".$row['proimage']."height = 50px width = 50px></td>";
                                                         echo "<td>".$row[2]."</td>";
                                                         echo "<td>".$row[3]."</td>";
                                                         echo "<td>".$row[4]."</td>";
                                                         echo "<td>".$row[5]."</td>";
-                                                        echo "<td>".$row[6]."</td>";
-                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-telescope'></i></a></td>";
+                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         // echo "<td class='edit'></td>";
                                                         echo "</tr>";
                                                         echo "<tbody>";
