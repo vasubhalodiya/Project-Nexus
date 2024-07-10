@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Admin Dashboard - Nexus</title>
+        <title>Admin Product- Nexus</title>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/fontawesome-all.css" >
         <link rel="stylesheet" href="../css/searchboxstyle.css">
@@ -37,7 +38,7 @@
                         <div class="sidebar-links">
                             <ul>
                                 <a href="admin-dashboard.html">
-                                    <li class="sidebar-link-menu active">
+                                    <li class="sidebar-link-menu">
                                         <img src="../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
@@ -52,7 +53,7 @@
                                     </li>
                                 </a>
                                 <a href="admin-product.html">
-                                    <li class="sidebar-link-menu">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../images/Product.svg">Products
                                     </li>
                                 </a>
@@ -87,16 +88,59 @@
                 <div class="content-child-section">
                     <div class="cnt-navbar">
                         <div class="cnt-path">
-                            <h6><a href="admin-dashboard.html">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Dashboard</a></h6>
+                            <h6><a href="admin-dashboard.html">Admin</a><img src="../images/Chevron Right admin.svg" alt=""><a class="path-active">Product</a></h6>
                         </div>
                         <div class="cnt-profile">
                             <a href="admin-profile.html"><img src="../images/my-icon.jpg" alt=""></a>
                         </div>
                     </div>
 <!-- ========================================================================= -->
-
-
-
+                    <div class="cnt-main-content">
+                        <div class="cnt-child-content">
+                            <div class="cnt-main-add" id="creat-cnt">
+                                <div class="cnt-adding">
+                                    <div class="cnt-adding-head">
+                                        <h4>Add Product</h4>
+                                    </div>
+                                    <div class="cnt-adding-form">
+                                        <div class="cnt-adding-main-part">
+                                            <div class="cnt-adding-part">
+                                                <form action="insert.php" method="post">
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Name</h5>
+                                                        <input type="text" placeholder="Enter name" name="proname">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Price</h5>
+                                                        <input type="text" placeholder="Enter price" name="proprice">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Quantity</h5>
+                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Description</h5>
+                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodescription"></textarea>
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Stock</h5>
+                                                        <input type="text" placeholder="Enter stock" name="prostock">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Wrong Price</h5>
+                                                        <input type="text" placeholder="Enter wrong price" name="prowrongprice">
+                                                    </div>
+                                                    <div class="cnt-adding-btn">
+                                                        <input type="submit" name="insert" value="Add Product">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 <!-- ========================================================================= -->
                 </div>
             </div>
@@ -119,5 +163,40 @@
             });
         </script>
 
+        <script>
+            const inputFile = document.querySelector("#proimage");
+            const pictureImage = document.querySelector(".picture-image");
+            const pictureImageTxt = "";
+            pictureImage.innerHTML = pictureImageTxt;
+
+            inputFile.addEventListener("change", function (e) {
+                const inputTarget = e.target;
+                const file = inputTarget.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.addEventListener("load", function (e) {
+                        const readerTarget = e.target;
+
+                        const img = document.createElement("img");
+                        img.src = readerTarget.result;
+                        img.classList.add("picture-img");
+
+                        pictureImage.innerHTML = "";
+                        pictureImage.appendChild(img);
+                    });
+
+                    reader.readAsDataURL(file);
+                } else {
+                    pictureImage.innerHTML = pictureImageTxt;
+                }
+            });
+        </script>
+
     </body>
 </html>
+
+
+
+

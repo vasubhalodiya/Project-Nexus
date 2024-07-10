@@ -1967,6 +1967,12 @@ form
     margin-left: 270px;
 }
 
+.cnt-full-width
+{
+    width: 100%;
+    margin: auto;
+}
+
 .cnt-sec-head
 {
     padding: 30px;
@@ -2107,7 +2113,7 @@ form
     margin-top: 40px;
 }
 
-.table thead th, tbody td
+.table thead th, tbody td, .table tbody+tbody
 {
     border-bottom: 1px solid var(--border);
     border-top: 1px solid var(--border);
@@ -2429,7 +2435,7 @@ form
     margin-top: 70px;
 }
 
-.cnt-adding-btn button
+.cnt-adding-btn input
 {
     color: var(--main-bg-color);
     background-color: var(--primary-color);

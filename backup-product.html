@@ -96,7 +96,7 @@
 <!-- ========================================================================= -->
                     <div class="cnt-main-content">
                         <div class="cnt-child-content">
-                            <div class="cnt-main-add" id="creat-cnt">
+                            <!-- <div class="cnt-main-add" id="creat-cnt">
                                 <div class="cnt-adding">
                                     <div class="cnt-adding-head">
                                         <h4>Add Product</h4>
@@ -107,56 +107,56 @@
                                                 <div class="cnt-adding-part">
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Name</h5>
-                                                        <input type="text" placeholder="Enter name">
+                                                        <input type="text" placeholder="Enter name" name="proname">
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Price</h5>
-                                                        <input type="text" placeholder="Enter price">
+                                                        <input type="text" placeholder="Enter price" name="proprice">
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Quantity</h5>
-                                                        <input type="text" placeholder="Enter quantity">
+                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Description</h5>
-                                                        <textarea cols="30" rows="5" placeholder="Product description"></textarea>
+                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodescription"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="cnt-adding-part">
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Stock</h5>
-                                                        <input type="text" placeholder="Enter stock">
+                                                        <input type="text" placeholder="Enter stock" name="prostock">
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Wrong Price</h5>
-                                                        <input type="text" placeholder="Enter wrong price">
+                                                        <input type="text" placeholder="Enter wrong price" name="prowrongprice">
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Image</h5>
-                                                        <label class="picture" for="picture-input" tabIndex="0">
+                                                        <label class="picture" for="proimage" tabIndex="0">
                                                             <img src="../images/Upload.svg" alt=""><h6>Choose product images</h6>
                                                         </label>
                                                         <span class="picture-image"></span>
-                                                        <input type="file" name="picture-input" id="picture-input">
+                                                        <input type="file" name="proimage" id="proimage">
                                                     </div>
                                                     <div class="cnt-adding-mini-part">
                                                         <div class="cnt-adding-field">
                                                             <h5>Colors</h5>
                                                             <div class="cnt-adding-colors">
                                                                 <label>
-                                                                    <input type="radio" name="color" class="color-box-done">
+                                                                    <input type="radio" name="color" class="color-box-done" value="red">
                                                                     <div class="icon red"></div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="color" class="color-box-done">
+                                                                    <input type="radio" name="color" class="color-box-done" value="blue">
                                                                     <div class="icon blue"></div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="color" class="color-box-done">
+                                                                    <input type="radio" name="color" class="color-box-done" value="orange">
                                                                     <div class="icon orange"></div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="color" class="color-box-done">
+                                                                    <input type="radio" name="color" class="color-box-done" value="green">
                                                                     <div class="icon green"></div>
                                                                 </label>
                                                             </div>
@@ -165,33 +165,25 @@
                                                             <h5>Sizes</h5>
                                                             <div class="cnt-adding-sizes">
                                                                 <label>
-                                                                    <input type="radio" name="size" class="size-box-done">
+                                                                    <input type="radio" name="size" class="size-box-done" value="s">
                                                                     <div class="icon">S</div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="size" class="size-box-done">
+                                                                    <input type="radio" name="size" class="size-box-done" value="m">
                                                                     <div class="icon">M</div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="size" class="size-box-done">
+                                                                    <input type="radio" name="size" class="size-box-done" value="l">
                                                                     <div class="icon">L</div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="size" class="size-box-done">
+                                                                    <input type="radio" name="size" class="size-box-done" value="xl">
                                                                     <div class="icon">XL</div>
                                                                 </label>
                                                                 <label>
-                                                                    <input type="radio" name="size" class="size-box-done">
+                                                                    <input type="radio" name="size" class="size-box-done" value="xxl">
                                                                     <div class="icon">XXL</div>
                                                                 </label>
-                                                                <!-- <label>
-                                                                    <input type="radio" name="alignment" class="size-box-done radio">
-                                                                    <div class="icon">S</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" id="right" name="alignment" value="right" class="size-box-done radio" />
-                                                                    <div class="icon">M</div>
-                                                                </label> -->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -203,11 +195,12 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="cnt-main-cnt" id="add-cnt">
                                 <div class="cnt-head">
                                     <h4>Dashboard</h4>
-                                    <button onclick="myFunction()">Add Product</button>
+                                    <!-- <button onclick="myFunction()">Add Product</button> -->
+                                     <a href="add-product.php"></a>
                                 </div>
                                 <div class="cnt-main-table">
                                     <div class="cnt-table">
@@ -227,66 +220,56 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                            <?php
+                                                include('../includes/config.php');
+                                                // $db = mysqli_connect("localhost","root","","nexus");
+                                                $sql = "select * from product";
+                                                $result = mysqli_query($db, $sql);
+                                                // echo mysqli_num_rows($result);
+
+                                                if(mysqli_num_rows($result)>0)
+                                                {
+                                            ?>
                                             <table class="table table-class" id="table-id">
                                                 <thead>
                                                     <tr>
+                                                        <th>Image</th>
                                                         <th>Name</th>
-                                                        <th>Email</th>
-                                                        <th>Phone</th>
-                                                        <th>Date</th>
+                                                        <th>Price</th>
+                                                        <th>Wrong Price</th>
+                                                        <th>color</th>
+                                                        <th>size</th>
+                                                        <th>Quantity</th>
+                                                        <th>Stock</th>
+                                                        <th>Description</th>
                                                         <th class="edit">Edit</th>
                                                         <th class="edit">Delete</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Rajah Armstrong</td>
-                                                        <td>erat.neque@noncursusnon.ca</td>
-                                                        <td>1-636-140-1210</td>
-                                                        <td>Oct 26, 2015</td>
-                                                        <td><a href='#'><i class='fa-solid fa-pen'></i></a></td>
-                                                        <td><a href='#'><i class='fa-regular fa-trash-can'></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Kuame Parsons</td>
-                                                        <td>non.sapien@in.com</td>
-                                                        <td>1-962-122-8834</td>
-                                                        <td>Aug 2, 2015</td>
-                                                        <td><a href='#'><i class='fa-solid fa-pen'></i></a></td>
-                                                        <td><a href='#'><i class='fa-regular fa-trash-can'></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Ira Parker</td>
-                                                        <td>Vivamus.molestie.dapibus@quisturpisvitae.edu</td>
-                                                        <td>1-584-906-8572</td>
-                                                        <td>Sep 15, 2015</td>
-                                                        <td><a href='#'><i class='fa-solid fa-pen'></i></a></td>
-                                                        <td><a href='#'><i class='fa-regular fa-trash-can'></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Dante Carlson</td>
-                                                        <td>dis.parturient@mi.co.uk</td>
-                                                        <td>1-364-156-9666</td>
-                                                        <td>Nov 28, 2015</td>
-                                                        <td><a href='#'><i class='fa-solid fa-pen'></i></a></td>
-                                                        <td><a href='#'><i class='fa-regular fa-trash-can'></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nathan Bernard</td>
-                                                        <td>Etiam.vestibulum.massa@nonummy.net</td>
-                                                        <td>1-646-420-3211</td>
-                                                        <td>Aug 4, 2016</td>
-                                                        <td><a href='#'><i class='fa-solid fa-pen'></i></a></td>
-                                                        <td><a href='#'><i class='fa-regular fa-trash-can'></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nathan Bernard</td>
-                                                        <td>Etiam.vestibulum.massa@nonummy.net</td>
-                                                        <td>1-646-420-3211</td>
-                                                        <td>Aug 4, 2016</td>
-                                                        <td><a href='#'><i class='fa-solid fa-pen'></i></a></td>
-                                                        <td><a href='#'><i class='fa-regular fa-trash-can'></i></a></td>
-                                                    </tr>
+                                                    <?php
+                                                    while($row = mysqli_fetch_array($result))
+                                                    {
+                                                        echo "<tbody>";
+                                                        echo "<tr>";
+                                                        echo "<td>".$row[1]."</td>";
+                                                        echo "<td>".$row[2]."</td>";
+                                                        echo "<td>".$row[3]."</td>";
+                                                        echo "<td>".$row[4]."</td>";
+                                                        echo "<td>".$row[5]."</td>";
+                                                        echo "<td>".$row[6]."</td>";
+                                                        echo "<td>".$row[7]."</td>";
+                                                        echo "<td>".$row[8]."</td>";
+                                                        echo "<td>".$row[9]."</td>";
+                                                        echo "<td>".$row[10]."</td>";
+                                                        echo "<td><a href='product-edit.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a></td>";
+                                                        echo "<td><a href='product-delete.php?id=$row[0]'<i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "</tr>";
+                                                    }
+                                                    }
+                                                    else
+                                                    {
+                                                        ?>
                                                 </tbody>
                                                 <!-- <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
@@ -299,6 +282,9 @@
                                                         </div>
                                                     </div>
                                                 </div> -->
+                                                <?php
+                                                    }
+                                                ?>
                                             </table>
                                             <div class='pagination-container'>
                                                 <nav>
@@ -333,7 +319,7 @@
                 }
             });
         </script>
-        <script>
+        <!-- <script>
             function myFunction() {
                 document.getElementById("creat-cnt").style.display = "block";
                 document.getElementById("add-cnt").style.display = "none";
@@ -344,7 +330,7 @@
                 document.getElementById("add-cnt").style.display = "block";
                 document.getElementById("save-cnt").style.display = "none";
             }
-        </script>
+        </script> -->
 
         <script>
             getPagination("#table-id");
@@ -471,7 +457,7 @@
         </script>
 
         <script>
-            const inputFile = document.querySelector("#picture-input");
+            const inputFile = document.querySelector("#proimage");
             const pictureImage = document.querySelector(".picture-image");
             const pictureImageTxt = "";
             pictureImage.innerHTML = pictureImageTxt;
