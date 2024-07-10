@@ -35,28 +35,28 @@
                             <h3>Nexus</h3>
                         </div>
                         <div class="sidebar-links">
-                            <ul>
-                                <a href="admin-dashboard.php">
+                        <ul>
+                                <a href="../admin-dashboard.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
-                                <a href="admin-users.php">
-                                    <li class="sidebar-link-menu">
+                                <a href="../users/admin-users.php">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../../images/Users.svg">Users
                                     </li>
                                 </a>
-                                <a href="admin-category.php">
-                                    <li class="sidebar-link-menu active">
+                                <a href="../category/admin-category.php">
+                                    <li class="sidebar-link-menu">
                                         <img src="../../images/Copy.svg">Category
                                     </li>
                                 </a>
-                                <a href="admin-product.php">
+                                <a href="../product/admin-product.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Product.svg">Products
                                     </li>
                                 </a>
-                                <a href="admin-sales.php">
+                                <a href="../sales/admin-sales.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Cart.svg">Sales
                                     </li>
@@ -67,12 +67,12 @@
                     <div class="sidebar-part">
                         <div class="sidebar-links">
                             <ul>
-                                <a href="admin-setting.php">
+                                <a href="../admin-setting.php">
                                     <li class="up-border sidebar-link-menu">
                                         <img src="../../images/Settings.svg">Setting
                                     </li>
                                 </a>
-                                <a href="admin-logout.php">
+                                <a href="../admin-logout.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Logout.svg">Logout
                                     </li>

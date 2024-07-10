@@ -26,9 +26,6 @@ if(isset($_POST["insert"]))
     }
 }      
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -66,28 +63,28 @@ if(isset($_POST["insert"]))
                             <h3>Nexus</h3>
                         </div>
                         <div class="sidebar-links">
-                            <ul>
-                                <a href="admin-dashboard.php">
+                        <ul>
+                                <a href="../admin-dashboard.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
-                                <a href="admin-users.php">
-                                    <li class="sidebar-link-menu">
+                                <a href="../users/admin-users.php">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../../images/Users.svg">Users
                                     </li>
                                 </a>
-                                <a href="admin-category.php">
+                                <a href="../category/admin-category.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Copy.svg">Category
                                     </li>
                                 </a>
-                                <a href="admin-product.php">
-                                    <li class="sidebar-link-menu active">
+                                <a href="../product/admin-product.php">
+                                    <li class="sidebar-link-menu">
                                         <img src="../../images/Product.svg">Products
                                     </li>
                                 </a>
-                                <a href="admin-sales.php">
+                                <a href="../sales/admin-sales.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Cart.svg">Sales
                                     </li>
@@ -98,12 +95,12 @@ if(isset($_POST["insert"]))
                     <div class="sidebar-part">
                         <div class="sidebar-links">
                             <ul>
-                                <a href="admin-setting.php">
+                                <a href="../admin-setting.php">
                                     <li class="up-border sidebar-link-menu">
                                         <img src="../../images/Settings.svg">Setting
                                     </li>
                                 </a>
-                                <a href="admin-logout.php">
+                                <a href="../admin-logout.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Logout.svg">Logout
                                     </li>
@@ -127,66 +124,11 @@ if(isset($_POST["insert"]))
 <!-- ========================================================================= -->
                     <div class="cnt-main-content">
                         <div class="cnt-child-content">
-                        <div class="cnt-main-add" id="creat-cnt">
-                                <div class="cnt-adding">
-                                    <div class="cnt-adding-head">
-                                        <h4>Add Product</h4>
-                                    </div>
-                                    <div class="cnt-adding-form">
-                                        <form action="insert.php" method="post">
-                                            <div class="cnt-adding-main-part">
-                                                <div class="cnt-adding-part">
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Id</h5>
-                                                        <input type="text" placeholder="Enter id" name="proid">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Name</h5>
-                                                        <input type="text" placeholder="Enter name" name="proname">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Price</h5>
-                                                        <input type="text" placeholder="Enter price" name="proprice">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Quantity</h5>
-                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Description</h5>
-                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodescription"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="cnt-adding-part">
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Stock</h5>
-                                                        <input type="text" placeholder="Enter stock" name="prostock">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Wrong Price</h5>
-                                                        <input type="text" placeholder="Enter wrong price" name="prowrongprice">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Image</h5>
-                                                        <label class="picture" for="proimage" tabIndex="0">
-                                                            <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
-                                                        </label>
-                                                        <span class="picture-image"></span>
-                                                        <input type="file" name="proimage" id="proimage">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cnt-adding-btn">
-                                                <input type="submit" name="insert" value="Add Product">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="cnt-main-cnt" id="add-cnt">
                                 <div class="cnt-head">
                                     <h4>Dashboard</h4>
-                                    <button onclick="myFunction()">Add Product</button>
+                                    <!-- <button onclick="myFunction()">Add Product</button> -->
+                                     <a href="add-product.php">Add Product</a>
                                 </div>
                                 <div class="cnt-main-table">
                                     <div class="cnt-table">
@@ -226,11 +168,11 @@ if(isset($_POST["insert"]))
                                                         <th>Quantity</th>
                                                         <th>Stock</th>
                                                         <th>Description</th>
-                                                        <th class="edit">Edit</th>
-                                                        <th class="edit">Delete</th>
+                                                        <th>Edit</th>
+                                                        <th>Delete</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                <!-- <tbody> -->
                                                     <?php
                                                     while($row = mysqli_fetch_array($result))
                                                     {
@@ -243,15 +185,17 @@ if(isset($_POST["insert"]))
                                                         echo "<td>".$row[5]."</td>";
                                                         echo "<td>".$row[6]."</td>";
                                                         echo "<td>".$row[7]."</td>";
-                                                        echo "<td><a href='product-edit.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a></td>";
-                                                        echo "<td><a href='product-delete.php?id=$row[0]'<i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "<td class='edit'><a href='product-edit.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a></td>";
+                                                        echo "<td class='edit'><a href='product-delete.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         echo "</tr>";
+                                                        echo "<tbody>";
                                                     }
+                                                        echo "</table>";
                                                     }
                                                     else
                                                     {
                                                         ?>
-                                                </tbody>
+                                                <!-- </tbody> -->
                                                 <!-- <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
                                                         <div class="stock-img">
@@ -266,7 +210,6 @@ if(isset($_POST["insert"]))
                                                 <?php
                                                     }
                                                 ?>
-                                            </table>
                                             <div class='pagination-container'>
                                                 <nav>
                                                     <ul class="pagination"></ul>
@@ -302,140 +245,114 @@ if(isset($_POST["insert"]))
         </script>
 
         <script>
-            function myFunction() {
-                document.getElementById("creat-cnt").style.display = "block";
-                document.getElementById("add-cnt").style.display = "none";
-                document.getElementById("save-cnt").style.display = "block";
-            }
-            function mynew() {
-                document.getElementById("creat-cnt").style.display = "none";
-                document.getElementById("add-cnt").style.display = "block";
-                document.getElementById("save-cnt").style.display = "none";
-            }
-        </script>
+            getPagination('#table-id');
+            $('#maxRows').trigger('change');
+            function getPagination (table){
 
-        <script>
-            getPagination("#table-id");
-            $("#maxRows").trigger("change");
-            function getPagination(table) {
-                $("#maxRows").on("change", function () {
-                    $(".pagination").php("");
-                    var trnum = 0;
+                $('#maxRows').on('change',function(){
+                    $('.pagination').html('');
+                    var trnum = 0 ;
                     var maxRows = parseInt($(this).val());
-
-                    var totalRows = $(table + " tbody tr").length;
-                    $(table + " tr:gt(0)").each(function () {
+                
+                    var totalRows = $(table+' tbody tr').length;
+                    $(table+' tr:gt(0)').each(function(){
                         trnum++;
-                        if (trnum > maxRows) {
-                            $(this).hide();
-                        }
-                        if (trnum <= maxRows) {
-                            $(this).show();
-                        }
+                        if (trnum > maxRows ){
+                            
+                            $(this).hide(); 
+                        }if (trnum <= maxRows ){$(this).show();}
                     });
-                    if (totalRows > maxRows) {
-                        var pagenum = Math.ceil(totalRows / maxRows);
-                        for (var i = 1; i <= pagenum;) {
-                            $(".pagination")
-                                .append(
-                                    '<li data-page="' +
-                                    i +
-                                    '"><span>' +
-                                    i++ +
-                                    '<span class="sr-only">(current)</span></span></li>'
-                                )
-                                .show();
+                    if (totalRows > maxRows){
+                        var pagenum = Math.ceil(totalRows/maxRows);  
+                        for (var i = 1; i <= pagenum ;){
+                        $('.pagination').append('<li data-page="'+i+'">\<span>'+ i++ +'<span class="sr-only">(current)</span></span>\</li>').show();
                         }
+            
+                
                     }
-                    $(".pagination li:first-child").addClass("active");
-                    showig_rows_count(maxRows, 1, totalRows);
-                    $(".pagination li").on("click", function (e) {
-                        e.preventDefault();
-                        var pageNum = $(this).attr("data-page");
-                        var trIndex = 0;
-                        $(".pagination li").removeClass("active");
-                        $(this).addClass("active");
-                        showig_rows_count(maxRows, pageNum, totalRows);
-                        $(table + " tr:gt(0)").each(function () {
-                            trIndex++;
-                            if (
-                                trIndex > maxRows * pageNum ||
-                                trIndex <= maxRows * pageNum - maxRows
-                            ) {
-                                $(this).hide();
-                            } else {
-                                $(this).show();
-                            }
-                        });
-                    });
-                });
-            }
+                    $('.pagination li:first-child').addClass('active');
+                
+            showig_rows_count(maxRows, 1, totalRows);
 
-            $(function () {
-                default_index();
+                $('.pagination li').on('click',function(e){
+                e.preventDefault();
+                        var pageNum = $(this).attr('data-page');
+                        var trIndex = 0 ;
+                        $('.pagination li').removeClass('active');
+                        $(this).addClass('active');
+                
+            showig_rows_count(maxRows, pageNum, totalRows);
+                
+                        $(table+' tr:gt(0)').each(function(){
+                            trIndex++;
+                            if (trIndex > (maxRows*pageNum) || trIndex <= ((maxRows*pageNum)-maxRows)){
+                                $(this).hide();		
+                            }else {$(this).show();}
+                        });
+                            });
+                });
+            }	
+
+            $(function(){
+            default_index();
             });
 
             function showig_rows_count(maxRows, pageNum, totalRows) {
-                var end_index = maxRows * pageNum;
-                var start_index = maxRows * pageNum - maxRows + parseFloat(1);
-                var string =
-                    "Showing " +
-                    start_index +
-                    " to " +
-                    end_index +
-                    " of " +
-                    totalRows +
-                    " entries";
-                $(".rows-count").php(string);
+                var end_index = maxRows*pageNum;
+                var start_index = ((maxRows*pageNum)- maxRows) + parseFloat(1);
+                var string = 'Showing '+ start_index + ' to ' + end_index +' of ' + totalRows + ' entries';               
+                $('.rows_count').html(string);
             }
 
             function default_index() {
-                $("table tr:eq(0)").prepend("<th> ID </th>");
-                var id = 0;
+            $('table tr:eq(0)').prepend('<th> ID </th>')
 
-                $("table tr:gt(0)").each(function () {
-                    id++;
-                    $(this).prepend("<td>" + id + "</td>");
-                });
+                            var id = 0;
+
+                            $('table tr:gt(0)').each(function(){	
+                                id++
+                                $(this).prepend('<td>'+id+'</td>');
+                            });
             }
 
             function FilterkeyWord_all_table() {
-                var count = $(".table")
-                    .children("tbody")
-                    .children("tr:first-child")
-                    .children("td").length;
 
-                var input, filter, table, tr, td, i;
-                input = document.getElementById("search-input-all");
-                var input_value = document.getElementById("search-input-all").value;
+            var count = $('.table').children('tbody').children('tr:first-child').children('td').length; 
+
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("search_input_all");
+            var input_value =     document.getElementById("search_input_all").value;
                 filter = input.value.toLowerCase();
-                if (input_value != "") {
-                    table = document.getElementById("table-id");
-                    tr = table.getElementsByTagName("tr");
+            if(input_value !=''){
+                table = document.getElementById("table-id");
+                tr = table.getElementsByTagName("tr");
 
-                    for (i = 1; i < tr.length; i++) {
-                        var flag = 0;
-
-                        for (j = 0; j < count; j++) {
-                            td = tr[i].getElementsByTagName("td")[j];
-                            if (td) {
-                                var td_text = td.innerHTML;
-                                if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
-                                    flag = 1;
-                                } else {
-                                }
-                            }
-                        }
-                        if (flag == 1) {
-                            tr[i].style.display = "";
+                for (i = 1; i < tr.length; i++) {
+                
+                var flag = 0;
+                
+                for(j = 0; j < count; j++){
+                    td = tr[i].getElementsByTagName("td")[j];
+                    if (td) {
+                    
+                        var td_text = td.innerHTML;  
+                        if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                        flag = 1;
                         } else {
-                            tr[i].style.display = "none";
                         }
                     }
-                } else {
-                    $("#maxRows").trigger("change");
+                    }
+                if(flag==1){
+                            tr[i].style.display = "";
+                }else {
+                    tr[i].style.display = "none";
                 }
+                }
+            }else {
+            $('#maxRows').trigger('change');
             }
+            }
+
         </script>
 
         <script>

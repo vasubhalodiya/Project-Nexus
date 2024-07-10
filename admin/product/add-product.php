@@ -36,28 +36,28 @@
                             <h3>Nexus</h3>
                         </div>
                         <div class="sidebar-links">
-                            <ul>
-                                <a href="admin-dashboard.php">
+                        <ul>
+                                <a href="../admin-dashboard.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
-                                <a href="admin-users.php">
-                                    <li class="sidebar-link-menu">
+                                <a href="../users/admin-users.php">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../../images/Users.svg">Users
                                     </li>
                                 </a>
-                                <a href="admin-category.php">
+                                <a href="../category/admin-category.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Copy.svg">Category
                                     </li>
                                 </a>
-                                <a href="admin-product.php">
-                                    <li class="sidebar-link-menu active">
+                                <a href="../product/admin-product.php">
+                                    <li class="sidebar-link-menu">
                                         <img src="../../images/Product.svg">Products
                                     </li>
                                 </a>
-                                <a href="admin-sales.php">
+                                <a href="../sales/admin-sales.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Cart.svg">Sales
                                     </li>
@@ -68,12 +68,12 @@
                     <div class="sidebar-part">
                         <div class="sidebar-links">
                             <ul>
-                                <a href="admin-setting.php">
+                                <a href="../admin-setting.php">
                                     <li class="up-border sidebar-link-menu">
                                         <img src="../../images/Settings.svg">Setting
                                     </li>
                                 </a>
-                                <a href="admin-logout.php">
+                                <a href="../admin-logout.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../../images/Logout.svg">Logout
                                     </li>
@@ -103,7 +103,7 @@
                                         <h4>Add Product</h4>
                                     </div>
                                     <div class="cnt-adding-form">
-                                        <form action="insert.php" method="post">
+                                        <form action="admin-product.php" method="post">
                                             <div class="cnt-adding-main-part">
                                                 <div class="cnt-adding-part">
                                                     <div class="cnt-adding-field">
@@ -148,7 +148,7 @@
                                             </div>
                                             <div class="cnt-adding-btn">
                                                 <!-- <button id="save-cnt" onclick="mynew()">Save Product</button> -->
-                                                 <input type="submit" name="insert" value="Add Product"onclick="mynew()">
+                                                 <input type="submit" name="insert" value="Add Product">
                                             </div>
                                         </form>
                                     </div>

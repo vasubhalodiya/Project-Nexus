@@ -35,28 +35,28 @@
                             <h3>Nexus</h3>
                         </div>
                         <div class="sidebar-links">
-                            <ul>
+                        <ul>
                                 <a href="admin-dashboard.php">
-                                    <li class="sidebar-link-menu">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../images/Dashboard.svg">Dashboard
                                     </li>
                                 </a>
-                                <a href="admin-users.php">
+                                <a href="users/admin-users.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Users.svg">Users
                                     </li>
                                 </a>
-                                <a href="admin-category.php">
+                                <a href="category/admin-category.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Copy.svg">Category
                                     </li>
                                 </a>
-                                <a href="admin-product.php">
+                                <a href="product/admin-product.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Product.svg">Products
                                     </li>
                                 </a>
-                                <a href="admin-sales.php">
+                                <a href="sales/admin-sales.php">
                                     <li class="sidebar-link-menu">
                                         <img src="../images/Cart.svg">Sales
                                     </li>

@@ -2048,7 +2048,7 @@ form
     font-family: var(--heading-ff);
 }
 
-.cnt-head button
+.cnt-head button, .cnt-head a
 {
     color: var(--main-bg-color);
     background-color: var(--primary-color);
@@ -2059,35 +2059,59 @@ form
     border-radius: 8px;
 }
 
-#creat-cnt 
+/* #creat-cnt 
 {
     display: none;
-    /* display: block; */
-}
+    display: block;
+} */
 
 /* #add-cnt
 {
     display: none;
 } */
 
-#save-cnt
+/* #save-cnt
 {
     display: none;
+} */
+
+.table td, .table th
+{
+    vertical-align: middle;
 }
 
-.edit 
+.table tbody tr td a i
 {
-    width: 0;
-    font-size: 16px;
-    text-align: center;
-    border-top: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table tbody tr .edit a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.table tbody tr .delete
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
 }
 
 .table tbody tr td a .fa-pen
 {
+    width: 55px;
+    height: 30px;
     color: var(--blue-color);
+    background-color: var(--third-bg-color);
+    border-radius: 5px;
     font-size: 14px;
-    padding: 5px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2095,17 +2119,16 @@ form
 
 .table tbody tr td a .fa-trash-can
 {
+    width: 55px;
+    height: 30px;
     color: #ef4e4e;
+    background-color: var(--third-bg-color);
+    border-radius: 5px;
     font-size: 16px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.edit a
-{
-    margin: 0px 10px;
 }
 
 .cnt-table
@@ -2132,7 +2155,6 @@ form
     background-color: var(--third-bg-color);
     font-size: 15px;
     font-family: var(--content-ff);
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
@@ -2151,11 +2173,6 @@ form
     margin: 0px 4px;
     padding: 5px 12px;
     border-radius: 5px;
-}
-
-.pagination li.active 
-{
-    cursor: pointer;
 }
 
 .pagination li:hover 
@@ -2248,6 +2265,7 @@ form
 .pagination li.active 
 {
     cursor: pointer;
+    color: var(--main-bg-color);
     background-color: var(--blue-color);
 }
 
