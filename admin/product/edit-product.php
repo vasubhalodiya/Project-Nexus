@@ -53,6 +53,16 @@ $rs1 = mysqli_query($db, $qry2);
                                             <input type='text' placeholder='Enter name' name='proname' value='$row[proname]'>
                                         </div>
                                         <div class='cnt-adding-field'>
+                                                        <h5>Product Category</h5>
+                                                        <select name='procategory'>
+                                                            include('../../includes/config.php');
+                                                            $categories = mysqli_query($db, 'Select * from category');
+                                                            while($c = mysqli_fetch_array($categories)) {
+                                                            <option value='$c[catname]'>$c[catname]</option>
+                                                            }
+                                                        </select>
+                                                    </div>
+                                        <div class='cnt-adding-field'>
                                             <h5>Product Quantity</h5>
                                             <input type='text' placeholder='Enter quantity' name='proquantity' value='$row[proquantity]'>
                                         </div>

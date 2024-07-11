@@ -11,13 +11,14 @@ if(isset($_POST['update']))
 
     $proname = $_POST['proname'];
     $proprice = $_POST['proprice'];
+    $procategory = $_POST['procategory'];
     $procolor = $_POST['procolor'];
     $prosize = $_POST['prosize'];
     $proquantity = $_POST['proquantity'];
     $prostockstatus = $_POST['prostockstatus'];
     $prodesc = $_POST['prodesc'];
     
-    $qry1 = "update product set proimage='$folder', proname='$proname', proprice='$proprice', procolor='$procolor', prosize='$prosize', proquantity='$proquantity', prostockstatus='$prostockstatus', prodesc='$prodesc' where proid=$id";
+    $qry1 = "update product set proimage='$folder', proname='$proname', proprice='$proprice', procategory='$procategory', procolor='$procolor', prosize='$prosize', proquantity='$proquantity', prostockstatus='$prostockstatus', prodesc='$prodesc' where proid=$id";
 
     $rs1 = mysqli_query($db, $qry1);
     // echo $qry1; //or

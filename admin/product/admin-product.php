@@ -114,6 +114,18 @@
                                                         <input type="text" placeholder="Enter name" name="proname">
                                                     </div>
                                                     <div class="cnt-adding-field">
+                                                        <h5>Product Category</h5>
+                                                        <select name="procategory">
+                                                            <?php
+                                                            include('../../includes/config.php');
+                                                            $categories = mysqli_query($db, "Select * from category");
+                                                            while($c = mysqli_fetch_array($categories)) {
+                                                            ?>
+                                                            <option value="<?php echo $c['catname'] ?>"><?php echo $c['catname']?></option>
+                                                            <?php } ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="cnt-adding-field">
                                                         <h5>Product Quantity</h5>
                                                         <input type="text" placeholder="Enter quantity" name="proquantity">
                                                     </div>
@@ -239,6 +251,7 @@
                                                         <th>Image</th>
                                                         <th>Name</th>
                                                         <th>Price</th>
+                                                        <th>Category</th>
                                                         <th>color</th>
                                                         <th>size</th>
                                                         <th>Quantity</th>
@@ -256,6 +269,7 @@
                                                         echo "<td><img src='".$row['proimage']."' width=80px></td>";
                                                         echo "<td>".$row['proname']."</td>";
                                                         echo "<td>".$row['proprice']."</td>";
+                                                        echo "<td>".$row['procategory']."</td>";
                                                         echo "<td>".$row['procolor']."</td>";
                                                         echo "<td>".$row['prosize']."</td>";
                                                         echo "<td>".$row['proquantity']."</td>";
@@ -270,8 +284,7 @@
                                                     else
                                                     {
                                                         ?>
-                                                <!-- </tbody> -->
-                                                <!-- <div class="stock-main-content">
+                                                <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
                                                         <div class="stock-img">
                                                             <img src="../../images/empty cart.png" alt="">
@@ -281,7 +294,7 @@
                                                             <h5>Please refresh the page and try again</h5>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                                 <?php
                                                     }
                                                 ?>

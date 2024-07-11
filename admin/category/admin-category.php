@@ -99,10 +99,10 @@
                             <div class="cnt-main-add" id="creat-cnt">
                                 <div class="cnt-adding">
                                     <div class="cnt-adding-head">
-                                        <h4>Add Product</h4>
+                                        <h4>Add Category</h4>
                                     </div>
                                     <div class="cnt-adding-form">
-                                        <form action="action-product.php" method="post" enctype="multipart/form-data">
+                                        <form action="action-category.php" method="post" enctype="multipart/form-data">
                                             <div class="cnt-adding-main-part">
                                                 <div class="cnt-adding-part">
                                                     <!-- <div class="cnt-adding-field">
@@ -110,85 +110,8 @@
                                                         <input type="text" placeholder="Enter id" name="proid">
                                                     </div> -->
                                                     <div class="cnt-adding-field">
-                                                        <h5>Product Name</h5>
-                                                        <input type="text" placeholder="Enter name" name="proname">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Quantity</h5>
-                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Description</h5>
-                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodesc"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="cnt-adding-part">
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Price</h5>
-                                                        <input type="text" placeholder="Enter price" name="proprice">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Stock Status</h5>
-                                                        <select name="prostockstatus">
-                                                            <option value="In Stock">In Stock</option>
-                                                            <option value="Out of Stock">Out of Stock</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Image</h5>
-                                                        <label class="picture" for="proimage" tabIndex="0">
-                                                            <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
-                                                        </label>
-                                                        <span class="picture-image"></span>
-                                                        <input type="file" name="uploadfile" id="proimage" class="file-input">
-                                                    </div>
-                                                    <div class="cnt-adding-mini-part">
-                                                        <div class="cnt-adding-field">
-                                                            <h5>Colors</h5>
-                                                            <div class="cnt-adding-colors">
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Red">
-                                                                    <div class="icon red"></div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Blue">
-                                                                    <div class="icon blue"></div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Orange">
-                                                                    <div class="icon orange"></div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Green">
-                                                                    <div class="icon green"></div>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cnt-adding-field">
-                                                            <h5>Sizes</h5>
-                                                            <div class="cnt-adding-sizes">
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="S">
-                                                                    <div class="icon">S</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="M">
-                                                                    <div class="icon">M</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="L">
-                                                                    <div class="icon">L</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="XL">
-                                                                    <div class="icon">XL</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="XXL">
-                                                                    <div class="icon">XXL</div>
-                                                                </label>
-                                                            </div>
-                                                        </div>
+                                                        <h5>Category Name</h5>
+                                                        <input type="text" placeholder="Enter category" name="catname">
                                                     </div>
                                                 </div>
                                             </div>
@@ -226,7 +149,7 @@
                                             </div>
                                             <?php
                                                 include('../../includes/config.php');
-                                                $sql = "select * from product";
+                                                $sql = "select * from category";
                                                 // $sql = "select * from product order by proid desc limit 4";
                                                 $result = mysqli_query($db, $sql);
 
@@ -236,14 +159,7 @@
                                             <table class="table table-class" id="table-id">
                                                 <thead>
                                                     <tr>
-                                                        <th>Image</th>
-                                                        <th>Name</th>
-                                                        <th>Price</th>
-                                                        <th>color</th>
-                                                        <th>size</th>
-                                                        <th>Quantity</th>
-                                                        <th>Stock Status</th>
-                                                        <th>Description</th>
+                                                        <th>Category</th>
                                                         <th>Edit - Delete</th>
                                                     </tr>
                                                 </thead>
@@ -253,15 +169,8 @@
                                                     {
                                                         echo "<tbody>";
                                                         echo "<tr>";
-                                                        echo "<td><img src='".$row['proimage']."' width=80px></td>";
-                                                        echo "<td>".$row['proname']."</td>";
-                                                        echo "<td>".$row['proprice']."</td>";
-                                                        echo "<td>".$row['procolor']."</td>";
-                                                        echo "<td>".$row['prosize']."</td>";
-                                                        echo "<td>".$row['proquantity']."</td>";
-                                                        echo "<td>".$row['prostockstatus']."</td>";
-                                                        echo "<td>".$row['prodesc']."</td>";
-                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "<td>".$row['catname']."</td>";
+                                                        echo "<td class='edit'><a href='edit-category.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-category.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         echo "</tr>";
                                                         echo "<tbody>";
                                                     }
@@ -270,8 +179,7 @@
                                                     else
                                                     {
                                                         ?>
-                                                <!-- </tbody> -->
-                                                <!-- <div class="stock-main-content">
+                                                <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
                                                         <div class="stock-img">
                                                             <img src="../../images/empty cart.png" alt="">
@@ -281,7 +189,7 @@
                                                             <h5>Please refresh the page and try again</h5>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                                 <?php
                                                     }
                                                 ?>

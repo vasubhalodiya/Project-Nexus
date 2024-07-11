@@ -99,10 +99,10 @@
                             <div class="cnt-main-add" id="creat-cnt">
                                 <div class="cnt-adding">
                                     <div class="cnt-adding-head">
-                                        <h4>Add Product</h4>
+                                        <h4>Add Users</h4>
                                     </div>
                                     <div class="cnt-adding-form">
-                                        <form action="action-product.php" method="post" enctype="multipart/form-data">
+                                        <form action="action-users.php" method="post" enctype="multipart/form-data">
                                             <div class="cnt-adding-main-part">
                                                 <div class="cnt-adding-part">
                                                     <!-- <div class="cnt-adding-field">
@@ -110,15 +110,15 @@
                                                         <input type="text" placeholder="Enter id" name="proid">
                                                     </div> -->
                                                     <div class="cnt-adding-field">
-                                                        <h5>Product Name</h5>
+                                                        <h5>User Name</h5>
                                                         <input type="text" placeholder="Enter name" name="proname">
                                                     </div>
                                                     <div class="cnt-adding-field">
-                                                        <h5>Product Quantity</h5>
+                                                        <h5>User Email</h5>
                                                         <input type="text" placeholder="Enter quantity" name="proquantity">
                                                     </div>
                                                     <div class="cnt-adding-field">
-                                                        <h5>Product Description</h5>
+                                                        <h5>User Registration Time</h5>
                                                         <textarea cols="30" rows="5" placeholder="Product description" name="prodesc"></textarea>
                                                     </div>
                                                 </div>
@@ -141,54 +141,6 @@
                                                         </label>
                                                         <span class="picture-image"></span>
                                                         <input type="file" name="uploadfile" id="proimage" class="file-input">
-                                                    </div>
-                                                    <div class="cnt-adding-mini-part">
-                                                        <div class="cnt-adding-field">
-                                                            <h5>Colors</h5>
-                                                            <div class="cnt-adding-colors">
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Red">
-                                                                    <div class="icon red"></div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Blue">
-                                                                    <div class="icon blue"></div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Orange">
-                                                                    <div class="icon orange"></div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="procolor" class="color-box-done" value="Green">
-                                                                    <div class="icon green"></div>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cnt-adding-field">
-                                                            <h5>Sizes</h5>
-                                                            <div class="cnt-adding-sizes">
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="S">
-                                                                    <div class="icon">S</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="M">
-                                                                    <div class="icon">M</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="L">
-                                                                    <div class="icon">L</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="XL">
-                                                                    <div class="icon">XL</div>
-                                                                </label>
-                                                                <label>
-                                                                    <input type="radio" name="prosize" class="size-box-done" value="XXL">
-                                                                    <div class="icon">XXL</div>
-                                                                </label>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
