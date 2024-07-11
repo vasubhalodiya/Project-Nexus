@@ -49,21 +49,21 @@ $rs1 = mysqli_query($db, $qry2);
                                     <div class='cnt-adding-part'>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Name</h5>
-                                            <input type='text' placeholder='Enter name' name='proname' value='$row[2]'>
+                                            <input type='text' placeholder='Enter name' name='proname' value='$row[proname]'>
                                         </div>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Stock</h5>
-                                            <input type='text' placeholder='Enter stock' name='prostock' value='$row[5]'>
+                                            <input type='text' placeholder='Enter stock' name='prostock' value='$row[prostock]'>
                                         </div>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Quantity</h5>
-                                            <input type='text' placeholder='Enter quantity' name='proquantity' value='$row[4]'>
+                                            <input type='text' placeholder='Enter quantity' name='proquantity' value='$row[proquantity]'>
                                         </div>
                                     </div>
                                     <div class='cnt-adding-part'>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Price</h5>
-                                            <input type='text' placeholder='Enter price' name='proprice' value='$row[3]'>
+                                            <input type='text' placeholder='Enter price' name='proprice' value='$row[proprice]'>
                                         </div>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Image</h5>
@@ -71,7 +71,7 @@ $rs1 = mysqli_query($db, $qry2);
                                                 <img src='../../images/Upload.svg' alt=''><h6>Choose product images</h6>
                                             </label>
                                             <span class='picture-image'></span>
-                                            <input type='file' name='proimage' id='proimage' value='$row[1]'>
+                                            <input type='file' name='proimage' id='proimage' value='$row[proimage]'>
                                         </div>
                                     </div>
                                 </div>

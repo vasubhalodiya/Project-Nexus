@@ -3,6 +3,11 @@ include('../../includes/config.php');
 if(isset($_POST["insert"]))
 {
     // $proid = $_POST['proid'];
+    $filename = $_FILES['uploadfile']['name'];
+    $tempname = $_FILES['uploadfile']['tmp_name'];
+    $folder = "upload/".$filename;
+    move_uploaded_file($tempname, $filename);
+
     $proname = $_POST['proname'];
     $prostock = $_POST['prostock'];
     $proprice = $_POST['proprice'];
@@ -10,11 +15,6 @@ if(isset($_POST["insert"]))
     // $proimage = $_POST['proimage'];
     // $procolor = $_POST['procolor'];
     // $prosize = $_POST['prosize'];
-    $file_name = $_FILES['proimage']['name'];
-    $file_tmp = $_FILES['proimage']['tmp_name'];
-    $folder = "upload/".$file_name;
-    move_uploaded_file($file_tmp."upload/".$file_name);
-
 
     $query = "insert into product(proimage, proname, prostock, proprice, proquantity) values('$folder','$proname','$prostock',' $proprice','$proquantity')";
 

@@ -42,7 +42,7 @@
                                     </li>
                                 </a>
                                 <a href="../users/admin-users.php">
-                                    <li class="sidebar-link-menu active">
+                                    <li class="sidebar-link-menu">
                                         <img src="../../images/Users.svg">Users
                                     </li>
                                 </a>
@@ -52,7 +52,7 @@
                                     </li>
                                 </a>
                                 <a href="../product/admin-product.php">
-                                    <li class="sidebar-link-menu">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../../images/Product.svg">Products
                                     </li>
                                 </a>
@@ -102,7 +102,7 @@
                                         <h4>Add Product</h4>
                                     </div>
                                     <div class="cnt-adding-form">
-                                        <form action="action-product.php" method="post">
+                                        <form action="action-product.php" method="post" enctype="multipart/form-data">
                                             <div class="cnt-adding-main-part">
                                                 <div class="cnt-adding-part">
                                                     <!-- <div class="cnt-adding-field">
@@ -129,11 +129,11 @@
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Image</h5>
-                                                        <label class="picture" for="proimage" tabIndex="0">
+                                                        <!-- <label class="picture" for="proimage" tabIndex="0">
                                                             <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
-                                                        </label>
+                                                        </label> -->
                                                         <span class="picture-image"></span>
-                                                        <input type="file" name="proimage" id="proimage">
+                                                        <input type="file" name="uploadfile" id="proimage">
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,7 +156,7 @@
                                         <form action="">
                                             <div class="header-wrap">
                                                 <div class="tb-search">
-                                                    <input type="text" id="search-input-all" onkeyup="FilterkeyWord_all_table()" placeholder="Search..">
+                                                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search..">
                                                 </div>
                                                 <div class="num-rows">
                                                     <select name="state" id="maxRows">
@@ -198,10 +198,10 @@
                                                         echo "<tbody>";
                                                         echo "<tr>";
                                                         echo "<td>".$row['proimage']."</td>";
-                                                        echo "<td>".$row[2]."</td>";
-                                                        echo "<td>".$row[3]."</td>";
-                                                        echo "<td>".$row[4]."</td>";
-                                                        echo "<td>".$row[5]."</td>";
+                                                        echo "<td>".$row['proname']."</td>";
+                                                        echo "<td>".$row['proprice']."</td>";
+                                                        echo "<td>".$row['proquantity']."</td>";
+                                                        echo "<td>".$row['prostock']."</td>";
                                                         echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         // echo "<td class='edit'></td>";
                                                         echo "</tr>";
@@ -274,117 +274,250 @@
             }
         </script>
 
-        <script>
-            getPagination('#table-id');
-            $('#maxRows').trigger('change');
-            function getPagination (table){
-
-                $('#maxRows').on('change',function(){
-                    $('.pagination').html('');
-                    var trnum = 0 ;
+        <!-- <script>
+            getPagination("#table-id");
+            $("#maxRows").trigger("change");
+            function getPagination(table) {
+                $("#maxRows").on("change", function () {
+                    $(".pagination").html("");
+                    var trnum = 0;
                     var maxRows = parseInt($(this).val());
-                
-                    var totalRows = $(table+' tbody tr').length;
-                    $(table+' tr:gt(0)').each(function(){
+
+                    var totalRows = $(table + " tbody tr").length;
+                    $(table + " tr:gt(0)").each(function () {
                         trnum++;
-                        if (trnum > maxRows ){
-                            
-                            $(this).hide(); 
-                        }if (trnum <= maxRows ){$(this).show();}
-                    });
-                    if (totalRows > maxRows){
-                        var pagenum = Math.ceil(totalRows/maxRows);  
-                        for (var i = 1; i <= pagenum ;){
-                        $('.pagination').append('<li data-page="'+i+'">\<span>'+ i++ +'<span class="sr-only">(current)</span></span>\</li>').show();
+                        if (trnum > maxRows) {
+
+                            $(this).hide();
                         }
-            
-                
+                        if (trnum <= maxRows) {
+                            $(this).show();
+                        }
+                    });
+                    if (totalRows > maxRows) {
+                        var pagenum = Math.ceil(totalRows / maxRows);
+                        for (var i = 1; i <= pagenum;) {
+                            $(".pagination")
+                                .append(
+                                    '<li data-page="' +
+                                    i +
+                                    '">\
+                                            <span>' +
+                                    i++ +
+                                    '<span class="sr-only">(current)</span></span>\
+                                            </li>'
+                                )
+                                .show();
+                        }
                     }
-                    $('.pagination li:first-child').addClass('active');
-                
-            showig_rows_count(maxRows, 1, totalRows);
+                    $(".pagination li:first-child").addClass("active");
 
-                $('.pagination li').on('click',function(e){
-                e.preventDefault();
-                        var pageNum = $(this).attr('data-page');
-                        var trIndex = 0 ;
-                        $('.pagination li').removeClass('active');
-                        $(this).addClass('active');
-                
-            showig_rows_count(maxRows, pageNum, totalRows);
-                
-                        $(table+' tr:gt(0)').each(function(){
+                    showig_rows_count(maxRows, 1, totalRows);
+
+                    $(".pagination li").on("click", function (e) {
+                        e.preventDefault();
+                        var pageNum = $(this).attr("data-page");
+                        var trIndex = 0;
+                        $(".pagination li").removeClass("active");
+                        $(this).addClass("active");
+
+                        showig_rows_count(maxRows, pageNum, totalRows);
+
+                        $(table + " tr:gt(0)").each(function () {
                             trIndex++;
-                            if (trIndex > (maxRows*pageNum) || trIndex <= ((maxRows*pageNum)-maxRows)){
-                                $(this).hide();		
-                            }else {$(this).show();}
+                            if (
+                                trIndex > maxRows * pageNum ||
+                                trIndex <= maxRows * pageNum - maxRows
+                            ) {
+                                $(this).hide();
+                            } else {
+                                $(this).show();
+                            }
                         });
-                            });
+                    });
                 });
-            }	
+            }
 
-            $(function(){
-            default_index();
+            $(function () {
+                default_index();
             });
 
             function showig_rows_count(maxRows, pageNum, totalRows) {
-                var end_index = maxRows*pageNum;
-                var start_index = ((maxRows*pageNum)- maxRows) + parseFloat(1);
-                var string = 'Showing '+ start_index + ' to ' + end_index +' of ' + totalRows + ' entries';               
-                $('.rows_count').html(string);
+                var end_index = maxRows * pageNum;
+                var start_index = maxRows * pageNum - maxRows + parseFloat(1);
+                var string =
+                    "Showing " +
+                    start_index +
+                    " to " +
+                    end_index +
+                    " of " +
+                    totalRows +
+                    " entries";
+                $(".rows_count").html(string);
             }
 
             function default_index() {
-            $('table tr:eq(0)').prepend('<th> ID </th>')
+                $("table tr:eq(0)").prepend("<th> ID </th>");
 
-                            var id = 0;
+                var id = 0;
 
-                            $('table tr:gt(0)').each(function(){	
-                                id++
-                                $(this).prepend('<td>'+id+'</td>');
-                            });
+                $("table tr:gt(0)").each(function () {
+                    id++;
+                    $(this).prepend("<td>" + id + "</td>");
+                });
             }
 
             function FilterkeyWord_all_table() {
 
-            var count = $('.table').children('tbody').children('tr:first-child').children('td').length; 
+                var count = $(".table")
+                    .children("tbody")
+                    .children("tr:first-child")
+                    .children("td").length;
 
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("search_input_all");
-            var input_value =     document.getElementById("search_input_all").value;
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("search_input_all");
+                var input_value = document.getElementById("search_input_all").value;
                 filter = input.value.toLowerCase();
-            if(input_value !=''){
-                table = document.getElementById("table-id");
-                tr = table.getElementsByTagName("tr");
+                if (input_value != "") {
+                    table = document.getElementById("table-id");
+                    tr = table.getElementsByTagName("tr");
 
-                for (i = 1; i < tr.length; i++) {
-                
-                var flag = 0;
-                
-                for(j = 0; j < count; j++){
-                    td = tr[i].getElementsByTagName("td")[j];
-                    if (td) {
-                    
-                        var td_text = td.innerHTML;  
-                        if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
-                        flag = 1;
+                    for (i = 1; i < tr.length; i++) {
+                        var flag = 0;
+
+                        for (j = 0; j < count; j++) {
+                            td = tr[i].getElementsByTagName("td")[j];
+                            if (td) {
+                                var td_text = td.innerHTML;
+                                if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                                    flag = 1;
+                                } else {
+                                }
+                            }
+                        }
+                        if (flag == 1) {
+                            tr[i].style.display = "";
                         } else {
+                            tr[i].style.display = "none";
                         }
                     }
-                    }
-                if(flag==1){
-                            tr[i].style.display = "";
-                }else {
-                    tr[i].style.display = "none";
+                } else {
+                    $("#maxRows").trigger("change");
                 }
-                }
-            }else {
+            }
+        </script> -->
+
+
+        <script>
+            getPagination('#table-id');
             $('#maxRows').trigger('change');
-            }
+            function getPagination(table) {
+
+                $('#maxRows').on('change', function () {
+                    $('.pagination').html('');
+                    var trnum = 0;
+                    var maxRows = parseInt($(this).val());
+
+                    var totalRows = $(table + ' tbody tr').length;
+                    $(table + ' tr:gt(0)').each(function () {
+                        trnum++;
+                        if (trnum > maxRows) {
+
+                            $(this).hide();
+                        } if (trnum <= maxRows) { $(this).show(); }
+                    });
+                    if (totalRows > maxRows) {
+                        var pagenum = Math.ceil(totalRows / maxRows);
+                        for (var i = 1; i <= pagenum;) {
+                            $('.pagination').append('<li data-page=" ' + i + ' ">\<span>'+ i++ + '<span class="sr-only">(current)</span></span>\</li>').show();
+                        }
+                    }
+                    $('.pagination li:first-child').addClass('active');
+
+
+                    showig_rows_count(maxRows, 1, totalRows);
+
+                    $('.pagination li').on('click', function (e) {
+                        e.preventDefault();
+                        var pageNum = $(this).attr('data-page');
+                        var trIndex = 0;
+                        $('.pagination li').removeClass('active');
+                        $(this).addClass('active');
+
+
+                        showig_rows_count(maxRows, pageNum, totalRows);
+
+                        $(table + ' tr:gt(0)').each(function () {
+                            trIndex++;
+                            if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
+                                $(this).hide();
+                            } else { $(this).show(); }
+                        });
+                    });
+                });
             }
 
+            $(function () {
+                default_index();
+            });
+
+            function showig_rows_count(maxRows, pageNum, totalRows) {
+                var end_index = maxRows * pageNum;
+                var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
+                var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
+                $('.rows_count').html(string);
+            }
+
+            function default_index() {
+                $('table tr:eq(0)').prepend('<th> ID </th>')
+
+                var id = 0;
+
+                $('table tr:gt(0)').each(function () {
+                    id++
+                    $(this).prepend('<td>' + id + '</td>');
+                });
+            }
+
+            function FilterkeyWord_all_table() {
+
+                var count = $('.table').children('tbody').children('tr:first-child').children('td').length;
+
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("search_input_all");
+                var input_value = document.getElementById("search_input_all").value;
+                filter = input.value.toLowerCase();
+                if (input_value != '') {
+                    table = document.getElementById("table-id");
+                    tr = table.getElementsByTagName("tr");
+
+                    for (i = 1; i < tr.length; i++) {
+
+                        var flag = 0;
+
+                        for (j = 0; j < count; j++) {
+                            td = tr[i].getElementsByTagName("td")[j];
+                            if (td) {
+
+                                var td_text = td.innerHTML;
+                                if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                                    flag = 1;
+                                } else {
+                                }
+                            }
+                        }
+                        if (flag == 1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                } else {
+                    $('#maxRows').trigger('change');
+                }
+            }
         </script>
-
+        
         <script>
             const inputFile = document.querySelector("#proimage");
             const pictureImage = document.querySelector(".picture-image");

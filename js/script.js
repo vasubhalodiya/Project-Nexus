@@ -359,9 +359,3 @@ var decrementQty = minusBtn.click(function () {
 
 
 
-
-
-
-
-
-
