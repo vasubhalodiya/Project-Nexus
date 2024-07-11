@@ -167,7 +167,7 @@
                                 <div class="footer-details">
                                     <div class="footer-about">
                                         <div class="footer-logo">
-                                            <h3>Nexus</h3>
+                                            <a href="index.html">Nexus</a>
                                         </div>
                                         <div class="footer-paragraph">
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, excepturi impedit iusto officiis, atque distinctio.</p>
