@@ -38,7 +38,7 @@
                             <ul>
                                 <a href="index.php" class="nav-links active"><li>Home</li></a>
                                 <a href="shop.php" class="nav-links"><li>Shop</li></a>
-                                <a href="brands.php" class="nav-links"><li>Brands</li></a>
+                                <!-- <a href="brands.php" class="nav-links"><li>Brands</li></a> -->
                                 <a href="#" class="nav-links"><li class="end-line">Support</li></a>
                             </ul>
                         </div>
@@ -71,12 +71,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-            
             <div class="footer">
                 <!-- <div class="container"> -->
                     <div class="footer-content">

@@ -37,8 +37,9 @@ $rs1 = mysqli_query($db, $qry2);
         <div class="main" id="main-site">
             <div class="cnt-main-add">
                 <div class="cnt-adding">
-                    <div class="cnt-adding-head">
+                    <div class="cnt-adding-head edit-cnt-adding-head">
                         <h4>Add Product</h4>
+                        <a href="admin-product.php">Back to Home</a>
                     </div>
                     <div class="cnt-adding-form all-center">
                         <form action="update-product.php" method="post">
@@ -52,12 +53,12 @@ $rs1 = mysqli_query($db, $qry2);
                                             <input type='text' placeholder='Enter name' name='proname' value='$row[proname]'>
                                         </div>
                                         <div class='cnt-adding-field'>
-                                            <h5>Product Stock</h5>
-                                            <input type='text' placeholder='Enter stock' name='prostock' value='$row[prostock]'>
-                                        </div>
-                                        <div class='cnt-adding-field'>
                                             <h5>Product Quantity</h5>
                                             <input type='text' placeholder='Enter quantity' name='proquantity' value='$row[proquantity]'>
+                                        </div>
+                                        <div class='cnt-adding-field'>
+                                            <h5>Product Description</h5>
+                                            <textarea cols='30' rows='5' placeholder='Product description' name='prodesc'>$row[prodesc]</textarea>
                                         </div>
                                     </div>
                                     <div class='cnt-adding-part'>
@@ -66,12 +67,67 @@ $rs1 = mysqli_query($db, $qry2);
                                             <input type='text' placeholder='Enter price' name='proprice' value='$row[proprice]'>
                                         </div>
                                         <div class='cnt-adding-field'>
+                                            <h5>Product Stock Status</h5>
+                                            <select name='prostockstatus' value='$row[prostockstatus]'>
+                                                <option value='In Stock'>In Stock</option>
+                                                <option value='Out of Stock'>Out of Stock</option>
+                                            </select>
+                                        </div>
+                                        <div class='cnt-adding-field'>
                                             <h5>Product Image</h5>
                                             <label class='picture' for='proimage' tabIndex='0'>
                                                 <img src='../../images/Upload.svg' alt=''><h6>Choose product images</h6>
                                             </label>
                                             <span class='picture-image'></span>
-                                            <input type='file' name='proimage' id='proimage' value='$row[proimage]'>
+                                            <input type='file' name='proimage' id='proimage' value='$row[proimage]' class='file-input'>
+                                        </div>
+                                        <div class='cnt-adding-mini-part'>
+                                            <div class='cnt-adding-field'>
+                                                <h5>Colors</h5>
+                                                <div class='cnt-adding-colors'>
+                                                    <label>
+                                                        <input type='radio' name='procolor' class='color-box-done' value='$row[procolor]'>
+                                                        <div class='icon red'></div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='procolor' class='color-box-done' value='$row[procolor]'>
+                                                        <div class='icon blue'></div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='procolor' class='color-box-done' value='$row[procolor]'>
+                                                        <div class='icon orange'></div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='procolor' class='color-box-done' value='$row[procolor]'>
+                                                        <div class='icon green'></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class='cnt-adding-field'>
+                                                <h5>Sizes</h5>
+                                                <div class='cnt-adding-sizes'>
+                                                    <label>
+                                                        <input type='radio' name='prosize' class='size-box-done' value='S' value='$row[prosize]'>
+                                                        <div class='icon'>S</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='prosize' class='size-box-done' value='M' value='$row[prosize]'>
+                                                        <div class='icon'>M</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='prosize' class='size-box-done' value='L' value='$row[prosize]'>
+                                                        <div class='icon'>L</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='prosize' class='size-box-done' value='Xl' value='$row[prosize]'>
+                                                        <div class='icon'>XL</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type='radio' name='prosize' class='size-box-done' value='XXl' value='$row[prosize]'>
+                                                        <div class='icon'>XXL</div>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

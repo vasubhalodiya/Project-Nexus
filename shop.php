@@ -38,7 +38,7 @@
                             <ul>
                                 <a href="index.php" class="nav-links"><li>Home</li></a>
                                 <a href="shop.php" class="nav-links active"><li>Shop</li></a>
-                                <a href="brands.php" class="nav-links"><li>New Arrivals</li></a>
+                                <!-- <a href="brands.php" class="nav-links"><li>Brands</li></a> -->
                                 <a href="#" class="nav-links"><li class="end-line">Support</li></a>
                             </ul>
                         </div>
@@ -67,87 +67,40 @@
                         </div>
                         <div class="product-cnt">
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="#">
-                                        <div class="best-card">
-                                            <div class="best-card-img">
-                                                <img src="images/tshirt 1.png" alt="">
-                                                <!-- <div class="best-card-btn">
-                                                    <a href="#" class="view-dtl">View Details</a>
-                                                    <a href="#" class="add-cart">Add to Cart</a>
-                                                </div> -->
-                                            </div>
-                                            <div class="best-card-cnt">
-                                                <div class="best-card-name">
-                                                    <h4>Black T-shirt</h4>
-                                                </div>
-                                                <div class="best-card-price-stock">
-                                                    <div class="best-card-stock">
-                                                        <p>In Stock</p>
+                            <?php
+                                include('includes/config.php');
+                                $sql = "select * from product";
+                                $result = mysqli_query($db, $sql);
+
+                                if(mysqli_num_rows($result)>0)
+                                {
+                                    while($row = mysqli_fetch_array($result))
+                                    {
+                                        echo "<div class='col-lg-3 col-md-6 col-sm-6'>
+                                            <a href='#'>
+                                                <div class='best-card'>
+                                                    <div class='best-card-img'>
+                                                        <img src='".$row['proimage']."' width=80px>
                                                     </div>
-                                                    <div class="best-card-price">
-                                                        <h6>$74.00</h6>
-                                                        <p><strike>$95.00</strike></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="#">
-                                        <div class="best-card">
-                                            <div class="best-card-img">
-                                                <img src="images/tshirt 2.png" alt="">
-                                                <!-- <div class="best-card-btn">
-                                                    <a href="#" class="view-dtl">View Details</a>
-                                                    <a href="#" class="add-cart">Add to Cart</a>
-                                                </div> -->
-                                            </div>
-                                            <div class="best-card-cnt">
-                                                <div class="best-card-name">
-                                                    <h4>Black T-shirt</h4>
-                                                </div>
-                                                <div class="best-card-price-stock">
-                                                    <div class="best-card-stock">
-                                                        <p>In Stock</p>
-                                                    </div>
-                                                    <div class="best-card-price">
-                                                        <h6>$74.00</h6>
-                                                        <p><strike>$95.00</strike></p>
+                                                    <div class='best-card-cnt'>
+                                                        <div class='best-card-name'>
+                                                            <h4>".$row['proname']."</h4>
+                                                        </div>
+                                                        <div class='best-card-price-stock'>
+                                                            <div class='best-card-stock'>
+                                                                <p>".$row['prostockstatus']."</p>
+                                                            </div>
+                                                            <div class='best-card-price'>
+                                                                <h6>$".$row['proprice']."</h6>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="#">
-                                        <div class="best-card">
-                                            <div class="best-card-img">
-                                                <img src="images/tshirt 3.png" alt="">
-                                                <!-- <div class="best-card-btn">
-                                                    <a href="#" class="view-dtl">View Details</a>
-                                                    <a href="#" class="add-cart">Add to Cart</a>
-                                                </div> -->
-                                            </div>
-                                            <div class="best-card-cnt">
-                                                <div class="best-card-name">
-                                                    <h4>Black T-shirt</h4>
-                                                </div>
-                                                <div class="best-card-price-stock">
-                                                    <div class="best-card-stock">
-                                                        <p>In Stock</p>
-                                                    </div>
-                                                    <div class="best-card-price">
-                                                        <h6>$74.00</h6>
-                                                        <p><strike>$95.00</strike></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                            </a>
+                                        </div>";
+                                        }
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>

@@ -97,20 +97,121 @@
                     <div class="cnt-main-content">
                         <div class="cnt-child-content">
                             <div class="cnt-main-add" id="creat-cnt">
-                                <h1>add item</h1>
-                                <button id="save-cnt" onclick="mynew()">save</button>
+                                <div class="cnt-adding">
+                                    <div class="cnt-adding-head">
+                                        <h4>Add Product</h4>
+                                    </div>
+                                    <div class="cnt-adding-form">
+                                        <form action="action-product.php" method="post" enctype="multipart/form-data">
+                                            <div class="cnt-adding-main-part">
+                                                <div class="cnt-adding-part">
+                                                    <!-- <div class="cnt-adding-field">
+                                                        <h5>Product Id</h5>
+                                                        <input type="text" placeholder="Enter id" name="proid">
+                                                    </div> -->
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Name</h5>
+                                                        <input type="text" placeholder="Enter name" name="proname">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Quantity</h5>
+                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Description</h5>
+                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodesc"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="cnt-adding-part">
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Price</h5>
+                                                        <input type="text" placeholder="Enter price" name="proprice">
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Stock Status</h5>
+                                                        <select name="prostockstatus">
+                                                            <option value="In Stock">In Stock</option>
+                                                            <option value="Out of Stock">Out of Stock</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="cnt-adding-field">
+                                                        <h5>Product Image</h5>
+                                                        <label class="picture" for="proimage" tabIndex="0">
+                                                            <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
+                                                        </label>
+                                                        <span class="picture-image"></span>
+                                                        <input type="file" name="uploadfile" id="proimage" class="file-input">
+                                                    </div>
+                                                    <div class="cnt-adding-mini-part">
+                                                        <div class="cnt-adding-field">
+                                                            <h5>Colors</h5>
+                                                            <div class="cnt-adding-colors">
+                                                                <label>
+                                                                    <input type="radio" name="procolor" class="color-box-done" value="Red">
+                                                                    <div class="icon red"></div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="procolor" class="color-box-done" value="Blue">
+                                                                    <div class="icon blue"></div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="procolor" class="color-box-done" value="Orange">
+                                                                    <div class="icon orange"></div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="procolor" class="color-box-done" value="Green">
+                                                                    <div class="icon green"></div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cnt-adding-field">
+                                                            <h5>Sizes</h5>
+                                                            <div class="cnt-adding-sizes">
+                                                                <label>
+                                                                    <input type="radio" name="prosize" class="size-box-done" value="S">
+                                                                    <div class="icon">S</div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="prosize" class="size-box-done" value="M">
+                                                                    <div class="icon">M</div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="prosize" class="size-box-done" value="L">
+                                                                    <div class="icon">L</div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="prosize" class="size-box-done" value="XL">
+                                                                    <div class="icon">XL</div>
+                                                                </label>
+                                                                <label>
+                                                                    <input type="radio" name="prosize" class="size-box-done" value="XXL">
+                                                                    <div class="icon">XXL</div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cnt-adding-btn">
+                                                <!-- <button id="save-cnt" onclick="mynew()">Save Product</button> -->
+                                                 <input type="submit" name="insert" value="Add Product">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                             <div class="cnt-main-cnt" id="add-cnt">
                                 <div class="cnt-head">
                                     <h4>Dashboard</h4>
                                     <button onclick="myFunction()">Add Product</button>
+                                     <!-- <a href="add-product.php">Add Product</a> -->
                                 </div>
                                 <div class="cnt-main-table">
                                     <div class="cnt-table">
                                         <form action="">
                                             <div class="header-wrap">
                                                 <div class="tb-search">
-                                                    <input type="text" id="search-input-all" onkeyup="FilterkeyWord_all_table()" placeholder="Search..">
+                                                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search..">
                                                 </div>
                                                 <div class="num-rows">
                                                     <select name="state" id="maxRows">
@@ -123,53 +224,53 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                            <?php
+                                                include('../../includes/config.php');
+                                                $sql = "select * from product";
+                                                // $sql = "select * from product order by proid desc limit 4";
+                                                $result = mysqli_query($db, $sql);
+
+                                                if(mysqli_num_rows($result)>0)
+                                                {
+                                            ?>
                                             <table class="table table-class" id="table-id">
                                                 <thead>
                                                     <tr>
+                                                        <th>Image</th>
                                                         <th>Name</th>
-                                                        <th>Email</th>
-                                                        <th>Phone</th>
-                                                        <th>Date</th>
+                                                        <th>Price</th>
+                                                        <th>color</th>
+                                                        <th>size</th>
+                                                        <th>Quantity</th>
+                                                        <th>Stock Status</th>
+                                                        <th>Description</th>
+                                                        <th>Edit - Delete</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Rajah Armstrong</td>
-                                                        <td>erat.neque@noncursusnon.ca</td>
-                                                        <td>1-636-140-1210</td>
-                                                        <td>Oct 26, 2015</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Kuame Parsons</td>
-                                                        <td>non.sapien@in.com</td>
-                                                        <td>1-962-122-8834</td>
-                                                        <td>Aug 2, 2015</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Ira Parker</td>
-                                                        <td>Vivamus.molestie.dapibus@quisturpisvitae.edu</td>
-                                                        <td>1-584-906-8572</td>
-                                                        <td>Sep 15, 2015</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Dante Carlson</td>
-                                                        <td>dis.parturient@mi.co.uk</td>
-                                                        <td>1-364-156-9666</td>
-                                                        <td>Nov 28, 2015</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nathan Bernard</td>
-                                                        <td>Etiam.vestibulum.massa@nonummy.net</td>
-                                                        <td>1-646-420-3211</td>
-                                                        <td>Aug 4, 2016</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nathan Bernard</td>
-                                                        <td>Etiam.vestibulum.massa@nonummy.net</td>
-                                                        <td>1-646-420-3211</td>
-                                                        <td>Aug 4, 2016</td>
-                                                    </tr>
-                                                </tbody>
+                                                <!-- <tbody> -->
+                                                    <?php
+                                                    while($row = mysqli_fetch_array($result))
+                                                    {
+                                                        echo "<tbody>";
+                                                        echo "<tr>";
+                                                        echo "<td><img src='".$row['proimage']."' width=80px></td>";
+                                                        echo "<td>".$row['proname']."</td>";
+                                                        echo "<td>".$row['proprice']."</td>";
+                                                        echo "<td>".$row['procolor']."</td>";
+                                                        echo "<td>".$row['prosize']."</td>";
+                                                        echo "<td>".$row['proquantity']."</td>";
+                                                        echo "<td>".$row['prostockstatus']."</td>";
+                                                        echo "<td>".$row['prodesc']."</td>";
+                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "</tr>";
+                                                        echo "<tbody>";
+                                                    }
+                                                        echo "</table>";
+                                                    }
+                                                    else
+                                                    {
+                                                        ?>
+                                                <!-- </tbody> -->
                                                 <!-- <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
                                                         <div class="stock-img">
@@ -181,7 +282,9 @@
                                                         </div>
                                                     </div>
                                                 </div> -->
-                                            </table>
+                                                <?php
+                                                    }
+                                                ?>
                                             <div class='pagination-container'>
                                                 <nav>
                                                     <ul class="pagination"></ul>
@@ -230,57 +333,49 @@
         </script>
 
         <script>
-            getPagination("#table-id");
-            $("#maxRows").trigger("change");
+            getPagination('#table-id');
+            $('#maxRows').trigger('change');
             function getPagination(table) {
-                $("#maxRows").on("change", function () {
-                    $(".pagination").php("");
+
+                $('#maxRows').on('change', function () {
+                    $('.pagination').html('');
                     var trnum = 0;
                     var maxRows = parseInt($(this).val());
 
-                    var totalRows = $(table + " tbody tr").length;
-                    $(table + " tr:gt(0)").each(function () {
+                    var totalRows = $(table + ' tbody tr').length;
+                    $(table + ' tr:gt(0)').each(function () {
                         trnum++;
                         if (trnum > maxRows) {
+
                             $(this).hide();
-                        }
-                        if (trnum <= maxRows) {
-                            $(this).show();
-                        }
+                        } if (trnum <= maxRows) { $(this).show(); }
                     });
                     if (totalRows > maxRows) {
                         var pagenum = Math.ceil(totalRows / maxRows);
                         for (var i = 1; i <= pagenum;) {
-                            $(".pagination")
-                                .append(
-                                    '<li data-page="' +
-                                    i +
-                                    '"><span>' +
-                                    i++ +
-                                    '<span class="sr-only">(current)</span></span></li>'
-                                )
-                                .show();
+                            $('.pagination').append('<li data-page=" ' + i + ' ">\<span>'+ i++ + '<span class="sr-only">(current)</span></span>\</li>').show();
                         }
                     }
-                    $(".pagination li:first-child").addClass("active");
+                    $('.pagination li:first-child').addClass('active');
+
+
                     showig_rows_count(maxRows, 1, totalRows);
-                    $(".pagination li").on("click", function (e) {
+
+                    $('.pagination li').on('click', function (e) {
                         e.preventDefault();
-                        var pageNum = $(this).attr("data-page");
+                        var pageNum = $(this).attr('data-page');
                         var trIndex = 0;
-                        $(".pagination li").removeClass("active");
-                        $(this).addClass("active");
+                        $('.pagination li').removeClass('active');
+                        $(this).addClass('active');
+
+
                         showig_rows_count(maxRows, pageNum, totalRows);
-                        $(table + " tr:gt(0)").each(function () {
+
+                        $(table + ' tr:gt(0)').each(function () {
                             trIndex++;
-                            if (
-                                trIndex > maxRows * pageNum ||
-                                trIndex <= maxRows * pageNum - maxRows
-                            ) {
+                            if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
                                 $(this).hide();
-                            } else {
-                                $(this).show();
-                            }
+                            } else { $(this).show(); }
                         });
                     });
                 });
@@ -292,48 +387,42 @@
 
             function showig_rows_count(maxRows, pageNum, totalRows) {
                 var end_index = maxRows * pageNum;
-                var start_index = maxRows * pageNum - maxRows + parseFloat(1);
-                var string =
-                    "Showing " +
-                    start_index +
-                    " to " +
-                    end_index +
-                    " of " +
-                    totalRows +
-                    " entries";
-                $(".rows-count").php(string);
+                var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
+                var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
+                $('.rows_count').html(string);
             }
 
             function default_index() {
-                $("table tr:eq(0)").prepend("<th> ID </th>");
+                $('table tr:eq(0)').prepend('<th> ID </th>')
+
                 var id = 0;
 
-                $("table tr:gt(0)").each(function () {
-                    id++;
-                    $(this).prepend("<td>" + id + "</td>");
+                $('table tr:gt(0)').each(function () {
+                    id++
+                    $(this).prepend('<td>' + id + '</td>');
                 });
             }
 
             function FilterkeyWord_all_table() {
-                var count = $(".table")
-                    .children("tbody")
-                    .children("tr:first-child")
-                    .children("td").length;
+
+                var count = $('.table').children('tbody').children('tr:first-child').children('td').length;
 
                 var input, filter, table, tr, td, i;
-                input = document.getElementById("search-input-all");
-                var input_value = document.getElementById("search-input-all").value;
+                input = document.getElementById("search_input_all");
+                var input_value = document.getElementById("search_input_all").value;
                 filter = input.value.toLowerCase();
-                if (input_value != "") {
+                if (input_value != '') {
                     table = document.getElementById("table-id");
                     tr = table.getElementsByTagName("tr");
 
                     for (i = 1; i < tr.length; i++) {
+
                         var flag = 0;
 
                         for (j = 0; j < count; j++) {
                             td = tr[i].getElementsByTagName("td")[j];
                             if (td) {
+
                                 var td_text = td.innerHTML;
                                 if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
                                     flag = 1;
@@ -348,9 +437,40 @@
                         }
                     }
                 } else {
-                    $("#maxRows").trigger("change");
+                    $('#maxRows').trigger('change');
                 }
             }
+        </script>
+        
+        <script>
+            const inputFile = document.querySelector("#proimage");
+            const pictureImage = document.querySelector(".picture-image");
+            const pictureImageTxt = "";
+            pictureImage.innerHTML = pictureImageTxt;
+
+            inputFile.addEventListener("change", function (e) {
+                const inputTarget = e.target;
+                const file = inputTarget.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.addEventListener("load", function (e) {
+                        const readerTarget = e.target;
+
+                        const img = document.createElement("img");
+                        img.src = readerTarget.result;
+                        img.classList.add("picture-img");
+
+                        pictureImage.innerHTML = "";
+                        pictureImage.appendChild(img);
+                    });
+
+                    reader.readAsDataURL(file);
+                } else {
+                    pictureImage.innerHTML = pictureImageTxt;
+                }
+            });
         </script>
 
     </body>
