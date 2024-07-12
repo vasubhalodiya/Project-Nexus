@@ -14,11 +14,11 @@ if(isset($_POST["insert"]))
     $procategory = $_POST['procategory'];
     $procolor = $_POST['procolor'];
     $prosize = $_POST['prosize'];
-    $proquantity = $_POST['proquantity'];
+    $proqty = $_POST['proqty'];
     $prostockstatus = $_POST['prostockstatus'];
     $prodesc = $_POST['prodesc'];
 
-    $query = "insert into product(proimage, proname, proprice, procategory, procolor, prosize, proquantity, prostockstatus, prodesc) values('$folder','$proname',' $proprice',' $procategory',' $procolor',' $prosize','$proquantity','$prostockstatus',' $prodesc')";
+    $query = "insert into product(proimage, proname, proprice, procategory, procolor, prosize, proqty, prostockstatus, prodesc) values('$folder','$proname',' $proprice',' $procategory',' $procolor',' $prosize','$proqty','$prostockstatus',' $prodesc')";
     echo $query;
     $run = mysqli_query($db, $query) or die ("can not insert data into database. ".mysqli_error($db));
 

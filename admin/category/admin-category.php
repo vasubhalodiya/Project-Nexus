@@ -42,12 +42,12 @@
                                     </li>
                                 </a>
                                 <a href="../users/admin-users.php">
-                                    <li class="sidebar-link-menu active">
+                                    <li class="sidebar-link-menu">
                                         <img src="../../images/Users.svg">Users
                                     </li>
                                 </a>
                                 <a href="../category/admin-category.php">
-                                    <li class="sidebar-link-menu">
+                                    <li class="sidebar-link-menu active">
                                         <img src="../../images/Copy.svg">Category
                                     </li>
                                 </a>

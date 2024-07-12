@@ -127,7 +127,7 @@
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Quantity</h5>
-                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
+                                                        <input type="text" placeholder="Enter quantity" name="proqty">
                                                     </div>
                                                     <div class="cnt-adding-field">
                                                         <h5>Product Description</h5>
@@ -272,7 +272,7 @@
                                                         echo "<td>".$row['procategory']."</td>";
                                                         echo "<td>".$row['procolor']."</td>";
                                                         echo "<td>".$row['prosize']."</td>";
-                                                        echo "<td>".$row['proquantity']."</td>";
+                                                        echo "<td>".$row['proqty']."</td>";
                                                         echo "<td>".$row['prostockstatus']."</td>";
                                                         echo "<td>".$row['prodesc']."</td>";
                                                         echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";

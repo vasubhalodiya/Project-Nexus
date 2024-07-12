@@ -222,8 +222,7 @@
                                                     else
                                                     {
                                                         ?>
-                                                <!-- </tbody> -->
-                                                <!-- <div class="stock-main-content">
+                                                <div class="stock-main-content">
                                                     <div class="stock-not-found-content">
                                                         <div class="stock-img">
                                                             <img src="../../images/empty cart.png" alt="">
@@ -233,7 +232,7 @@
                                                             <h5>Please refresh the page and try again</h5>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                                 <?php
                                                     }
                                                 ?>
