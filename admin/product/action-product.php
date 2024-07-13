@@ -3,8 +3,8 @@ include('../../includes/config.php');
 if(isset($_POST["insert"]))
 {
     // $proid = $_POST['proid'];
-    $filename = $_FILES['uploadfile']['name'];
-    $tempname = $_FILES['uploadfile']['tmp_name'];
+    $filename = $_FILES['proimage']['name'];
+    $tempname = $_FILES['proimage']['tmp_name'];
     $folder = "upload/".$filename;
     move_uploaded_file($tempname, $filename);
 

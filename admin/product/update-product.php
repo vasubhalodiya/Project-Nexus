@@ -4,8 +4,8 @@ if(isset($_POST['update']))
 {
     $id = $_POST['id'];
 
-    $filename = $_FILES['uploadfile']['name'];
-    $tempname = $_FILES['uploadfile']['tmp_name'];
+    $filename = $_FILES['proimage']['name'];
+    $tempname = $_FILES['proimage']['tmp_name'];
     $folder = "upload/".$filename;
     move_uploaded_file($tempname, $filename);
 

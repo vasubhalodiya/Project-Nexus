@@ -178,7 +178,9 @@
                                             </div>
                                             <?php
                                                 include('../../includes/config.php');
-                                                $sql = "select * from product";
+                                                $sql = "select lg.* from login lg, users us";
+                                                // $sql = "select * from users INNER JOIN login ON users.";
+                                                // $sql = "select * from product";
                                                 // $sql = "select * from product order by proid desc limit 4";
                                                 $result = mysqli_query($db, $sql);
 
@@ -188,14 +190,9 @@
                                             <table class="table table-class" id="table-id">
                                                 <thead>
                                                     <tr>
-                                                        <th>Image</th>
                                                         <th>Name</th>
-                                                        <th>Price</th>
-                                                        <th>color</th>
-                                                        <th>size</th>
-                                                        <th>Quantity</th>
-                                                        <th>Stock Status</th>
-                                                        <th>Description</th>
+                                                        <th>Email</th>
+                                                        <th>Password</th>
                                                         <th>Edit - Delete</th>
                                                     </tr>
                                                 </thead>
@@ -205,15 +202,10 @@
                                                     {
                                                         echo "<tbody>";
                                                         echo "<tr>";
-                                                        echo "<td><img src='".$row['proimage']."' width=80px></td>";
-                                                        echo "<td>".$row['proname']."</td>";
-                                                        echo "<td>".$row['proprice']."</td>";
-                                                        echo "<td>".$row['procolor']."</td>";
-                                                        echo "<td>".$row['prosize']."</td>";
-                                                        echo "<td>".$row['proquantity']."</td>";
-                                                        echo "<td>".$row['prostockstatus']."</td>";
-                                                        echo "<td>".$row['prodesc']."</td>";
-                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "<td>".$row['uname']."</td>";
+                                                        echo "<td>".$row['email']."</td>";
+                                                        echo "<td>".$row['password']."</td>";
+                                                        echo "<td class='edit'><a href='edit-users.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-users.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         echo "</tr>";
                                                         echo "<tbody>";
                                                     }
