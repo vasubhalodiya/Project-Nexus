@@ -163,7 +163,7 @@
                                             </div>
                                             <?php
                                                 include('../../includes/config.php');
-                                                $sql = "select * from product";
+                                                $sql = "select * from sales";
                                                 // $sql = "select * from product order by proid desc limit 4";
                                                 $result = mysqli_query($db, $sql);
 
@@ -190,7 +190,7 @@
                                                         echo "<td>".$row['salesqty']."</td>";
                                                         echo "<td>".$row['salestotal']."</td>";
                                                         echo "<td>".$row['salesdate']."</td>";
-                                                        echo "<td class='edit'><a href='edit-product.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-product.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
+                                                        echo "<td class='edit'><a href='edit-sales.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-sales.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         echo "</tr>";
                                                         echo "<tbody>";
                                                     }
