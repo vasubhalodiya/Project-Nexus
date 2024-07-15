@@ -152,7 +152,7 @@
                                                             <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
                                                         </label>
                                                         <span class="picture-image"></span>
-                                                        <input type="file" name="proimage" id="proimage" class="file-input">
+                                                        <input type="file" name="uploadimage" id="proimage" class="file-input">
                                                     </div>
                                                     <div class="cnt-adding-mini-part">
                                                         <div class="cnt-adding-field">

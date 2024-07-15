@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -61,13 +66,125 @@
 
             <div class="prodtl">
                 <div class="container">
-                    <div class="prodtl-content">
+                <?php
+                    include('includes/config.php');
+                    if(isset($_POST["product"]))
+                    {
+                        $product_name = $_POST['product'];
+                        $product_data = getSlugActive("products", $product_name);
+                        $product = mysqli_fetch_array($product_data);
+
+                        if($product)
+                        {
+                    ?>
+                    <!-- <div class="prodtl-content">
                         <div class="row">
                             <div class="col-lg-6">
-                                
+                                <div class="prodtl-details">
+                                    <div class="prodtl-img">
+                                        <img src="images/tshirt 1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="prodtl-details">
+                                    <div class="prodtl-txt">
+                                        <div class="prodtl-title">
+                                            <h4><?php $product['proname']?></h4>
+                                        </div>
+                                        <div class="prodtl-price-stock">
+                                            <div class="prodtl-price">
+                                                <h4>$74.00</h4>
+                                            </div>
+                                            <div class="prodtl-stock">
+                                                <p>In Stock</p>
+                                            </div>
+                                        </div>
+                                        <div class="prodtl-color prodtl-mini-head">
+                                            <h6>Available Colors</h6>
+                                                <div class="cnt-adding-colors">
+                                                    <label>
+                                                        <input type="radio" name="color" class="color-box-done" value="Red">
+                                                        <div class="icon red"></div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="color" class="color-box-done" value="Blue">
+                                                        <div class="icon blue"></div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="color" class="color-box-done" value="Orange">
+                                                        <div class="icon orange"></div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="color" class="color-box-done" value="Green">
+                                                        <div class="icon green"></div>
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="prodtl-size prodtl-mini-head">
+                                            <h6>Select Size</h6>
+                                                <div class="cnt-adding-sizes">
+                                                    <label>
+                                                        <input type="radio" name="size" class="size-box-done" value="S">
+                                                        <div class="icon">S</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="size" class="size-box-done" value="M">
+                                                        <div class="icon">M</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="size" class="size-box-done" value="L">
+                                                        <div class="icon">L</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="size" class="size-box-done" value="XL">
+                                                        <div class="icon">XL</div>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="size" class="size-box-done" value="XXL">
+                                                        <div class="icon">XXL</div>
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="prodtl-increment-decrement prodtl-mini-head">
+                                            <h6>Quantity</h6>
+                                            <div class="cart-card-increment-decrement">
+                                                <div class="cart-plus-minus">
+                                                    <button class="cart-qty-minus" type="button" value="-">-</button>
+                                                    <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                                    <button class="cart-qty-plus" type="button" value="+">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prodtl-btn">
+                                            <a href="#">Add to cart</a>
+                                            <p>— Free shipping on orders $100+</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="prodtl-description">
+                            <div class="prodtl-desc-head">
+                                <h4>Details</h4>
+                            </div>
+                            <div class="prodtl-desc-dtl">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aspernatur consequuntur labore perferendis sequi nam numquam laudantium aliquid corrupti harum, itaque ipsam deserunt suscipit alias porro dolor voluptates at adipisci!</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <?php
+                        }
+                        else
+                        {
+                            echo "Somthing went wrong";
+                        }
+                    }
+                    else
+                    {
+                        echo "First Somthing went wrong";
+                    }
+                    ?>
                 </div>
             </div>
 

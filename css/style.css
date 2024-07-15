@@ -408,7 +408,7 @@ li{
     background-color: var(--main-bg-color);
 }
 
-.login-form
+.auth-form
 {
     padding: 70px 0px;
 }
@@ -418,20 +418,21 @@ li{
     padding: 100px 0px;
 }
 
-.login-form-head
+.auth-form-head
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding: 0px 15px;
 }
 
-.login-admin
+.auth-admin
 {
     margin-bottom: 50px;
 }
 
-.login-form-head a
+.auth-form-head a
 {
     color: #4285f4;
     font-size: 15px;
@@ -439,18 +440,18 @@ li{
     gap: 7px;
 }
 
-.login-form-head a img
+.auth-form-head a img
 {
     width: 14px;
     color: red;
     transform: scaleX(-1);
 }
 
-.login-form-content
+.auth-form-content
 {
     width: 50%;
     margin: auto;
-    background-color: var(--main-bg-color);
+    background-color: var(--primary-color);
     border-radius: 10px;
     padding: 70px 50px;
 }
@@ -459,12 +460,12 @@ li{
 {
     width: 35%;
     margin: auto;
-    background-color: var(--main-bg-color);
+    background-color: var(--primary-color);
     border-radius: 10px;
     padding: 70px 50px;
 }
 
-.login-form-dtl
+.auth-form-dtl
 {
     display: flex;
     display: block;
@@ -474,52 +475,51 @@ li{
     text-align: left;
 }
 
-.login-form-head h2
+.auth-form-head h2
 {
     width: 100%;
-    color: var(--primary-color);
+    color: var(--main-bg-color);
     font-size: 30px;
     font-family: var(--logo-ff);
     letter-spacing: 1px;
 }
 
-.login-form-dtl h6
+.auth-form-dtl h6
 {
     width: 100%;
-    color: var(--primary-color);
+    color: var(--main-bg-color);
     font-size: 16px;
-    font-family: var(--content-ff);
-    letter-spacing: 1px;
     margin-bottom: 40px;
+    padding: 0px 15px;
 }
 
-.login-form-acc a
+.auth-form-acc a
 {
     color: #4285F4;
     font-size: 15px;
     text-decoration: underline;
 }
 
-.login-form-acc a:hover
+.auth-form-acc a:hover
 {
     color: #4285F4;
     font-size: 15px;
     text-decoration: none;
 }
 
-.login-field-cnt
+.auth-field-cnt
 {
     margin-bottom: 40px;
 }
 
-.login-field-cnt p
+.auth-field-cnt p
 {
     color: #4c4c4c;
     font-size: 15px;
     margin-bottom: 0px;
 }
 
-.login-field-cnt input
+.auth-field-cnt input
 {
     width: 100%;
     color: rgb(17, 16, 19, 0.9);
@@ -529,26 +529,26 @@ li{
     border-bottom: 1px solid rgb(0, 0, 0, 0.2);
 }
 
-.login-field-cnt input::placeholder
+.auth-field-cnt input::placeholder
 {
     color: rgb(0, 0, 0, 0.5);
     font-size: 15px;
 }
 
-.login-btn
+.auth-btn
 {
     text-align: center;
 }
 
-.login-btn-admin
+.auth-btn-admin
 {
     margin-top: 50px;
 }
 
-.login-btn input
+.auth-btn input
 {
     width: 70%;
-    color: var(--main-bg-color);
+    color: var(--primary-color);
     font-size: 18px;
     font-family: var(--heading-ff);
     background-color: var(--main-bg-color);
@@ -556,7 +556,7 @@ li{
     border-radius: 10px;
 }
 
-.login-btn a:hover
+.auth-btn a:hover
 {
     text-decoration: none;
 }
@@ -568,7 +568,7 @@ form
     padding: 0;
 }
 
-.login-copyright h6
+.auth-copyright h6
 {
     margin: 0;
     padding: 10px 0px;
@@ -1190,7 +1190,7 @@ form
     padding: 40px;
 }
 
-.footer-logo h3
+.footer-logo a
 {
     color: var(--primary-color);
     font-size: var(--heading-fs);
@@ -1944,6 +1944,139 @@ form
     cursor: pointer;
     border-radius: 3px;
 }
+
+/* ************************************************************************************************* */
+
+.prodtl
+{
+    width: 65%;
+    padding: 100px 0px;
+    margin: auto;
+}
+
+.prodtl-content .row .col-lg-6
+{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.prodtl-img
+{
+    width: 100%;
+    height: 450px;
+    background-color: var(--third-bg-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prodtl-title h4
+{
+    color: var(--primary-color);
+    font-size: var(--heading-fs);
+    font-family: var(--logo-ff);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.prodtl-price-stock
+{
+    display: flex;
+    align-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.prodtl-price
+{
+    display: flex;
+    align-items: center;
+}
+
+.prodtl-price h4
+{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-family: var(--heading-ff);
+}
+
+.prodtl-stock p
+{
+    color: var(--content-color);
+    background-color: var(--third-bg-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--content-ff);
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.prodtl-mini-head
+{
+    margin-bottom: 30px;
+}
+
+.prodtl-mini-head h6
+{
+    color: var(--content-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.prodtl-btn
+{
+    margin-top: 40px;
+}
+
+.prodtl-btn a
+{
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    font-size: var(--content-head-fs);
+    font-family: var(--heading-ff);
+    padding: 10px 100px;
+    border-radius: 7px;
+}
+
+.prodtl-btn p
+{
+    color: var(--content-color);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.prodtl-description
+{
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.prodtl-desc-head h4
+{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-family: var(--heading-ff);
+    margin-bottom: 15px;
+}
+
+.prodtl-desc-dtl p
+{
+    color: var(--content-color);
+    font-size: 16px;
+    font-family: var(--content-ff);
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
 
 /* ********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** */
 

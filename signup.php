@@ -83,73 +83,65 @@
 
 <body>
     <div class="main" id="main-site">
-        <div class="bg-color">
-            <div class="login-form">
-                <div class="login-form-content">
-                    <div class="login-bg">
-                        <div class="login-dtl">
-                            <div class="login-form-dtl">
-                                <div class="login-form-head">
-                                    <h2>Signup Account</h2>
-                                    <a href="index.php"><img src="images/back-to-home.svg" alt="">Home</a>
-                                </div>
-                                <div class="login-form-acc">
-                                    <h6>Already have an account? <a href="login.php">Login</a></h6>
-                                    <!-- <h6>Don't have an account? <a href="signup.php">Register here</a></h6> -->
-                                </div>
-                                <form method="post" name="signup" onsubmit="return checkpass();">
-                                    <div class="login-field">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="login-field-cnt">
-                                                    <p>Username</p>
-                                                    <input type="text" name="uname" class="textInput" placeholder="Enter username" id="name" required>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="col-lg-6 col-md-12 col-sm-12">
-                                                <div class="login-field-cnt">
-                                                    <p>Last Name</p>
-                                                    <input type="text" name="lname" class="textInput" placeholder="Enter last name ( optional )" id="name">
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                        <div class="login-field-cnt">
-                                            <p>Email</p>
-                                            <input type="text" name="email" class="textInput" placeholder="Enter email address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Example: helloworld@gmail.com or helloworld123@gmail.com" required>
-                                        </div>
-                                        <!-- <div class="login-field-cnt">
-                                            <p>Contact</p>
-                                            <input type="text" name="contact" class="textInput" placeholder="Enter contact number" pattern="[0-9]{10}" title="only 10 numeric characters" required>
-                                        </div> -->
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-12 col-sm-12">
-                                                <div class="login-field-cnt">
-                                                    <p>Password</p>
-                                                    <input type="text" name="password" class="textInput" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z]).{4,}" title="at least one number and lowercase letter, and at least 4 or more characters" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-12 col-sm-12">
-                                                <div class="login-field-cnt">
-                                                    <p>Confirm Password</p>
-                                                    <input type="text" name="confirmpassword" class="textInput" placeholder="Enter confirm password" pattern="(?=.*\d)(?=.*[a-z]).{4,}" title="at least one number and lowercase letter, and at least 4 or more characters" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="login-btn">
-                                            <input type="submit" name="submit" value="Create Account">
+    <div class="bg-color">
+    <div class="auth-form">
+        <div class="auth-form-content">
+            <div class="auth-bg">
+                <div class="auth-dtl">
+                    <div class="auth-form-dtl">
+                        <div class="auth-form-head">
+                            <h2>Signup Account</h2>
+                            <a href="index.php"><img src="images/back-to-home.svg" alt="">Home</a>
+                        </div>
+                        <div class="auth-form-acc">
+                            <h6>Already have an account? <a href="login.php">Login</a></h6>
+                            <!-- <h6>Don't have an account? <a href="signup.php">Register here</a></h6> -->
+                        </div>
+                        <form method="post" name="signup" onsubmit="return checkpass();">
+                            <div class="auth-field">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="auth-field-cnt">
+                                            <p>Username</p>
+                                            <input type="text" name="uname" class="textInput" placeholder="Enter username" id="name" required>
                                         </div>
                                     </div>
-                                    <!-- <h6>Don't have an account? <a href="#">Register</a></h6> -->
-                                </form>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="auth-field-cnt">
+                                        <p>Email</p>
+                                        <input type="text" name="email" class="textInput" placeholder="Enter email address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Example: helloworld@gmail.com or helloworld123@gmail.com" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="auth-field-cnt">
+                                            <p>Password</p>
+                                            <input type="text" name="password" class="textInput" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z]).{4,}" title="at least one number and lowercase letter, and at least 4 or more characters" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="auth-field-cnt">
+                                            <p>Confirm Password</p>
+                                            <input type="text" name="confirmpassword" class="textInput" placeholder="Enter confirm password" pattern="(?=.*\d)(?=.*[a-z]).{4,}" title="at least one number and lowercase letter, and at least 4 or more characters" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="auth-btn">
+                                    <input type="submit" name="submit" value="Create Account">
+                                </div>
                             </div>
-                        </div>
+                            <!-- <h6>Don't have an account? <a href="#">Register</a></h6> -->
+                        </form>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
+    </div>
+
+
+
+</div>
     </div>
 
 <!-- *********************************************************************************************** -->

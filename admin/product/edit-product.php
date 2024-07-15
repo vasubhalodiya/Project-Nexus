@@ -54,13 +54,17 @@ $rs1 = mysqli_query($db, $qry2);
                                         </div>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Category</h5>
-                                            <select name='procategory'>
+                                            <select name='procategory'>";?>
+                                            <?php
                                                 include('../../includes/config.php');
                                                 $categories = mysqli_query($db, 'Select * from category');
-                                                while($c = mysqli_fetch_array($categories)) {
-                                                <option value='$c[catname]'>$c[catname]</option>
+                                                while($c = mysqli_fetch_array($categories)) 
+                                                {
+                                                    ?>
+                                                    <option value="<?php echo $c['catname'] ?>"><?php echo $c['catname']?></option>
+                                                <?php
                                                 }
-                                            </select>
+                                            echo "</select>
                                         </div>
                                         <div class='cnt-adding-field'>
                                             <h5>Product Quantity</h5>

@@ -77,7 +77,7 @@
                                     while($row = mysqli_fetch_array($result))
                                     {
                                         echo "<div class='col-lg-3 col-md-6 col-sm-6'>
-                                            <a href='#'>
+                                            <a href='product-view.php?product=".$row['proname']."'>
                                                 <div class='best-card'>
                                                     <div class='best-card-img'>
                                                         <img src='".$row['proimage']."' width=80px>

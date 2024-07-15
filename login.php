@@ -21,22 +21,18 @@
         //     header('location:welcome.php');
         // }
 
-        if(mysqli_num_rows($result) > 0){
-
+        if(mysqli_num_rows($result) > 0)
+        {
             $row = mysqli_fetch_array($result);
-      
-            if($row['user_type'] == 'admin'){
-      
-            //    $_SESSION['admin_name'] = $row['name'];
-               header('location:admin.php');
-      
-            }elseif($row['user_type'] == 'user'){
-      
-            //    $_SESSION['user_name'] = $row['name'];
-               header('location:user.php');
-      
+            if($row['user_type'] == 'admin')
+            {
+               header('location:admin/admin-dashboard.php');
             }
-           
+            elseif($row['user_type'] == 'user')
+            {
+                $_SESSION['email']=$email;
+                header('location:profile.php');
+            }
         }
         else
         {
@@ -75,32 +71,32 @@
 </head>
 
 <body>
-    <div class="main" id="main-site">
+<div class="main" id="main-site">
         <div class="bg-color">
-            <div class="login-form user-panel-form">
-                <div class="login-form-content user-panel-form-content">
-                    <div class="login-bg">
-                        <div class="login-dtl">
-                            <div class="login-form-dtl">
-                                <div class="login-form-head">
+            <div class="auth-form user-panel-form">
+                <div class="auth-form-content user-panel-form-content">
+                    <div class="auth-bg">
+                        <div class="auth-dtl">
+                            <div class="auth-form-dtl">
+                                <div class="auth-form-head">
                                     <h2>User Login</h2>
                                     <a href="index.php"><img src="images/back-to-home.svg" alt="">Home</a>
                                 </div>
-                                <div class="login-form-acc">
-                                    <!-- <h6>Already have an account? <a href="login.php">Login</a></h6> -->
+                                <div class="auth-form-acc">
+                                    <!-- <h6>Already have an account? <a href="auth.php">auth</a></h6> -->
                                     <h6>Don't have an account? <a href="signup.php">Register here</a></h6>
                                 </div>
                                 <form method="post" action="">
-                                    <div class="login-field">
-                                        <div class="login-field-cnt">
+                                    <div class="auth-field">
+                                        <div class="auth-field-cnt">
                                             <p>Email</p>
                                             <input type="text" name="email" id="textInput" placeholder="Enter email id">
                                         </div>
-                                        <div class="login-field-cnt">
+                                        <div class="auth-field-cnt">
                                             <p>Password</p>
                                             <input type="text" name="password" id="textInput" placeholder="Enter password">
                                         </div>
-                                        <div class="login-btn">
+                                        <div class="auth-btn">
                                             <input type="submit" name="login" value="Login">
                                         </div>
                                     </div>
@@ -110,8 +106,6 @@
                     </div>
                 </div>
             </div>
-
-
 
         </div>
     </div>
