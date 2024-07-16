@@ -1,3 +1,17 @@
+<?php
+
+if(!isset($_SESSION['username']))
+{
+    header("location:my-login.php");
+}
+else
+{
+    header("location:payment.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -152,7 +166,7 @@
                                                 <h6>$ 100.00</h6>
                                             </div>
                                             <div class="summary-btn">
-                                                <a href="#">Checkout</a>
+                                                <input type="submit" name="checkout" value="Checkout">
                                             </div>
                                             <div class="summary-continue-shopping">
                                                 <a href="#">Continue Shopping</a>

@@ -68,16 +68,17 @@
                 <div class="container">
                 <?php
                     include('includes/config.php');
-                    if(isset($_POST["product"]))
+                    if(isset($_POST["proview"]))
                     {
+                        echo "hello";
                         $product_name = $_POST['product'];
-                        $product_data = getSlugActive("products", $product_name);
+                        $product_data = getSlugActive("product", $product_name);
                         $product = mysqli_fetch_array($product_data);
 
                         if($product)
                         {
                     ?>
-                    <!-- <div class="prodtl-content">
+                    <div class="prodtl-content">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="prodtl-details">
@@ -172,7 +173,7 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aspernatur consequuntur labore perferendis sequi nam numquam laudantium aliquid corrupti harum, itaque ipsam deserunt suscipit alias porro dolor voluptates at adipisci!</p>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <?php
                         }
                         else

@@ -52,7 +52,7 @@
                                         </div> -->
                                     </li>
                                 </a>
-                                <a href="profile.php" class="nav-links"><li><img src="images/User-1.svg" alt=""></li></a>
+                                <a href="index-other.php" class="nav-links"><li><img src="images/User-1.svg" alt=""></li></a>
                             </ul>
                         </div>
                     </div>
@@ -317,6 +317,7 @@
                 }
             });
         </script>
+
 
     </body>
 </html>
