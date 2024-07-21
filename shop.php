@@ -44,7 +44,7 @@
                         </div>
                         <div class="nav-profile">
                             <ul>
-                                <a href="cart.php" class="nav-links">
+                                <a href="mycart.php" class="nav-links">
                                     <li class="cart-count-relative">
                                         <img src="images/Cart.svg" alt="">
                                         <!-- <div class="cart-count">
@@ -65,7 +65,7 @@
                         <div class="product-head">
                             <h3>Products</h3>
                         </div>
-                        <div class="product-cnt">
+                        <!-- <div class="product-cnt">
                             <div class="row">
                             <?php
                                 include('includes/config.php');
@@ -77,32 +77,99 @@
                                     while($row = mysqli_fetch_array($result))
                                     {
                                         echo "<div class='col-lg-3 col-md-6 col-sm-6'>
-                                            <a href='product-view.php?proview=".$row['proid']."'>
-                                                <div class='best-card'>
-                                                    <div class='best-card-img'>
-                                                        <img src='".$row['proimage']."' width=80px>
-                                                    </div>
-                                                    <div class='best-card-cnt'>
-                                                        <div class='best-card-name'>
-                                                            <h4>".$row['proname']."</h4>
+                                                <form action='managecart.php' method='post'>
+                                                    <div class='best-card'>
+                                                        <div class='best-card-img'>
+                                                            <img src='".$row['proimage']."' width=80px>
                                                         </div>
-                                                        <div class='best-card-price-stock'>
-                                                            <div class='best-card-stock'>
-                                                                <p>".$row['prostockstatus']."</p>
+                                                        <div class='best-card-cnt'>
+                                                            <div class='best-card-cnt-part'>
+                                                                <div class='best-card-name'>
+                                                                    <h4>".$row['proname']."</h4>
+                                                                </div>
+                                                                <div class='best-card-price'>
+                                                                    <h6>$".$row['proprice']."</h6>
+                                                                </div>
                                                             </div>
-                                                            <div class='best-card-price'>
-                                                                <h6>$".$row['proprice']."</h6>
+                                                            <div class='best-card-price-stock'>
+                                                                <div class='best-card-stock'>
+                                                                    <p>".$row['prostockstatus']."</p>
+                                                                </div>
+                                                                <div class='best-card-stock'>
+                                                                    <button type='submit' name='add_to_cart'>Add to Cart</button>
+                                                                    <input type='hidden' name='proname' value='".$row['proname']."'>
+                                                                    <input type='hidden' name='proprice' value='".$row['proprice']."'>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </a>
-                                        </div>";
+                                                </form>
+                                            </div>";
                                         }
                                     }
                                 ?>
                             </div>
-                        </div>
+                        </div> -->
+                        <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-3">
+        <form action="manage_cart.php" method="POST">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bag 1</h5>
+              <p class="card-text">proprice: Rs.450</p>
+              <button type="submit" name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
+              <input type="hidden" name="proname" value="Bag 1">
+              <input type="hidden" name="proprice" value="450">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-3">
+        <form action="manage_cart.php" method="POST">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bag 2</h5>
+              <p class="card-text">proprice: Rs.650</p>
+              <button type="submit"  name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
+              <input type="hidden" name="proname" value="Bag 2">
+              <input type="hidden" name="proprice" value="650">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-3">
+        <form action="manage_cart.php" method="POST">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bag 3</h5>
+              <p class="card-text">proprice: Rs.750</p>
+              <button type="submit"  name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
+              <input type="hidden" name="proname" value="Bag 3">
+              <input type="hidden" name="proprice" value="750">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-3">
+        <form action="manage_cart.php" method="POST">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bag 4</h5>
+              <p class="card-text">proprice: Rs.950</p>
+              <button type="submit"  name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
+              <input type="hidden" name="proname" value="Bag 4">
+              <input type="hidden" name="proprice" value="950">
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
                     </div>
                 </div>
             </div>
@@ -214,3 +281,34 @@
 
     </body>
 </html>
+
+
+
+
+<!-- echo "<div class='col-lg-3 col-md-6 col-sm-6'>
+    <a href='product-view.php?proview=".$row['proid']."'>
+        <div class='best-card'>
+            <div class='best-card-img'>
+                <img src='".$row['proimage']."' width=80px>
+            </div>
+            <div class='best-card-cnt'>
+                <div class='best-card-cnt-part'>
+                    <div class='best-card-name'>
+                        <h4>".$row['proname']."</h4>
+                    </div>
+                    <div class='best-card-price'>
+                        <h6>$".$row['proprice']."</h6>
+                    </div>
+                </div>
+                <div class='best-card-price-stock'>
+                    <div class='best-card-stock'>
+                        <p>".$row['prostockstatus']."</p>
+                    </div>
+                    <div class='best-card-stock'>
+                        <button type='submit' name='addtocart'>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>"; -->

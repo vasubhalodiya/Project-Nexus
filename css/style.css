@@ -1005,7 +1005,7 @@ form
 
 .best-card
 {
-    cursor: pointer;
+    /* cursor: pointer; */
     transition:all 0.5s ease;
 }
 
@@ -1088,12 +1088,19 @@ form
     padding: 20px;
 }
 
+.best-card-cnt-part
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .best-card-name h4
 {
     color: var(--primary-color);
     font-size: 20px;
     font-family: var(--heading-ff);
-    margin-bottom: 20px;
 }
 
 .best-card-price-stock
@@ -1130,6 +1137,17 @@ form
     background-color: rgb(44, 44, 45, 0.3);
     font-size: var(--content-mini-fs);
     font-family: var(--content-ff);
+    border: 1px solid var(--border);
+    padding: 7px 20px;
+    border-radius: 50px;
+}
+
+.best-card-stock button
+{
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    font-size: var(--content-mini-fs);
+    font-family: var(--heading-ff);
     border: 1px solid var(--border);
     padding: 7px 20px;
     border-radius: 50px;

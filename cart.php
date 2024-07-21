@@ -1,17 +1,3 @@
-<?php
-
-if(!isset($_SESSION['username']))
-{
-    header("location:my-login.php");
-}
-else
-{
-    header("location:payment.php");
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -77,7 +63,7 @@ else
                 <div class="container">
                     <div class="cart-content">
                         <div class="row">
-                            <div class="col-lg-7 col-md-12 col-sm-12">
+                            <!-- <div class="col-lg-7 col-md-12 col-sm-12">
                                 <div class="card-cnt">
                                     <div class="cart-product">
                                         <div class="cart-product-head">
@@ -141,7 +127,7 @@ else
                                         </div>
                                     </div>        
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-lg-5 col-md-12 col-sm-12">
                                 <div class="cart-cnt">
                                     <div class="cart-summary">
