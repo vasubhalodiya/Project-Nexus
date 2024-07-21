@@ -32,7 +32,7 @@
                 <div class="sidebar-content">
                     <div class="sidebar-part">
                         <div class="sidebar-logo">
-                            <a href="index.html">Nexus</a>
+                            <a href="../../index.php">Nexus</a>
                         </div>
                         <div class="sidebar-links">
                             <ul>
@@ -111,36 +111,24 @@
                                                     </div> -->
                                                     <div class="cnt-adding-field">
                                                         <h5>User Name</h5>
-                                                        <input type="text" placeholder="Enter name" name="proname">
+                                                        <input type="text" placeholder="Enter name" name="uname">
                                                     </div>
                                                     <div class="cnt-adding-field">
-                                                        <h5>User Email</h5>
-                                                        <input type="text" placeholder="Enter quantity" name="proquantity">
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>User Registration Time</h5>
-                                                        <textarea cols="30" rows="5" placeholder="Product description" name="prodesc"></textarea>
+                                                        <h5>User Password</h5>
+                                                        <input type="text" placeholder="Enter password" name="password">
                                                     </div>
                                                 </div>
                                                 <div class="cnt-adding-part">
                                                     <div class="cnt-adding-field">
-                                                        <h5>Product Price</h5>
-                                                        <input type="text" placeholder="Enter price" name="proprice">
+                                                        <h5>User Email</h5>
+                                                        <input type="text" placeholder="Enter email" name="email">
                                                     </div>
                                                     <div class="cnt-adding-field">
-                                                        <h5>Product Stock Status</h5>
-                                                        <select name="prostockstatus">
-                                                            <option value="In Stock">In Stock</option>
-                                                            <option value="Out of Stock">Out of Stock</option>
+                                                        <h5>User Type</h5>
+                                                        <select name="user_type">
+                                                            <option value="User">User</option>
+                                                            <option value="Admin">Admin</option>
                                                         </select>
-                                                    </div>
-                                                    <div class="cnt-adding-field">
-                                                        <h5>Product Image</h5>
-                                                        <label class="picture" for="proimage" tabIndex="0">
-                                                            <img src="../../images/Upload.svg" alt=""><h6>Choose product images</h6>
-                                                        </label>
-                                                        <span class="picture-image"></span>
-                                                        <input type="file" name="uploadfile" id="proimage" class="file-input">
                                                     </div>
                                                 </div>
                                             </div>
@@ -178,10 +166,9 @@
                                             </div>
                                             <?php
                                                 include('../../includes/config.php');
-                                                $sql = "select lg.* from login lg, users us";
+                                                // $sql = "select lg.* from login lg, users us";
                                                 // $sql = "select * from users INNER JOIN login ON users.";
-                                                // $sql = "select * from product";
-                                                // $sql = "select * from product order by proid desc limit 4";
+                                                $sql = "select * from login";
                                                 $result = mysqli_query($db, $sql);
 
                                                 if(mysqli_num_rows($result)>0)
@@ -190,9 +177,10 @@
                                             <table class="table table-class" id="table-id">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
+                                                        <th>Username</th>
                                                         <th>Email</th>
                                                         <th>Password</th>
+                                                        <th>User Type</th>
                                                         <th>Edit - Delete</th>
                                                     </tr>
                                                 </thead>
@@ -205,6 +193,7 @@
                                                         echo "<td>".$row['uname']."</td>";
                                                         echo "<td>".$row['email']."</td>";
                                                         echo "<td>".$row['password']."</td>";
+                                                        echo "<td>".$row['user_type']."</td>";
                                                         echo "<td class='edit'><a href='edit-users.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-users.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
                                                         echo "</tr>";
                                                         echo "<tbody>";

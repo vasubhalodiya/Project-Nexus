@@ -32,7 +32,7 @@
                 <div class="sidebar-content">
                     <div class="sidebar-part">
                         <div class="sidebar-logo">
-                            <a href="index.html">Nexus</a>
+                            <a href="../../index.php">Nexus</a>
                         </div>
                         <div class="sidebar-links">
                         <ul>

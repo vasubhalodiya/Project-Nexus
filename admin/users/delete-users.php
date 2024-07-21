@@ -1,8 +1,8 @@
 <?php
 include('../../includes/config.php');
-$uid = $_REQUEST['id'];
+$id = $_REQUEST['id'];
 
-$qry1 = "delete from users where uid=$uid";
+$qry1 = "delete from login where id=$id";
 $rs1 = mysqli_query($db, $qry1);
 
 header("location:admin-users.php");
