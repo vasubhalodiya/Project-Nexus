@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       {
         echo"<script>
           alert('Item Already Added');
-          window.location.href='shop.php';
+          window.location.href='index.php';
         </script>";
       }
       else
@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proqty'=>1);
         echo"<script>
           alert('Item Added');
-          window.location.href='shop.php';
+          window.location.href='index.php';
         </script>";
       }
     }
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proqty'=>1);
       echo"<script>
         alert('Item Added');
-        window.location.href='shop.php';
+        window.location.href='index.php';
       </script>";
     }
   }
@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $_SESSION['cart']=array_values($_SESSION['cart']);
         echo"<script>
           alert('Item Removed');
-          window.location.href='cart.php';
+          window.location.href='mycart.php';
         </script>";
       }
     }
@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       {
         $_SESSION['cart'][$key]['proqty']=$_POST['Mod_proqty'];
         echo"<script>
-          window.location.href='cart.php';
+          window.location.href='mycart.php';
         </script>";
       }
     }

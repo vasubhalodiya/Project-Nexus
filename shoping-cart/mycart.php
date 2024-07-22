@@ -1,14 +1,11 @@
 <?php 
-// include("header.php"); 
-session_start();
+include("header.php"); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
   <title>Cart</title>
 </head>
 <body>
@@ -43,14 +40,14 @@ session_start();
                       <td>$value[proname]</td>
                       <td>$value[proprice]<input type='hidden' class='iproprice' value='$value[proprice]'></td>
                       <td>
-                        <form action='manage_mycart.php' method='POST'>
+                        <form action='manage_cart.php' method='POST'>
                           <input class='text-center iproqty' name='Mod_proqty' onchange='this.form.submit();' type='number' value='$value[proqty]' min='1' max='10'>
                           <input type='hidden' name='proname' value='$value[proname]'>
                         </form>
                       </td>
                       <td class='itotal'></td>
                       <td>
-                        <form action='manage_mycart.php' method='POST'>
+                        <form action='manage_cart.php' method='POST'>
                           <button name='Remove_Item' class='btn btn-sm btn-outline-danger'>REMOVE</button>
                           <input type='hidden' name='proname' value='$value[proname]'>
                         </form>
