@@ -65,7 +65,7 @@
                         <div class="product-head">
                             <h3>Products</h3>
                         </div>
-                        <!-- <div class="product-cnt">
+                        <div class="product-cnt">
                             <div class="row">
                             <?php
                                 include('includes/config.php');
@@ -80,7 +80,7 @@
                                                 <form action='managecart.php' method='post'>
                                                     <div class='best-card'>
                                                         <div class='best-card-img'>
-                                                            <img src='".$row['proimage']."' width=80px>
+                                                            <img src='admin/product/upload".$row['proimage']."' width=80px>
                                                         </div>
                                                         <div class='best-card-cnt'>
                                                             <div class='best-card-cnt-part'>
@@ -96,7 +96,7 @@
                                                                     <p>".$row['prostockstatus']."</p>
                                                                 </div>
                                                                 <div class='best-card-stock'>
-                                                                    <button type='submit' name='add_to_cart'>Add to Cart</button>
+                                                                    <button type='submit' name='Add_To_Cart'>Add to Cart</button>
                                                                     <input type='hidden' name='proname' value='".$row['proname']."'>
                                                                     <input type='hidden' name='proprice' value='".$row['proprice']."'>
                                                                 </div>
@@ -108,70 +108,6 @@
                                         }
                                     }
                                 ?>
-                            </div>
-                        </div> -->
-                        <div class="container mt-5">
-                            <div class="row">
-                            <div class="col-lg-3">
-                                <form action="managecart.php" method="POST">
-                                <div class="card">
-                                    <img src="images/1.jpg" class="card-img-top">
-                                    <div class="card-body text-center">
-                                    <h5 class="card-title">Bag 1</h5>
-                                    <p class="card-text">proprice: Rs.450</p>
-                                    <button type="submit" name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
-                                    <input type="hidden" name="proname" value="Bag 1">
-                                    <input type="hidden" name="proprice" value="450">
-                                    </div>
-                                </div>
-                                </form>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <form action="managecart.php" method="POST">
-                                <div class="card">
-                                    <img src="images/2.jpg" class="card-img-top">
-                                    <div class="card-body text-center">
-                                    <h5 class="card-title">Bag 2</h5>
-                                    <p class="card-text">proprice: Rs.650</p>
-                                    <button type="submit"  name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
-                                    <input type="hidden" name="proname" value="Bag 2">
-                                    <input type="hidden" name="proprice" value="650">
-                                    </div>
-                                </div>
-                                </form>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <form action="managecart.php" method="POST">
-                                <div class="card">
-                                    <img src="images/3.jpg" class="card-img-top">
-                                    <div class="card-body text-center">
-                                    <h5 class="card-title">Bag 3</h5>
-                                    <p class="card-text">proprice: Rs.750</p>
-                                    <button type="submit"  name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
-                                    <input type="hidden" name="proname" value="Bag 3">
-                                    <input type="hidden" name="proprice" value="750">
-                                    </div>
-                                </div>
-                                </form>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <form action="managecart.php" method="POST">
-                                <div class="card">
-                                    <img src="images/4.jpg" class="card-img-top">
-                                    <div class="card-body text-center">
-                                    <h5 class="card-title">Bag 4</h5>
-                                    <p class="card-text">proprice: Rs.950</p>
-                                    <button type="submit"  name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
-                                    <input type="hidden" name="proname" value="Bag 4">
-                                    <input type="hidden" name="proprice" value="950">
-                                    </div>
-                                </div>
-                                </form>
-                            </div>
-
                             </div>
                         </div>
                     </div>

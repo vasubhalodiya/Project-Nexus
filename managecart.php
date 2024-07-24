@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       else
       {
         $count=count($_SESSION['cart']);
-        $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proqty'=>1);
+        $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'prosize'=>$_POST['prosize'],'proqty'=>1);
         echo"<script>
           alert('Item Added');
           window.location.href='shop.php';
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     }
     else
     {
-      $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proqty'=>1);
+      $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'prosize'=>$_POST['prosize'],'proqty'=>1);
       echo"<script>
         alert('Item Added');
         window.location.href='shop.php';
