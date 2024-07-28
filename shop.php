@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -47,9 +50,16 @@
                                 <a href="cart.php" class="nav-links">
                                     <li class="cart-count-relative">
                                         <img src="images/Cart.svg" alt="">
-                                        <!-- <div class="cart-count">
-                                            <p>0</p>
-                                        </div> -->
+                                        <?php
+                                            $count=0;
+                                            if(isset($_SESSION['cart']))
+                                            {
+                                                $count=count($_SESSION['cart']);
+                                            }
+                                        ?>
+                                        <div class="cart-count">
+                                            <p><?php echo $count; ?></p>
+                                        </div>
                                     </li>
                                 </a>
                                 <a href="#" class="nav-links"><li><img src="images/User-1.svg" alt=""></li></a>
@@ -80,7 +90,7 @@
                                                 <form action='managecart.php' method='post'>
                                                     <div class='best-card'>
                                                         <div class='best-card-img'>
-                                                            <img src='admin/product/upload".$row['proimage']."' width=80px>
+                                                            <img src='admin/product/$row[proimage]'>
                                                         </div>
                                                         <div class='best-card-cnt'>
                                                             <div class='best-card-cnt-part'>

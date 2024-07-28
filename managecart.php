@@ -11,25 +11,23 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       if(in_array($_POST['proname'],$myitems))
       {
         echo"<script>
-          alert('Item Already Added');
+          // alert('Item Already Added');
           window.location.href='shop.php';
         </script>";
       }
       else
       {
         $count=count($_SESSION['cart']);
-        $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'prosize'=>$_POST['prosize'],'proqty'=>1);
+        $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proimage'=>$_POST['proimage'],'proqty'=>1);
         echo"<script>
-          alert('Item Added');
           window.location.href='shop.php';
         </script>";
       }
     }
     else
     {
-      $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'prosize'=>$_POST['prosize'],'proqty'=>1);
+      $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proimage'=>$_POST['proimage'],'proqty'=>1);
       echo"<script>
-        alert('Item Added');
         window.location.href='shop.php';
       </script>";
     }
@@ -43,7 +41,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         unset($_SESSION['cart'][$key]);
         $_SESSION['cart']=array_values($_SESSION['cart']);
         echo"<script>
-          alert('Item Removed');
           window.location.href='cart.php';
         </script>";
       }

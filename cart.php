@@ -51,9 +51,16 @@ session_start();
                                 <a href="cart.php" class="nav-links active">
                                     <li class="cart-count-relative">
                                         <img src="images/Cart.svg" alt="">
-                                        <!-- <div class="cart-count">
-                                            <p>0</p>
-                                        </div> -->
+                                        <?php
+                                            $count=0;
+                                            if(isset($_SESSION['cart']))
+                                            {
+                                                $count=count($_SESSION['cart']);
+                                            }
+                                        ?>
+                                        <div class="cart-count">
+                                            <p><?php echo $count; ?></p>
+                                        </div>
                                     </li>
                                 </a>
                                 <a href="#" class="nav-links"><li><img src="images/User-1.svg" alt=""></li></a>
@@ -82,11 +89,10 @@ session_start();
                                                     echo "<div class='cart-card'>
                                                     <div class='cart-card-part'>
                                                         <div class='cart-card-img'>
-                                                            <img src='images/tshirt 1.png' alt=''>
+                                                            <img src='admin/product/$value[proimage]'>
                                                         </div>
                                                         <div class='cart-card-title'>
                                                             <h4>$value[proname]</h4>
-                                                            <h5>$value[prosize]</h5>                                                
                                                         </div>
                                                     </div>
                                                     <div class='cart-card-part'>
