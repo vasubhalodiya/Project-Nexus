@@ -206,6 +206,110 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="dashboard-latest">
+                                <div class="dash-latest-content">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="cnt-head dash-latest-head">
+                                                <h4>Latest Product</h4>
+                                            </div>
+                                            <div class="dash-latest-card">
+                                                <?php
+                                                    include('../includes/config.php');
+                                                    // $sql = "select * from product";
+                                                    $sql = "select * from product order by proid desc limit 4";
+                                                    $result = mysqli_query($db, $sql);
+        
+                                                    if(mysqli_num_rows($result)>0)
+                                                    {
+                                                ?>
+                                                <table class="table table-class" id="table-id">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Image</th>
+                                                            <th>Name</th>
+                                                            <th>Price</th>
+                                                            <th>Category</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <?php
+                                                    while($row = mysqli_fetch_array($result))
+                                                    {
+                                                        echo "<tbody>";
+                                                        echo "<tr>";
+                                                        echo "<td><img src='".$row['proimage']."' width=80px></td>";
+                                                        echo "<td>".$row['proname']."</td>";
+                                                        echo "<td>".$row['proprice']."</td>";
+                                                        echo "<td>".$row['procategory']."</td>";
+                                                        echo "</tr>";
+                                                        echo "<tbody>";
+                                                    }
+                                                        echo "</table>";
+                                                    }
+                                                    else
+                                                    {
+                                                    ?>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                <a href="product/admin-product.php">
+                                                    <div class="dash-latest-table-btn">
+                                                        <p>View More</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="cnt-head dash-latest-head">
+                                                <h4>Latest Users</h4>
+                                            </div>
+                                            <div class="dash-latest-card">
+                                                <?php
+                                                    include('../includes/config.php');
+                                                    // $sql = "select * from users";
+                                                    $sql = "select * from users order by id desc limit 4";
+                                                    $result = mysqli_query($db, $sql);
+
+                                                    if(mysqli_num_rows($result)>0)
+                                                    {
+                                                ?>
+                                                <table class="table table-class" id="table-id">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Username</th>
+                                                            <th>Email</th>
+                                                            <th>User Type</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <?php
+                                                        while($row = mysqli_fetch_array($result))
+                                                        {
+                                                            echo "<tbody>";
+                                                            echo "<tr>";
+                                                            echo "<td>".$row['uname']."</td>";
+                                                            echo "<td>".$row['email']."</td>";
+                                                            echo "<td>".$row['user_type']."</td>";
+                                                            echo "</tr>";
+                                                            echo "<tbody>";
+                                                        }
+                                                            echo "</table>";
+                                                        }
+                                                        else
+                                                        {
+                                                    ?>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                <a href="users/admin-users.php">
+                                                    <div class="dash-latest-table-btn">
+                                                        <p>View More</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
