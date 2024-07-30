@@ -95,64 +95,113 @@
                     </div>
 <!-- ========================================================================= -->
 
-                    <div class="dashboard">
-                        <div class="dashboard-content">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="dashboard-card">
-                                        <div class="dashboard-count">
-                                            <h5>Users</h5>
-                                            <?php
-                                                include('../includes/config.php');
-                                                $users_query = "SELECT * from users";
-                                                $users_query_run = mysqli_query($db, $users_query);
+                    <div class="cnt-main-content">
+                        <div class="cnt-child-content">
+                            <div class="cnt-head">
+                                <h4>Dashboard</h4>
+                            </div>
+                            <div class="dashboard">
+                                <div class="dashboard-content">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="dashboard-card">
+                                                <div class="dashboard-count">
+                                                    <h5>Users</h5>
+                                                    <?php
+                                                        include('../includes/config.php');
+                                                        $users_query = "SELECT * from users";
+                                                        $users_query_run = mysqli_query($db, $users_query);
 
-                                                if($users_total = mysqli_num_rows($users_query_run))
-                                                {
-                                                    echo "<h3>".$users_total."</h3>";
-                                                }
-                                                else
-                                                {
-                                                    echo "<h3>No Data</h3>";
-                                                }
-                                            ?>
-                                            <!-- <h3>3</h3> -->
+                                                        if($users_total = mysqli_num_rows($users_query_run))
+                                                        {
+                                                            echo "<h3>".$users_total."</h3>";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo "<h3>No Data</h3>";
+                                                        }
+                                                    ?>
+                                                    <!-- <h3>3</h3> -->
+                                                </div>
+                                                <div class="dashboard-view">
+                                                    <a href="#">View Details</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="dashboard-view">
-                                            <a href="#">View Details</a>
+                                        <div class="col-lg-3">
+                                            <div class="dashboard-card">
+                                                <div class="dashboard-count">
+                                                    <h5>Category</h5>
+                                                    <?php
+                                                        include('../includes/config.php');
+                                                        $category_query = "SELECT * from category";
+                                                        $category_query_run = mysqli_query($db, $category_query);
+
+                                                        if($category_total = mysqli_num_rows($category_query_run))
+                                                        {
+                                                            echo "<h3>".$category_total."</h3>";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo "<h3>No Data</h3>";
+                                                        }
+                                                    ?>
+                                                    <!-- <h3>3</h3> -->
+                                                </div>
+                                                <div class="dashboard-view">
+                                                    <a href="#">View Details</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="dashboard-card">
-                                        <div class="dashboard-count">
-                                            <h5>Users</h5>
-                                            <h3>3</h3>
+                                        <div class="col-lg-3">
+                                            <div class="dashboard-card">
+                                                <div class="dashboard-count">
+                                                    <h5>Product</h5>
+                                                    <?php
+                                                        include('../includes/config.php');
+                                                        $product_query = "SELECT * from product";
+                                                        $product_query_run = mysqli_query($db, $product_query);
+
+                                                        if($product_total = mysqli_num_rows($product_query_run))
+                                                        {
+                                                            echo "<h3>".$product_total."</h3>";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo "<h3>No Data</h3>";
+                                                        }
+                                                    ?>
+                                                    <!-- <h3>3</h3> -->
+                                                </div>
+                                                <div class="dashboard-view">
+                                                    <a href="#">View Details</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="dashboard-view">
-                                            <a href="#">View Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="dashboard-card">
-                                        <div class="dashboard-count">
-                                            <h5>Users</h5>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="dashboard-view">
-                                            <a href="#">View Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="dashboard-card">
-                                        <div class="dashboard-count">
-                                            <h5>Users</h5>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="dashboard-view">
-                                            <a href="#">View Details</a>
+                                        <div class="col-lg-3">
+                                            <div class="dashboard-card">
+                                                <div class="dashboard-count">
+                                                    <h5>Sales</h5>
+                                                    <?php
+                                                        include('../includes/config.php');
+                                                        $sales_query = "SELECT * from sales";
+                                                        $sales_query_run = mysqli_query($db, $sales_query);
+
+                                                        if($sales_total = mysqli_num_rows($sales_query_run))
+                                                        {
+                                                            echo "<h3>".$sales_total."</h3>";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo "<h3>No Data</h3>";
+                                                        }
+                                                    ?>
+                                                    <!-- <h3>3</h3> -->
+                                                </div>
+                                                <div class="dashboard-view">
+                                                    <a href="#">View Details</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

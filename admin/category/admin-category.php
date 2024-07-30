@@ -125,7 +125,7 @@
                             </div>
                             <div class="cnt-main-cnt" id="add-cnt">
                                 <div class="cnt-head">
-                                    <h4>Dashboard</h4>
+                                    <h4>Category</h4>
                                     <button onclick="myFunction()">Add Product</button>
                                      <!-- <a href="add-product.php">Add Product</a> -->
                                 </div>
