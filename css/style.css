@@ -2992,16 +2992,53 @@ form
     max-width: 100px;
 }
 
+.dashboard-content
+{
+    padding: 50px;
+}
 
+.dashboard-card
+{
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
 
+.dashboard-count
+{
+    padding: 20px;
+}
 
+.dashboard-count h5
+{
+    color: var(--content-color);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
 
+.dashboard-count h3
+{
+    color: var(--primary-color);
+    font-size: 30px;
+    font-family: var(--heading-ff);
+}
 
+.dashboard-view
+{
+    width: 100%;
+    padding: 15px 20px;
+    border-top: 1px solid var(--border);
+    background-color: var(--third-bg-color);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
 
-
-
-
-
+.dashboard-view a
+{
+    width: 100%;
+    color: var(--blue-color);
+    font-size: 14px;
+}
 
 
 

@@ -95,7 +95,70 @@
                     </div>
 <!-- ========================================================================= -->
 
+                    <div class="dashboard">
+                        <div class="dashboard-content">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-count">
+                                            <h5>Users</h5>
+                                            <?php
+                                                include('../includes/config.php');
+                                                $users_query = "SELECT * from users";
+                                                $users_query_run = mysqli_query($db, $users_query);
 
+                                                if($users_total = mysqli_num_rows($users_query_run))
+                                                {
+                                                    echo "<h3>".$users_total."</h3>";
+                                                }
+                                                else
+                                                {
+                                                    echo "<h3>No Data</h3>";
+                                                }
+                                            ?>
+                                            <!-- <h3>3</h3> -->
+                                        </div>
+                                        <div class="dashboard-view">
+                                            <a href="#">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-count">
+                                            <h5>Users</h5>
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="dashboard-view">
+                                            <a href="#">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-count">
+                                            <h5>Users</h5>
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="dashboard-view">
+                                            <a href="#">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-count">
+                                            <h5>Users</h5>
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="dashboard-view">
+                                            <a href="#">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 <!-- ========================================================================= -->
                 </div>

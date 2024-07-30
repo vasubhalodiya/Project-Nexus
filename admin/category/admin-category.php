@@ -167,7 +167,7 @@
                                                     <?php
                                                     while($row = mysqli_fetch_array($result))
                                                     {
-                                                        echo "<tbody>";
+                                                        echo "<tbody id='table'>";
                                                         echo "<tr>";
                                                         echo "<td>".$row['catname']."</td>";
                                                         echo "<td class='edit'><a href='edit-category.php?id=$row[0]'><i class='fa-solid fa-pen'></i></a><a href='delete-category.php?id=$row[0]'><i class='fa-regular fa-trash-can'></i></a></td>";
@@ -241,7 +241,7 @@
             }
         </script>
 
-        <script>
+        <!-- <script>
             getPagination('#table-id');
             $('#maxRows').trigger('change');
             function getPagination(table) {
@@ -349,7 +349,40 @@
                     $('#maxRows').trigger('change');
                 }
             }
-        </script>
+        </script> -->
+        
+
+
+
+
+
+
+
+<script>
+    $("#search_input_all").on("keyup", function() {
+  var value = $(this).val().toLowerCase();
+  $("#table tr").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         <script>
             const inputFile = document.querySelector("#proimage");

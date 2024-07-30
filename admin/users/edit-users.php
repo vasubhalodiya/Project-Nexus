@@ -1,7 +1,7 @@
 <?php
 include('../../includes/config.php');
 $id = $_REQUEST['id'];
-$qry2 = "select * from login where id='$id'";
+$qry2 = "select * from users where id='$id'";
 $rs1 = mysqli_query($db, $qry2);
 ?>
 

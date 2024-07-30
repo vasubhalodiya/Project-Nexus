@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $password = md5($_POST['password']);
 
-        $sql = "select * from login where email='$email' and password='$password'";
+        $sql = "select * from users where email='$email' and password='$password'";
         $result = mysqli_query($db,$sql)or die(mysqli_error($db));
         $total = mysqli_num_rows($result);
 

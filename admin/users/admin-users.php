@@ -166,9 +166,9 @@
                                             </div>
                                             <?php
                                                 include('../../includes/config.php');
-                                                // $sql = "select lg.* from login lg, users us";
+                                                // $sql = "select lg.* from users lg, users us";
                                                 // $sql = "select * from users INNER JOIN login ON users.";
-                                                $sql = "select * from login";
+                                                $sql = "select * from users";
                                                 $result = mysqli_query($db, $sql);
 
                                                 if(mysqli_num_rows($result)>0)
