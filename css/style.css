@@ -3032,7 +3032,7 @@ form
 .dashboard-view
 {
     width: 100%;
-    padding: 15px 20px;
+    height: 50px;
     border-top: 1px solid var(--border);
     background-color: var(--third-bg-color);
     border-bottom-left-radius: 12px;
@@ -3042,8 +3042,12 @@ form
 .dashboard-view a
 {
     width: 100%;
+    height: 50px;
     color: var(--blue-color);
     font-size: 14px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .dash-latest-head
@@ -3068,14 +3072,68 @@ form
     justify-content: center;
 }
 
+.logout-content
+{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.logout-name h5
+{
+    color: var(--primary-color);
+    font-size: 21px;
+    margin-bottom: 20px;
+}
 
+.logout-name h5 span
+{
+    color: var(--blue-color);
+    font-size: 23px;
+    font-family: 'Int-SemiBold';
+    letter-spacing: 1px;
+}
 
+.logout-name h4
+{
+    width: 350px;
+    color: var(--content-color);
+    font-size: 17px;
+    margin-bottom: 40px;
+    line-height: 25px;
+}
 
+.logout-btn
+{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
+.logout-no-btn a
+{
+    color: var(--primary-color);
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--primary-color);
+    font-size: 17px;
+    font-family: var(--content-ff);
+    padding: 10px 30px;
+    border-radius: 8px;
+}
 
-
-
+.logout-yes-btn a
+{
+    color: var(--main-bg-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: 17px;
+    padding: 10px 30px;
+    border-radius: 8px;
+}
 
 
 

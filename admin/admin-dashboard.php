@@ -124,7 +124,9 @@
                                                     <!-- <h3>3</h3> -->
                                                 </div>
                                                 <div class="dashboard-view">
-                                                    <a href="#">View Details</a>
+                                                    <a href="users/admin-users.php">
+                                                        <p>View Details</p>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +151,7 @@
                                                     <!-- <h3>3</h3> -->
                                                 </div>
                                                 <div class="dashboard-view">
-                                                    <a href="#">View Details</a>
+                                                    <a href="category/admin-category.php">View Details</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -174,7 +176,7 @@
                                                     <!-- <h3>3</h3> -->
                                                 </div>
                                                 <div class="dashboard-view">
-                                                    <a href="#">View Details</a>
+                                                    <a href="product/admin-product.php">View Details</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,7 +201,7 @@
                                                     <!-- <h3>3</h3> -->
                                                 </div>
                                                 <div class="dashboard-view">
-                                                    <a href="#">View Details</a>
+                                                    <a href="sales/admin-sales.php">View Details</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -226,6 +228,7 @@
                                                 <table class="table table-class" id="table-id">
                                                     <thead>
                                                         <tr>
+                                                            <th>ID</th>
                                                             <th>Image</th>
                                                             <th>Name</th>
                                                             <th>Price</th>
@@ -237,7 +240,8 @@
                                                     {
                                                         echo "<tbody>";
                                                         echo "<tr>";
-                                                        echo "<td><img src='".$row['proimage']."' width=80px></td>";
+                                                        echo "<td>".$row['proid']."</td>";
+                                                        echo "<td><img src='product/".$row['proimage']."' width=80px></td>";
                                                         echo "<td>".$row['proname']."</td>";
                                                         echo "<td>".$row['proprice']."</td>";
                                                         echo "<td>".$row['procategory']."</td>";
@@ -276,6 +280,7 @@
                                                 <table class="table table-class" id="table-id">
                                                     <thead>
                                                         <tr>
+                                                            <th>ID</th>
                                                             <th>Username</th>
                                                             <th>Email</th>
                                                             <th>User Type</th>
@@ -286,6 +291,7 @@
                                                         {
                                                             echo "<tbody>";
                                                             echo "<tr>";
+                                                            echo "<td>".$row['id']."</td>";
                                                             echo "<td>".$row['uname']."</td>";
                                                             echo "<td>".$row['email']."</td>";
                                                             echo "<td>".$row['user_type']."</td>";

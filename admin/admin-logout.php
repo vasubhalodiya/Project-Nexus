@@ -94,33 +94,29 @@
                         </div>
                     </div>
 <!-- ========================================================================= -->
-                    <div class="content-main-section" id="logout">
-                        <div class="content-child-section">
-                            <div class="cnt-sec-head">
-                                <h3>Log Out</h3>
-                            </div>
-                            <div class="logout-main-content">
-                                <div class="logout-content">
-                                    <div class="logout-img">
-                                        <img src="images/logo.png" alt="">
+                            <div class="cnt-main-content">
+                                <div class="cnt-child-content">
+                                    <div class="cnt-head">
+                                        <h4>Logout</h4>
                                     </div>
-                                    <div class="logout-name">
-                                        <h6>Logout</h6>
-                                        <h5>Hey! <span>User</span></h5>
-                                        <h4>Are you sure you want to log out form my website?</h4>
-                                    </div>
-                                    <div class="logout-btn">
-                                        <div class="logout-no-btn">
-                                            <button>No</button>
-                                        </div>
-                                        <div class="logout-yes-btn">
-                                            <button>Yes</button>
+                                    <div class="logout-main-content">
+                                        <div class="logout-content">
+                                            <div class="logout-name">
+                                                <h5>Hey! <span>User</span></h5>
+                                                <h4>Are you sure you want to log out form this website?</h4>
+                                            </div>
+                                            <div class="logout-btn">
+                                                <div class="logout-no-btn">
+                                                    <a href="admin-dashboard.php">No</a>
+                                                </div>
+                                                <div class="logout-yes-btn">
+                                                    <a href="../logout.php">Yes</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 <!-- ========================================================================= -->
                 </div>
             </div>
