@@ -94,29 +94,29 @@
                         </div>
                     </div>
 <!-- ========================================================================= -->
-                            <div class="cnt-main-content">
-                                <div class="cnt-child-content">
-                                    <div class="cnt-head">
-                                        <h4>Logout</h4>
+                    <div class="cnt-main-content">
+                        <div class="cnt-child-content">
+                            <div class="cnt-head">
+                                <h4>Logout</h4>
+                            </div>
+                            <div class="logout-main-content">
+                                <div class="logout-content">
+                                    <div class="logout-name">
+                                        <h5>Hey! <span>User</span></h5>
+                                        <h4>Are you sure you want to log out form this website?</h4>
                                     </div>
-                                    <div class="logout-main-content">
-                                        <div class="logout-content">
-                                            <div class="logout-name">
-                                                <h5>Hey! <span>User</span></h5>
-                                                <h4>Are you sure you want to log out form this website?</h4>
-                                            </div>
-                                            <div class="logout-btn">
-                                                <div class="logout-no-btn">
-                                                    <a href="admin-dashboard.php">No</a>
-                                                </div>
-                                                <div class="logout-yes-btn">
-                                                    <a href="../logout.php">Yes</a>
-                                                </div>
-                                            </div>
+                                    <div class="logout-btn">
+                                        <div class="logout-no-btn">
+                                            <a href="admin-dashboard.php">No</a>
+                                        </div>
+                                        <div class="logout-yes-btn">
+                                            <a href="../logout.php">Yes</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 <!-- ========================================================================= -->
                 </div>
             </div>
