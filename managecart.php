@@ -10,26 +10,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       $myitems=array_column($_SESSION['cart'],'proname');
       if(in_array($_POST['proname'],$myitems))
       {
-        echo"<script>
-          // alert('Item Already Added');
-          window.location.href='shop.php';
-        </script>";
+        header("location:shop.php");
       }
       else
       {
         $count=count($_SESSION['cart']);
         $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proimage'=>$_POST['proimage'],'proqty'=>1);
-        echo"<script>
-          window.location.href='shop.php';
-        </script>";
+        header("location:shop.php");
       }
     }
     else
     {
       $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proimage'=>$_POST['proimage'],'proqty'=>1);
-      echo"<script>
-        window.location.href='shop.php';
-      </script>";
+      header("location:shop.php");
     }
   }
   if(isset($_POST['Remove_Item']))

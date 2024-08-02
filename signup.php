@@ -7,9 +7,11 @@
     if(isset($_POST['uname']))
     {
         $uname = $_POST['uname'];
-        $email =$_POST['email'];
-        $password = md5($_POST['password']);
-        $password2 = md5($_POST['confirmpassword']);
+        $email = $_POST['email'];
+        // $password = md5($_POST['password']);
+        // $password2 = md5($_POST['confirmpassword']);
+        $password = $_POST['password'];
+        $password2 = $_POST['confirmpassword'];
         $user_type =$_POST['user_type'];
 
         $sql = "select * from login where email='$email'";
