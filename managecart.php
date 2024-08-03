@@ -15,13 +15,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
       else
       {
         $count=count($_SESSION['cart']);
-        $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proimage'=>$_POST['proimage'],'proqty'=>1);
+        $_SESSION['cart'][$count]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proqty'=>1);
         header("location:shop.php");
       }
     }
     else
     {
-      $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proimage'=>$_POST['proimage'],'proqty'=>1);
+      $_SESSION['cart'][0]=array('proname'=>$_POST['proname'],'proprice'=>$_POST['proprice'],'proqty'=>1);
       header("location:shop.php");
     }
   }

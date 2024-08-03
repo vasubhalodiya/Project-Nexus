@@ -1683,12 +1683,12 @@ form
     background-color: transparent;
     border: none;
     width: 130px;
-    text-align: center;
     display: inline-block;
     margin: 0px 5px;
-    padding: 0px 30px;
     border: 1px solid var(--border);
     border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .cart-plus-minus .cart-qty-plus
@@ -3135,8 +3135,15 @@ form
     border-radius: 8px;
 }
 
+.price, .subtotal
+{
+    display: none;
+}
 
-
+.cart td
+{
+    border: none;
+}
 
 
 

@@ -89,7 +89,6 @@ session_start();
                                                     echo "<div class='cart-card'>
                                                     <div class='cart-card-part'>
                                                         <div class='cart-card-img'>
-                                                            <img src='admin/product/$value[proimage]'>
                                                         </div>
                                                         <div class='cart-card-title'>
                                                             <h4>$value[proname]</h4>
@@ -102,9 +101,22 @@ session_start();
                                                         <div class='cart-card-child-part'>
                                                             <div class='cart-card-increment-decrement'>
                                                                 <div class='cart-plus-minus'>
-                                                                    <button class='cart-qty-minus' type='button' value='-'>-</button>
-                                                                    <input type='text' name='qty' min='1' class='qty form-control' value='$value[proqty]'/>
-                                                                    <button class='cart-qty-plus' type='button' value='+'>+</button>
+                                                                    <table>
+                                                                        <tr class='cart'>
+                                                                            <td class='text-center'>
+                                                                                <span class='price'><strong>$value[proprice]</strong></span>
+                                                                            </td>
+                                                                            <td class='text-center'>
+                                                                                <input class='qty form-control' type='number' value='1' min='1'>
+                                                                            </td>
+                                                                            <td class='text-center'>
+                                                                                <span class='subtotal'>$value[proprice]</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a href='javascript:void(0)' class='remove'><i class='icofont-trash'></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                             <div class='cart-card-close'>
@@ -122,6 +134,7 @@ session_start();
                                     </div>        
                                 </div>
                             </div>
+
                             <div class="col-lg-5 col-md-12 col-sm-12">
                                 <div class="cart-cnt">
                                     <div class="cart-summary">
@@ -131,7 +144,8 @@ session_start();
                                             </div>
                                             <div class="summary-field">
                                                 <h5>Subtotal:</h5>
-                                                <h6>$ 90.00</h6>
+                                                <!-- <h6>$ 90.00</h6> -->
+                                            <h6>$<span id="total">0</span></h6>
                                             </div>
                                             <div class="summary-field">
                                                 <h5>Shipping:</h5>
@@ -266,5 +280,41 @@ session_start();
             });
         </script>
 
+    <script>
+        $('.qty').change(function () {
+            updateQuantity(this);
+        });
+
+
+        function updateQuantity(qtyInput) {
+            var cartRow = $(qtyInput).closest('tr');
+            var price = parseFloat($('.price', cartRow).text());
+            var quantity = $('.qty', cartRow).val();
+            var subtotal = $('.subtotal', cartRow);
+            var linePrice = price * quantity;
+            $(subtotal).text(linePrice.toFixed(2));
+            total_calculate()
+        }
+
+        function total_calculate() {
+            var total = 0;
+            $(".cart .subtotal").each(function () {
+                var value = $(this).text() != "" ? parseFloat($(this).text()) : 0;
+                total += value;
+            })
+            $("#total").text(total.toFixed(2))
+        }
+        total_calculate()
+    </script>
+
     </body>
 </html>
+
+
+
+
+<!-- <div class='cart-plus-minus'>
+    <button class='cart-qty-minus' type='button' value='-'>-</button>
+    <input type='text' name='qty' min='1' class='qty form-control' value='$value[proqty]'/>
+    <button class='cart-qty-plus' type='button' value='+'>+</button>
+</div> -->

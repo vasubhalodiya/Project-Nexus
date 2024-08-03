@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <table>
+        <tr class="cart">
+            <td class="text-center">
+                <span class="price"><strong>13.99</strong></span>
+            </td>
+            <td class="text-center">
+                <input class="qty form-control" type="number" value="1" min="1">
+            </td>
+            <td class="text-center">
+                <span class="subtotal">13.99</span>
+            </td>
+            <td>
+                <a href="javascript:void(0)" class="remove"><i class="icofont-trash"></i></a>
+            </td>
+        </tr>
+        <tr class="cart">
+            <td class="text-center">
+                <span class="price"><strong>13.99</strong></span>
+            </td>
+            <td class="text-center">
+                <input class="qty form-control" type="number" value="1" min="1">
+            </td>
+            <td class="text-center">
+                <span class="subtotal">13.99</span>
+            </td>
+            <td>
+                <a href="javascript:void(0)" class="remove"><i class="icofont-trash"></i></a>
+            </td>
+        </tr>
+
+    </table>
+
+    <span class="float-right" style="color:blue" id="total">0</span>
+
+    <script>
+        $('.qty').change(function () {
+            updateQuantity(this);
+        });
+
+
+        function updateQuantity(qtyInput) {
+            var cartRow = $(qtyInput).closest('tr');
+            var price = parseFloat($('.price', cartRow).text());
+            var quantity = $('.qty', cartRow).val();
+            var subtotal = $('.subtotal', cartRow);
+            var linePrice = price * quantity;
+            $(subtotal).text(linePrice.toFixed(2));
+            total_calculate()
+        }
+
+        function total_calculate() {
+            var total = 0;
+            $(".cart .subtotal").each(function () {
+                var value = $(this).text() != "" ? parseFloat($(this).text()) : 0;
+                total += value;
+            })
+            $("#total").text(total.toFixed(2))
+        }
+        total_calculate()
+    </script>
+</body>
+</html>
