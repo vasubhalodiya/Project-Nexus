@@ -80,7 +80,7 @@ session_start();
                                         <div class='cart-product-head'>
                                             <h3>Your Cart</h3>
                                         </div>
-                                            <?php 
+                                            <?php
                                                 if(isset($_SESSION['cart']))
                                                 {
                                                     foreach($_SESSION['cart'] as $key => $value)
